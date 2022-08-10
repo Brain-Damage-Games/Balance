@@ -7,19 +7,15 @@ public class ShelfSorting : MonoBehaviour
 {
     GameObject[] objects;
     [SerializeField]
-    GameObject cube;
+    float space = 1.2f;
     float shelfStart;
     float shelfEnd;
-    int witchFloor = 0;
-    GameObject[] maxObjectLengthPerFloor;
-    float maxLength = 0f;
     float yPosition;
+
     // Start is called before the first frame update
     void Awake()
     {
         objects = GameObject.FindGameObjectsWithTag("Objects");
-
-        maxObjectLengthPerFloor = new GameObject[100];
 
         yPosition = transform.localPosition.y + 2f;
 
@@ -42,17 +38,9 @@ public class ShelfSorting : MonoBehaviour
                 yPosition,
                 transform.localPosition.z);
 
-            shelfStart = shelfStart + 1.2f;
+            shelfStart = shelfStart + space;
             
         }
-    }
-
-    public void MovingToStart()
-    {
-        cube.transform.position = new Vector3(
-            shelfStart + 0.2f + cube.GetComponent<Collider>().bounds.size.x / 2f,
-            transform.localPosition.y + gameObject.GetComponent<Collider>().bounds.size.y / 2f + 1f,
-            transform.localPosition.z);
     }
 
 
