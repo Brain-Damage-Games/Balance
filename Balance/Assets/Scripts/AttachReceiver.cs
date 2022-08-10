@@ -1,18 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AttachReceiver : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]
+    Transform destinationAttachPoint;
+
+    [SerializeField]
+    Transform parent;
+
+    public void Attach(GameObject OriginGameObject)
     {
-        
+        OriginGameObject.transform.position = destinationAttachPoint.position;
+        OriginGameObject.transform.SetParent(gameObject.transform);
+    }
+    public void Detach(GameObject go)
+    {
+        go.transform.SetParent(parent);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
