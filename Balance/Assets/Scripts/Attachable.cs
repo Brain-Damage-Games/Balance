@@ -10,10 +10,13 @@ public class Attachable : MonoBehaviour
 
     void Update()
     {
-        if (CheckAttachablity()  && aim.tag == "aim")
+        Attach();
+    }
+    public void Attach()
+    {
+        if (CheckAttachablity() && aim.tag == "aim")
             aim.GetComponent<AttachReceiver>().Attach(gameObject);
     }
-    
    private bool CheckAttachablity()
     {
         Ray ray1 = new Ray(transform.position, transform.right);
@@ -28,8 +31,8 @@ public class Attachable : MonoBehaviour
             if (deltaZ <= 1 && deltaY <= 1)
             {
                 aim = hitInfo.collider.gameObject;
-                Debug.DrawLine(ray1.origin, hitInfo.point, Color.red);
-                print(hitInfo.collider.gameObject.name);
+                //Debug.DrawLine(ray1.origin, hitInfo.point, Color.red);
+                //print(hitInfo.collider.gameObject.name);
                 return true;
             }
             else
@@ -37,8 +40,8 @@ public class Attachable : MonoBehaviour
         }
         else
         {
-            Debug.DrawLine(ray1.origin, ray1.origin + ray1.direction * 100, Color.blue);
-            Debug.DrawLine(ray2.origin, ray2.origin + ray2.direction * 100, Color.black);
+            //Debug.DrawLine(ray1.origin, ray1.origin + ray1.direction * 100, Color.blue);
+            //Debug.DrawLine(ray2.origin, ray2.origin + ray2.direction * 100, Color.black);
             return false;
 
         }
