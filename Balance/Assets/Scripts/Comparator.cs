@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Comparator : MonoBehaviour
 {
@@ -10,9 +11,12 @@ public class Comparator : MonoBehaviour
     public List<Mass> leftMassObjects, rightMassObjects;
     private bool isRotating = false;
     [SerializeField, Range(5f,50f)] float maxAngleOffset = 30f;
-    private float angleOffset = 0f;
+    public float angleOffset = 0f;
+    public float angle;
     [SerializeField, Range(0f,10f)] float angleOffsetIncreasePerUnit = 2f;
     [SerializeField, Range(0.01f, 0.5f)] float baseSpeed = 0.1f;
+
+    public TextMeshProUGUI leftText, rightText;
     void Awake(){
         leftMassObjects = new List<Mass>();
         rightMassObjects = new List<Mass>();
@@ -21,9 +25,11 @@ public class Comparator : MonoBehaviour
         if (isRotating){
             Rotate();
         }
+        leftText.text = leftMass.ToString();
+        rightText.text = rightMass.ToString();
     }
     private void Rotate(){
-        float angle = (transform.rotation.eulerAngles.z > 180) ? transform.rotation.eulerAngles.z - 360 : transform.rotation.eulerAngles.z;
+        angle = (transform.rotation.eulerAngles.z > 180) ? transform.rotation.eulerAngles.z - 360 : transform.rotation.eulerAngles.z;
         float rotateSpeed = Mathf.Abs(rightMass - leftMass) * Mathf.Abs(maxAngleOffset - Mathf.Abs(angle)) * Time.deltaTime * baseSpeed;
         float balanceSpeed = Mathf.Abs(maxAngleOffset - Mathf.Abs(angle)) * Time.deltaTime * baseSpeed * 2;
         if (leftMass > rightMass && angle < angleOffset && Mathf.Abs(angle - angleOffset) > angleOffsetIncreasePerUnit+1){
@@ -33,10 +39,10 @@ public class Comparator : MonoBehaviour
             transform.rotation = Quaternion.Euler(0,0,transform.rotation.eulerAngles.z - rotateSpeed);
         }
 
-        else if (rightMass > leftMass && angle > -angleOffset && Mathf.Abs(angle - angleOffset) > angleOffsetIncreasePerUnit+1){
+        else if (rightMass > leftMass && angle > -angleOffset && Mathf.Abs(angle + angleOffset) > angleOffsetIncreasePerUnit+1){
             transform.rotation = Quaternion.Euler(0,0,transform.rotation.eulerAngles.z - rotateSpeed);
         }
-        else if (rightMass > leftMass && angle < -angleOffset && Mathf.Abs(angle - angleOffset) > angleOffsetIncreasePerUnit+1){
+        else if (rightMass > leftMass && angle < -angleOffset && Mathf.Abs(angle + angleOffset) > angleOffsetIncreasePerUnit+1){
             transform.rotation = Quaternion.Euler(0,0,transform.rotation.eulerAngles.z + rotateSpeed);
         }
 
