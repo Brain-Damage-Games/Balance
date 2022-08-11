@@ -11,11 +11,11 @@ public class AttachReceiver : MonoBehaviour
     public void Attach(GameObject OriginGameObject)
     {
         OriginGameObject.transform.position = destinationAttachPoint.position;
-        OriginGameObject.transform.SetParent(gameObject.transform);
+        //here add the code to add the weight of object to scale
     }
     public void Detach(GameObject go)
     {
-        go.transform.SetParent(parent);
+        //here add the code to omit the weight of object to scale
     }
 
 }

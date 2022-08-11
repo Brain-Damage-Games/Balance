@@ -3,45 +3,50 @@ using UnityEngine;
 public class Attachable : MonoBehaviour
 {
     [SerializeField]
-    float zDistance = 10000f;
+    float distance = 10000f;
 
+    [SerializeField]
+    GameObject Camera;
 
     private GameObject aim;
 
-    void Update()
+    void LateUpdate()
     {
-        Attach();
+        //if(Input.GetKey(KeyCode.Space))
+            //Attach();
+
+        //if(Input.GetKey(KeyCode.LeftAlt))
+            //Detach();
     }
+
     public void Attach()
     {
-        if (CheckAttachablity() && aim.tag == "aim")
+        if (CheckAttachablity() && aim.tag == "Aim")
             aim.GetComponent<AttachReceiver>().Attach(gameObject);
     }
-   private bool CheckAttachablity()
+
+    public void Detach()
     {
-        Ray ray1 = new Ray(transform.position, transform.right);
-        Ray ray2 = new Ray(transform.position, -transform.right);
+        aim.GetComponent<AttachReceiver>().Detach(gameObject);
+    }
+
+    private bool CheckAttachablity()
+    {
+        Vector3 camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Transform>().position;
+        Vector3 dest = transform.position;
+        Vector3 direction = Vector3.Normalize(dest - camera);
+        Ray ray = new Ray(dest, direction);
         RaycastHit hitInfo;
 
-        if (Physics.Raycast(ray1, out hitInfo, zDistance) || Physics.Raycast(ray2, out hitInfo, zDistance))
+        if(Physics.Raycast(ray, out hitInfo, distance))
         {
-            float deltaZ = Mathf.Abs(transform.position.z - hitInfo.point.z);
-            float deltaY = Mathf.Abs(transform.position.y - hitInfo.point.y);
-
-            if (deltaZ <= 1 && deltaY <= 1)
-            {
-                aim = hitInfo.collider.gameObject;
-                //Debug.DrawLine(ray1.origin, hitInfo.point, Color.red);
-                //print(hitInfo.collider.gameObject.name);
-                return true;
-            }
-            else
-                return false;
+            //Debug.DrawLine(ray.origin, hitInfo.point, Color.red);
+            aim = hitInfo.collider.gameObject;
+            return true;
         }
         else
         {
-            //Debug.DrawLine(ray1.origin, ray1.origin + ray1.direction * 100, Color.blue);
-            //Debug.DrawLine(ray2.origin, ray2.origin + ray2.direction * 100, Color.black);
+            //Debug.DrawLine(ray.origin, ray.origin + ray.direction * 100, Color.blue);
             return false;
 
         }
