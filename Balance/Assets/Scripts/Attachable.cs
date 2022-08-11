@@ -13,7 +13,7 @@ public class Attachable : MonoBehaviour
     void LateUpdate()
     {
         //if(Input.GetKey(KeyCode.Space))
-            //Attach();
+            Attach();
 
         //if(Input.GetKey(KeyCode.LeftAlt))
             //Detach();
