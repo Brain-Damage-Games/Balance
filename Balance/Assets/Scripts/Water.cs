@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class Water : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+   
+   public int objectInWater=0;
+
+    void OnCollisionEnter(Collision collision){
+        objectInWater+=1;
+        Debug.Log(objectInWater);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
