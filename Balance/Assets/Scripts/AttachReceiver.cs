@@ -7,15 +7,23 @@ public class AttachReceiver : MonoBehaviour
 
     [SerializeField]
     Transform parent;
+    private Comparator comparator;
+    [SerializeField] bool isLeft;
+
+    void Awake(){
+        comparator = GetComponentInParent<Comparator>();
+    }
 
     public void Attach(GameObject OriginGameObject)
     {
         OriginGameObject.transform.position = destinationAttachPoint.position;
-        //here add the code to add the weight of object to scale
+        
+        if (isLeft) comparator.AddMassToLeft(OriginGameObject.GetComponent<Mass>());
+        else comparator.AddMassToRight(OriginGameObject.GetComponent<Mass>());
     }
     public void Detach(GameObject go)
     {
-        //here add the code to omit the weight of object to scale
+        comparator.RemoveMass(go.GetComponent<Mass>());
     }
 
 }

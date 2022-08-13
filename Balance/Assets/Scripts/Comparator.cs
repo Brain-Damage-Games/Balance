@@ -7,12 +7,12 @@ public class Comparator : MonoBehaviour
 {
     private bool heavyRight = false;
     private bool heavyLeft = false;
-    public float leftMass = 0, rightMass = 0;
-    public List<Mass> leftMassObjects, rightMassObjects;
+    private float leftMass = 0, rightMass = 0;
+    private List<Mass> leftMassObjects, rightMassObjects;
     private bool isRotating = false;
     [SerializeField, Range(5f,50f)] float maxAngleOffset = 30f;
-    public float angleOffset = 0f;
-    public float angle;
+    private float angleOffset = 0f;
+    private float angle;
     [SerializeField, Range(0f,10f)] float angleOffsetIncreasePerUnit = 2f;
     [SerializeField, Range(0.01f, 0.5f)] float baseSpeed = 0.1f;
 
@@ -33,28 +33,28 @@ public class Comparator : MonoBehaviour
         float rotateSpeed = Mathf.Abs(rightMass - leftMass) * Mathf.Abs(maxAngleOffset - Mathf.Abs(angle)) * Time.deltaTime * baseSpeed;
         float balanceSpeed = Mathf.Abs(maxAngleOffset - Mathf.Abs(angle)) * Time.deltaTime * baseSpeed * 2;
         if (leftMass > rightMass && angle < angleOffset && Mathf.Abs(angle - angleOffset) > angleOffsetIncreasePerUnit+1){
-            transform.rotation = Quaternion.Euler(0,0,transform.rotation.eulerAngles.z + rotateSpeed);
+            transform.rotation = Quaternion.Euler(0,-90,transform.rotation.eulerAngles.z + rotateSpeed);
         }
         else if (leftMass > rightMass && angle > angleOffset && Mathf.Abs(angle - angleOffset) > angleOffsetIncreasePerUnit+1){
-            transform.rotation = Quaternion.Euler(0,0,transform.rotation.eulerAngles.z - rotateSpeed);
+            transform.rotation = Quaternion.Euler(0,-90,transform.rotation.eulerAngles.z - rotateSpeed);
         }
 
         else if (rightMass > leftMass && angle > -angleOffset && Mathf.Abs(angle + angleOffset) > angleOffsetIncreasePerUnit+1){
-            transform.rotation = Quaternion.Euler(0,0,transform.rotation.eulerAngles.z - rotateSpeed);
+            transform.rotation = Quaternion.Euler(0,-90,transform.rotation.eulerAngles.z - rotateSpeed);
         }
         else if (rightMass > leftMass && angle < -angleOffset && Mathf.Abs(angle + angleOffset) > angleOffsetIncreasePerUnit+1){
-            transform.rotation = Quaternion.Euler(0,0,transform.rotation.eulerAngles.z + rotateSpeed);
+            transform.rotation = Quaternion.Euler(0,-90,transform.rotation.eulerAngles.z + rotateSpeed);
         }
 
         else if (leftMass == rightMass){
             if (angle > angleOffset){
-                transform.rotation = Quaternion.Euler(0,0,transform.rotation.eulerAngles.z - balanceSpeed);
+                transform.rotation = Quaternion.Euler(0,-90,transform.rotation.eulerAngles.z - balanceSpeed);
             }
             else if (angle < angleOffset){
-                transform.rotation = Quaternion.Euler(0,0,transform.rotation.eulerAngles.z + balanceSpeed);
+                transform.rotation = Quaternion.Euler(0,-90,transform.rotation.eulerAngles.z + balanceSpeed);
             }
             if (Mathf.Abs(angle) < 0.5){
-                transform.rotation = Quaternion.Euler(0,0,0);
+                transform.rotation = Quaternion.Euler(0,-90,0);
                 isRotating = false;
             }
         }
