@@ -1,47 +1,95 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
 
-public class ShelfSorting : MonoBehaviour
+public class shelfSorting : MonoBehaviour
 {
-    GameObject[] objects;
-    [SerializeField]
-    float space = 1.2f;
-    float shelfStart;
-    float shelfEnd;
-    float yPosition;
+    GameObject[] allObjects;
+    List<GameObject> seenObjects;
 
-    // Start is called before the first frame update
+    [SerializeField]
+    float space = 0.4f;
+
+    float shelfStartPosition, shelfEndPosition;
+    int firstObjectIndex, lastObjectIndex;
     void Awake()
     {
-        objects = GameObject.FindGameObjectsWithTag("Objects");
+        allObjects = GameObject.FindGameObjectsWithTag("Objects");
+        seenObjects = new List<GameObject>(6);
 
-        yPosition = transform.localPosition.y + 2f;
+        if(allObjects.Length > 6)
+        {
+            for(int i = 0; i <= 5; i++)
+                seenObjects.Add(allObjects[i]);
+            
+            for(int i = 6; i < allObjects.Length; i++)
+                allObjects[i].SetActive(false);
 
-        shelfStart = transform.position.x - transform.localScale.x / 2f + 1f;
-        shelfEnd = transform.position.x + transform.localScale.x / 2f;
+            firstObjectIndex = 0;
+            lastObjectIndex = 5;
+            
+        }
+        else
+            for(int i = 0; i < allObjects.Length; i++)
+                seenObjects.Add(allObjects[i]);
 
         Sort();
-
-        //MovingToStart();
     }
 
+    //***** this function will gave the gameObjects their position;
     public void Sort()
     {
-        //Sorting the objects
-        for(int i = 0; i < objects.Length; i++)
-        {
-            
-            objects[i].transform.position = new Vector3(
-                shelfStart,
-                yPosition,
-                transform.localPosition.z);
+        shelfStartPosition = transform.position.z - transform.localScale.z / 2f + 1f;
+        shelfEndPosition = transform.position.z + transform.localScale.z / 2f - 1f;
 
-            shelfStart = shelfStart + space;
+        for(int i = 0; i < seenObjects.Count; i++)
+        {
+            print(seenObjects[i].name + " + ");
+            seenObjects[i].transform.position = new Vector3(
+                transform.localPosition.x,
+                transform.position.y + 1f,
+                shelfStartPosition + space + 0.5f );
             
+            shelfStartPosition = shelfStartPosition + space + 1f;
+           
         }
     }
 
+    public void ShiftRight()
+    {
+        if(allObjects.Length > 6 && lastObjectIndex < allObjects.Length - 1)
+        {
+            seenObjects[0].SetActive(false);
+            seenObjects.RemoveAt(0);
+            seenObjects.Insert(5, allObjects[lastObjectIndex + 1]);
+            allObjects[lastObjectIndex + 1].SetActive(true);
+
+            firstObjectIndex++;
+            lastObjectIndex++;
+
+            Sort();
+        }
+    }
+
+    public void ShiftLeft()
+    {
+        if(allObjects.Length > 6 && firstObjectIndex > 0)
+        {
+            seenObjects[5].SetActive(false);
+            seenObjects.RemoveAt(5);
+            seenObjects.Insert(0, allObjects[firstObjectIndex - 1]);
+            allObjects[firstObjectIndex - 1].SetActive(true);
+
+            lastObjectIndex--;
+            firstObjectIndex--;
+
+            Sort();
+        }
+    }
+
+    public void TakeOut(GameObject takingOut)
+    {
+
+    }
 
 }
