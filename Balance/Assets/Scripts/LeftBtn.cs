@@ -8,6 +8,6 @@ public class LeftBtn : MonoBehaviour
     GameObject shelf;
 
     private void OnMouseDown() {
-        shelf.GetComponent<shelfSorting>().ShiftLeft();
+        shelf.GetComponent<ShelfSorting>().ShiftLeft();
     }
 }

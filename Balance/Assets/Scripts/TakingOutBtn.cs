@@ -9,6 +9,6 @@ public class TakingOutBtn : MonoBehaviour
 
     private void OnMouseDown() 
     {
-        shelf.GetComponent<shelfSorting>().TakeOut(animal);   
+        shelf.GetComponent<ShelfSorting>().TakeOut(animal);   
     }
 }

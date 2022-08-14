@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class shelfSorting : MonoBehaviour
+public class ShelfSorting : MonoBehaviour
 {
     List<GameObject> allObjects;
     List<GameObject> seenObjects;
