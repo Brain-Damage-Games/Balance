@@ -8,7 +8,7 @@ public class Dragging : MonoBehaviour
     private bool dragging = false;
     private Vector3 offset;
     private Transform toDrag;
-    public void drag ()
+    void Update()
     {
         Vector3 v3 ; 
         if (Input.touchCount != 1)
@@ -45,9 +45,5 @@ public class Dragging : MonoBehaviour
         {
             dragging = false;
         }
-    }
-    void Update()
-    {
-        drag();
     }
 }

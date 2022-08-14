@@ -26,6 +26,8 @@ MonoBehaviour:
   vertical: 0
   controlID: 15
 --- !u!114 &2
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
