@@ -9,6 +9,7 @@ public class Attachable : MonoBehaviour
     GameObject Camera;
 
     private GameObject aim;
+    private bool attached;
 
     void LateUpdate()
     {
@@ -20,12 +21,19 @@ public class Attachable : MonoBehaviour
     }
     public void Attach()
     {
-        if (CheckAttachablity() && aim.tag == "Aim")
+        if (CheckAttachablity() && aim.tag == "Aim"){
             aim.GetComponent<AttachReceiver>().Attach(gameObject);
+            Camera.GetComponent<Dragging>().UnDrag();
+            transform.SetParent(aim.transform);
+            attached = true;
+        }
+
     }
     public void Detach()
     {
         aim.GetComponent<AttachReceiver>().Detach(gameObject);
+        transform.SetParent(null);
+        attached = false;
     }
     private bool CheckAttachablity()
     {
@@ -47,5 +55,9 @@ public class Attachable : MonoBehaviour
             return false;
 
         }
+    }
+
+    public bool isAttached(){
+        return attached;
     }
 }

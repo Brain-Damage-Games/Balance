@@ -25,7 +25,7 @@ public class Dragging : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit))
             {   
-                if (hit.collider.tag == "Aim")
+                if (hit.collider.tag == "Objects")
                 {
                     toDrag = hit.transform;
                     dist = hit.transform.position.z - Camera.main.transform.position.z;
@@ -33,6 +33,11 @@ public class Dragging : MonoBehaviour
                     v3 = Camera.main.ScreenToWorldPoint(v3);
                     offset = toDrag.position - v3;
                     dragging = true;
+
+                    Attachable attachable = hit.collider.gameObject.GetComponent<Attachable>();
+                    if (attachable != null && attachable.isAttached()){
+                        attachable.Detach();
+                    }
                 }
             }
         }
@@ -50,5 +55,9 @@ public class Dragging : MonoBehaviour
     void Update()
     {
         drag ();
+    }
+
+    public void UnDrag(){
+        dragging = false;
     }
 }
