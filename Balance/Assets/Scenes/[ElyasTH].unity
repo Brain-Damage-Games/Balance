@@ -301,7 +301,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &177479292
 GameObject:
@@ -346,7 +346,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &301912434
 GameObject:
@@ -432,7 +432,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1092793643}
         m_TargetAssemblyTypeName: Comparator, Assembly-CSharp
         m_MethodName: RemoveMass
         m_Mode: 2
@@ -547,7 +547,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &437004655
 GameObject:
@@ -684,6 +684,16 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 437004655}
   m_CullTransparentMesh: 1
+--- !u!4 &537589985 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7223962444326467312, guid: 03f50f4c38b12974786267c88ae85722, type: 3}
+  m_PrefabInstance: {fileID: 1092793636}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &800022715 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2122263729447193711, guid: 03f50f4c38b12974786267c88ae85722, type: 3}
+  m_PrefabInstance: {fileID: 1092793636}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &803407629
 GameObject:
   m_ObjectHideFlags: 0
@@ -1331,9 +1341,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scale
       objectReference: {fileID: 0}
-    - target: {fileID: 6128757690219206761, guid: 03f50f4c38b12974786267c88ae85722, type: 3}
+    - target: {fileID: 2122263729447193711, guid: 03f50f4c38b12974786267c88ae85722, type: 3}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128757690219206761, guid: 03f50f4c38b12974786267c88ae85722, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6128757690219206761, guid: 03f50f4c38b12974786267c88ae85722, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1375,6 +1389,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6547430237913735489, guid: 03f50f4c38b12974786267c88ae85722, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7072203586085455822, guid: 03f50f4c38b12974786267c88ae85722, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7223962444326467312, guid: 03f50f4c38b12974786267c88ae85722, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7466701103392904083, guid: 03f50f4c38b12974786267c88ae85722, type: 3}
       propertyPath: m_TagString
       value: Aim
@@ -1383,36 +1409,15 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Aim
       objectReference: {fileID: 0}
+    - target: {fileID: 9115162370615579281, guid: 03f50f4c38b12974786267c88ae85722, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03f50f4c38b12974786267c88ae85722, type: 3}
 --- !u!1 &1092793637 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1802386100055476743, guid: 03f50f4c38b12974786267c88ae85722, type: 3}
-  m_PrefabInstance: {fileID: 1092793636}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1092793638 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6128757690219206761, guid: 03f50f4c38b12974786267c88ae85722, type: 3}
-  m_PrefabInstance: {fileID: 1092793636}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1092793639 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7072203586085455822, guid: 03f50f4c38b12974786267c88ae85722, type: 3}
-  m_PrefabInstance: {fileID: 1092793636}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1092793640 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7597101002846526836, guid: 03f50f4c38b12974786267c88ae85722, type: 3}
-  m_PrefabInstance: {fileID: 1092793636}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1092793641 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7842136647552469289, guid: 03f50f4c38b12974786267c88ae85722, type: 3}
-  m_PrefabInstance: {fileID: 1092793636}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1092793642 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7466701103392904083, guid: 03f50f4c38b12974786267c88ae85722, type: 3}
   m_PrefabInstance: {fileID: 1092793636}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1092793643
@@ -1430,38 +1435,10 @@ MonoBehaviour:
   maxAngleOffset: 30
   angleOffsetIncreasePerUnit: 2
   baseSpeed: 0.1
+  leftHook: {fileID: 800022715}
+  rightHook: {fileID: 537589985}
   leftText: {fileID: 1197563506}
   rightText: {fileID: 105091006}
---- !u!114 &1092793644
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1092793640}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fc1fbf0ef7731046a83faf7753be433, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destinationAttachPoint: {fileID: 1092793639}
-  parent: {fileID: 1092793638}
-  isLeft: 1
---- !u!114 &1092793645
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1092793642}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fc1fbf0ef7731046a83faf7753be433, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destinationAttachPoint: {fileID: 1092793641}
-  parent: {fileID: 1092793638}
-  isLeft: 0
 --- !u!64 &1092793646
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1476,34 +1453,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
---- !u!64 &1092793647
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1092793640}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -2893882437805235404, guid: b698259b6c877774e9e5a0e9b81c8b33, type: 3}
---- !u!64 &1092793650
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1092793642}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -2893882437805235404, guid: b698259b6c877774e9e5a0e9b81c8b33, type: 3}
 --- !u!1 &1197563504
 GameObject:
   m_ObjectHideFlags: 0
@@ -1723,7 +1672,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1092793643}
         m_TargetAssemblyTypeName: Comparator, Assembly-CSharp
         m_MethodName: RemoveMass
         m_Mode: 2
@@ -1865,7 +1814,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1755544169
 GameObject:
@@ -1966,7 +1915,7 @@ RectTransform:
   - {fileID: 1197563505}
   - {fileID: 105091005}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2057,7 +2006,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1092793643}
         m_TargetAssemblyTypeName: Comparator, Assembly-CSharp
         m_MethodName: AddMassToLeft
         m_Mode: 2
@@ -2191,7 +2140,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1092793643}
         m_TargetAssemblyTypeName: Comparator, Assembly-CSharp
         m_MethodName: AddMassToRight
         m_Mode: 2
