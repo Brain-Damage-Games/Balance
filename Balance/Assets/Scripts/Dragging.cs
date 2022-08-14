@@ -8,7 +8,8 @@ public class Dragging : MonoBehaviour
     private bool dragging = false;
     private Vector3 offset;
     private Transform toDrag;
-    void Update()
+    private GameObject Obj;
+    private void drag()
     {
         Vector3 v3 ; 
         if (Input.touchCount != 1)
@@ -24,7 +25,7 @@ public class Dragging : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit))
             {   
-                if (hit.collider.tag == "drag")
+                if (hit.collider.tag == "Aim")
                 {
                     toDrag = hit.transform;
                     dist = hit.transform.position.z - Camera.main.transform.position.z;
@@ -35,7 +36,7 @@ public class Dragging : MonoBehaviour
                 }
             }
         }
-        if(dragging && touch.phase == TouchPhase.Moved)
+        if(dragging && (touch.phase == TouchPhase.Moved))
         {
             v3 = new Vector3(Input.mousePosition.x, Input.mousePosition.y, dist);
             v3 = Camera.main.ScreenToWorldPoint(v3);
@@ -45,5 +46,9 @@ public class Dragging : MonoBehaviour
         {
             dragging = false;
         }
+    }
+    void Update()
+    {
+        drag ();
     }
 }
