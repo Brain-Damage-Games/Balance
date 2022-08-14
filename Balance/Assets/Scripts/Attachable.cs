@@ -23,6 +23,8 @@ public class Attachable : MonoBehaviour
     {
         if (CheckAttachablity() && aim.tag == "Aim")
             aim.GetComponent<AttachReceiver>().Attach(gameObject);
+
+        Vibrator.Vibrate(25);
     }
 
     public void Detach()
