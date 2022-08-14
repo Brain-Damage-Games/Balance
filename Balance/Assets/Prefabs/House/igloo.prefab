@@ -55,6 +55,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: igloo
       objectReference: {fileID: 0}
+    - target: {fileID: 8810856019550362692, guid: b0656114b1b4a9f41b3e5866c5b1002f, type: 3}
+      propertyPath: mass
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0656114b1b4a9f41b3e5866c5b1002f, type: 3}
 --- !u!4 &2631830307401028448 stripped

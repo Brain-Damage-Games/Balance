@@ -108,6 +108,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5137378431446935211, guid: a4bd6a70fa88b3942a573c25e37bc03d, type: 3}
+      propertyPath: mass
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8597537172676869163, guid: a4bd6a70fa88b3942a573c25e37bc03d, type: 3}
       propertyPath: m_Name
       value: dragonfly
