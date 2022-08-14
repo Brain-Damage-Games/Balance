@@ -18,18 +18,15 @@ public class Attachable : MonoBehaviour
         //if(Input.GetKey(KeyCode.LeftAlt))
             //Detach();
     }
-
     public void Attach()
     {
         if (CheckAttachablity() && aim.tag == "Aim")
             aim.GetComponent<AttachReceiver>().Attach(gameObject);
     }
-
     public void Detach()
     {
         aim.GetComponent<AttachReceiver>().Detach(gameObject);
     }
-
     private bool CheckAttachablity()
     {
         Vector3 camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Transform>().position;
@@ -51,6 +48,4 @@ public class Attachable : MonoBehaviour
 
         }
     }
-
-
 }
