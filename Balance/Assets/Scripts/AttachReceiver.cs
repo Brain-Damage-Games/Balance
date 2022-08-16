@@ -20,10 +20,13 @@ public class AttachReceiver : MonoBehaviour
         
         if (isLeft) comparator.AddMassToLeft(OriginGameObject.GetComponent<Mass>());
         else comparator.AddMassToRight(OriginGameObject.GetComponent<Mass>());
+
+        GetComponentInParent<Attachable>()?.GetTargetComparator()?.UpdateMass();
     }
     public void Detach(GameObject go)
     {
         comparator.RemoveMass(go.GetComponent<Mass>());
+        GetComponentInParent<Attachable>()?.GetTargetComparator()?.UpdateMass();
     }
 
 }

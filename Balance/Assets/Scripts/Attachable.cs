@@ -22,12 +22,11 @@ public class Attachable : MonoBehaviour
     public void Attach()
     {
         if (CheckAttachablity() && aim.tag == "Aim"){
-            aim.GetComponent<AttachReceiver>().Attach(gameObject);
+            aim.GetComponent<AttachReceiver>()?.Attach(gameObject);
             Camera.GetComponent<Dragging>().UnDrag();
             transform.SetParent(aim.transform);
             attached = true;
         }
-
     }
     public void Detach()
     {
@@ -59,5 +58,9 @@ public class Attachable : MonoBehaviour
 
     public bool isAttached(){
         return attached;
+    }
+
+    public Comparator GetTargetComparator(){
+        return aim?.GetComponentInParent<Comparator>();
     }
 }

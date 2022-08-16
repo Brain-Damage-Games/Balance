@@ -8,7 +8,7 @@ public class Comparator : MonoBehaviour
     private bool heavyRight = false;
     private bool heavyLeft = false;
     private float leftMass = 0, rightMass = 0;
-    private List<Mass> leftMassObjects, rightMassObjects;
+    private Mass leftMassObject, rightMassObject;
     private bool isRotating = false;
     [SerializeField, Range(5f,50f)] float maxAngleOffset = 30f;
     private float angleOffset = 0f;
@@ -16,12 +16,8 @@ public class Comparator : MonoBehaviour
     [SerializeField, Range(0f,10f)] float angleOffsetIncreasePerUnit = 2f;
     [SerializeField, Range(0.01f, 0.5f)] float baseSpeed = 0.1f;
     [SerializeField] Transform leftHook,rightHook;
-
     public TextMeshProUGUI leftText, rightText;
-    void Awake(){
-        leftMassObjects = new List<Mass>();
-        rightMassObjects = new List<Mass>();
-    }
+
     void Update(){
         if (isRotating){
             Rotate();
@@ -87,39 +83,37 @@ public class Comparator : MonoBehaviour
             heavyRight = false;
         }
         isRotating = true;
+
+        GetComponent<Mass>()?.SetMass(leftMass + rightMass);
     }
 
     public void AddMassToLeft(Mass mass){
-        leftMassObjects.Add(mass);
-        leftMass += mass.GetMass();
+        leftMassObject = mass;
+        leftMass = mass.GetMass();
         Compare();
     }
 
     public void AddMassToRight(Mass mass){
-        rightMassObjects.Add(mass);
-        rightMass += mass.GetMass();
+        rightMassObject = mass;
+        rightMass = mass.GetMass();
+        Compare();
+    }
+
+    public void UpdateMass(){
+        if (rightMassObject != null) rightMass = rightMassObject.GetMass();
+        if (leftMassObject != null) leftMass = leftMassObject.GetMass();
         Compare();
     }
 
     public void RemoveMass(Mass mass){
-        if (rightMassObjects.Contains(mass)) {
-            rightMassObjects.Remove(mass);
-            rightMass -= mass.GetMass();
+        if (rightMassObject == mass) {
+            rightMassObject = null;
+            rightMass = 0;
         }
-        else if (leftMassObjects.Contains(mass)) {
-            leftMassObjects.Remove(mass);
-            leftMass -= mass.GetMass();
+        else if (leftMassObject == mass) {
+            leftMassObject = null;
+            leftMass = 0;
         }
         Compare();
-    }
-
-    public void EmptyLeft(){
-        leftMassObjects.Clear();
-        leftMass = 0f;
-    }
-
-    public void EmptyRight(){
-        rightMassObjects.Clear();
-        rightMass = 0f;
     }
 }
