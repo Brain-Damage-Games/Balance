@@ -96,11 +96,11 @@ Material:
     - _NormalDepthInfluence: 0.5
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _RampSmooth: 0.1
+    - _RampSmooth: 0.092
     - _RampThreshold: 0.5
     - _ReflRoughness: 0
     - _ReflStrength: 1
-    - _RimMax: 1
+    - _RimMax: 0.352
     - _RimMin: 0.4
     - _Shininess: 0.1
     - _SmoothnessTextureChannel: 0
