@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Penguin Baby
+  m_Controller: {fileID: 9100000, guid: af8b1c87864cf4f43a0a6c716920e67f, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: -7367652356898429361, guid: 8e708f4719b414d39b707eca77f8380c,
+      type: 3}
+    m_OverrideClip: {fileID: 3926092535246355761, guid: 8e708f4719b414d39b707eca77f8380c,
+      type: 3}
+  - m_OriginalClip: {fileID: -6904288451446005494, guid: 8e708f4719b414d39b707eca77f8380c,
+      type: 3}
+    m_OverrideClip: {fileID: 7634575997702004775, guid: 8e708f4719b414d39b707eca77f8380c,
+      type: 3}
