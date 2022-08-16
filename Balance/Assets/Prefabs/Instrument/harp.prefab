@@ -55,9 +55,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: harp
       objectReference: {fileID: 0}
+    - target: {fileID: 6571084061305840235, guid: 71df1978496915049ad6a886e28bb855, type: 3}
+      propertyPath: m_Mass
+      value: 52
+      objectReference: {fileID: 0}
     - target: {fileID: 7398288210202169893, guid: 71df1978496915049ad6a886e28bb855, type: 3}
       propertyPath: mass
-      value: 35
+      value: 52
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71df1978496915049ad6a886e28bb855, type: 3}

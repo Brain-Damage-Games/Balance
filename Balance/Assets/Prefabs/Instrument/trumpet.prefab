@@ -55,9 +55,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: trumpet
       objectReference: {fileID: 0}
+    - target: {fileID: 6571084061305840235, guid: 71df1978496915049ad6a886e28bb855, type: 3}
+      propertyPath: m_Mass
+      value: 48
+      objectReference: {fileID: 0}
     - target: {fileID: 7398288210202169893, guid: 71df1978496915049ad6a886e28bb855, type: 3}
       propertyPath: mass
-      value: 31
+      value: 48
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71df1978496915049ad6a886e28bb855, type: 3}

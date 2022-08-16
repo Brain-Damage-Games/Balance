@@ -51,6 +51,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5240304300775423888, guid: b0656114b1b4a9f41b3e5866c5b1002f, type: 3}
+      propertyPath: m_Mass
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 5258953912032827246, guid: b0656114b1b4a9f41b3e5866c5b1002f, type: 3}
       propertyPath: m_Name
       value: igloo
