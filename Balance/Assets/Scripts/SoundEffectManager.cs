@@ -21,7 +21,7 @@ public class SoundEffectManager : MonoBehaviour
     }
     public void PlayDetachSound(float volume = 1) 
     {
-        audioSource.pitch = 1;
+        audioSource.pitch = 0.8f;
         audioSource.volume = volume;
         audioSource.clip = detachSound;
         audioSource.Play();
