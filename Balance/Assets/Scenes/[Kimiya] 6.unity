@@ -189,7 +189,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 2d844768f1662ec48a2626b5f8e1ad3b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: c23a928d4e439ab4792f960782e98cde, type: 2}
+      objectReference: {fileID: 2100000, guid: 172a31160aff32b49863cf33bbaba15a, type: 2}
     - target: {fileID: 919132149155446097, guid: 2d844768f1662ec48a2626b5f8e1ad3b, type: 3}
       propertyPath: m_Name
       value: ChickenBrown (7)
@@ -267,7 +267,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 2d844768f1662ec48a2626b5f8e1ad3b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: c23a928d4e439ab4792f960782e98cde, type: 2}
+      objectReference: {fileID: 2100000, guid: 172a31160aff32b49863cf33bbaba15a, type: 2}
     - target: {fileID: 919132149155446097, guid: 2d844768f1662ec48a2626b5f8e1ad3b, type: 3}
       propertyPath: m_Name
       value: ChickenBrown (6)
@@ -904,7 +904,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 2d844768f1662ec48a2626b5f8e1ad3b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: c23a928d4e439ab4792f960782e98cde, type: 2}
+      objectReference: {fileID: 2100000, guid: 172a31160aff32b49863cf33bbaba15a, type: 2}
     - target: {fileID: 919132149155446097, guid: 2d844768f1662ec48a2626b5f8e1ad3b, type: 3}
       propertyPath: m_Name
       value: ChickenBrown (4)
@@ -1452,7 +1452,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 2d844768f1662ec48a2626b5f8e1ad3b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: c23a928d4e439ab4792f960782e98cde, type: 2}
+      objectReference: {fileID: 2100000, guid: 172a31160aff32b49863cf33bbaba15a, type: 2}
     - target: {fileID: 919132149155446097, guid: 2d844768f1662ec48a2626b5f8e1ad3b, type: 3}
       propertyPath: m_Name
       value: ChickenBrown (5)
@@ -1851,7 +1851,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 2d844768f1662ec48a2626b5f8e1ad3b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 67513a2cbf5be1b4e842d4114e847a5c, type: 2}
+      objectReference: {fileID: 2100000, guid: c0c439fe4afa60642ac277300398d50c, type: 2}
     - target: {fileID: 919132149155446097, guid: 2d844768f1662ec48a2626b5f8e1ad3b, type: 3}
       propertyPath: m_Name
       value: ChickenBrown (2)
