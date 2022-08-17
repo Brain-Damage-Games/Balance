@@ -5,39 +5,40 @@ public class Attachable : MonoBehaviour
     [SerializeField]
     float distance = 10000f;
 
-
-    private bool checkedAttachabality=false;
+    
+    private bool attached = false;
 
     private GameObject aim;
-    //private Vector3 cameraPosition;
 
-    /*private void Awake()
+
+    private bool triggerAttachabality = false;
+
+    void Update()
     {
-        cameraPosition = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Transform>().position;
-    }*/
-    void LateUpdate()
-    {
+        //if(!attached)
             Attach();
+        //
+        //write your desiered code for detach
     }
     public void Attach()
     {
         
-        if ((CheckAttachablity() || checkedAttachabality) && aim.tag == "Aim")
+        if ((CheckAttachablity() || triggerAttachabality) && aim.tag == "Aim")
+        {
+
             aim.GetComponent<AttachReceiver>().Attach(gameObject);
+            IsAttached();
+        }
     }
-    /*private void OnCollisionEnter(Collision collision)
-    {
-        print("collides");
-    }*/
     void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Aim")
         {
             aim = other.gameObject;
-            checkedAttachabality = true;
+            triggerAttachabality = true;
         }
         else
-            checkedAttachabality = false;
+            triggerAttachabality = false;
     }
     public void Detach()
     {
@@ -65,5 +66,14 @@ public class Attachable : MonoBehaviour
             return  false;
 
         }
+    }
+    public void IsAttached()
+    {
+        attached = true;
+    }
+
+    public void IsNotAttached()
+    {
+        attached = false;
     }
 }
