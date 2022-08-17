@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1010605722675716314}
   - component: {fileID: 1010605722674749978}
   - component: {fileID: 1010605722686361370}
+  - component: {fileID: -7586012618558380254}
   m_Layer: 0
   m_Name: acorn
   m_TagString: Untagged
@@ -105,6 +106,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!64 &-7586012618558380254
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010605722677017818}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 24e9975d9ceb87c48800c36d536ba2a0, type: 3}
 --- !u!1001 &4423448909798697799
 PrefabInstance:
   m_ObjectHideFlags: 0

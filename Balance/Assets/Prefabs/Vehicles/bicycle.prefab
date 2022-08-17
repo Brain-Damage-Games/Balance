@@ -7,9 +7,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 481435981927046566, guid: 6bdae2108b49a2744b8d39212e53a544, type: 3}
+      propertyPath: m_Mass
+      value: 61
+      objectReference: {fileID: 0}
+    - target: {fileID: 3071425664110867662, guid: 6bdae2108b49a2744b8d39212e53a544, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3071425664110867662, guid: 6bdae2108b49a2744b8d39212e53a544, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.727
+      objectReference: {fileID: 0}
+    - target: {fileID: 3071425664110867662, guid: 6bdae2108b49a2744b8d39212e53a544, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.238
+      objectReference: {fileID: 0}
     - target: {fileID: 3516570022201527797, guid: 6bdae2108b49a2744b8d39212e53a544, type: 3}
       propertyPath: m_Name
       value: bicycle
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388425330492099931, guid: 6bdae2108b49a2744b8d39212e53a544, type: 3}
+      propertyPath: mass
+      value: 61
       objectReference: {fileID: 0}
     - target: {fileID: 4789616675264360129, guid: 6bdae2108b49a2744b8d39212e53a544, type: 3}
       propertyPath: m_RootOrder
@@ -65,9 +85,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6bdae2108b49a2744b8d39212e53a544, type: 3}
---- !u!4 &90886820568244350 stripped
+--- !u!4 &7612528918717790833 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 4789616675264360129, guid: 6bdae2108b49a2744b8d39212e53a544, type: 3}
+  m_CorrespondingSourceObject: {fileID: 3071425664110867662, guid: 6bdae2108b49a2744b8d39212e53a544, type: 3}
   m_PrefabInstance: {fileID: 4844404155782483647}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7636334748762486252
@@ -75,7 +95,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 90886820568244350}
+    m_TransformParent: {fileID: 7612528918717790833}
     m_Modifications:
     - target: {fileID: 8310782938750548329, guid: f4f861ba91ab14941ab19eac59849c00, type: 3}
       propertyPath: m_RootOrder
@@ -87,11 +107,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8310782938750548329, guid: f4f861ba91ab14941ab19eac59849c00, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.727
       objectReference: {fileID: 0}
     - target: {fileID: 8310782938750548329, guid: f4f861ba91ab14941ab19eac59849c00, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.238
       objectReference: {fileID: 0}
     - target: {fileID: 8310782938750548329, guid: f4f861ba91ab14941ab19eac59849c00, type: 3}
       propertyPath: m_LocalRotation.w

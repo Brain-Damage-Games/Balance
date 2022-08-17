@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5950381899987477516}
   - component: {fileID: 5950381899988575948}
   - component: {fileID: 5950381899976821708}
+  - component: {fileID: 680823420315265428}
   m_Layer: 0
   m_Name: bee
   m_TagString: Untagged
@@ -106,6 +107,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!64 &680823420315265428
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5950381899986319372}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 75c19e4e8c0333b49978b147e9161638, type: 3}
 --- !u!1001 &4614311778223313460
 PrefabInstance:
   m_ObjectHideFlags: 0

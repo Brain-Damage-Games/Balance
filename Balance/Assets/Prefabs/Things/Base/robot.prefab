@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9012094415011204330}
   - component: {fileID: 9012094415012302378}
   - component: {fileID: 9012094415021597482}
+  - component: {fileID: -7353354623150827757}
   m_Layer: 0
   m_Name: robot
   m_TagString: Untagged
@@ -105,6 +106,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!64 &-7353354623150827757
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9012094415014301930}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 1b9ebae764ba79248803c62e4eebee8f, type: 3}
 --- !u!1001 &9012094414969369232
 PrefabInstance:
   m_ObjectHideFlags: 0

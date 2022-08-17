@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1686247683092769995}
   - component: {fileID: 1686247683091639819}
   - component: {fileID: 1686247683103343371}
+  - component: {fileID: -1972101210690747928}
   m_Layer: 0
   m_Name: kleenex
   m_TagString: Untagged
@@ -105,6 +106,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!64 &-1972101210690747928
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1686247683093835979}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: d3c3f54e11f529f45a9b4311a6cb12dd, type: 3}
 --- !u!1001 &1686247683199322391
 PrefabInstance:
   m_ObjectHideFlags: 0

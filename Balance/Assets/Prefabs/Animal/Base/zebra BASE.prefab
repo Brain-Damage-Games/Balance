@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8198004457680926982}
   - component: {fileID: 8198004457688011782}
   - component: {fileID: 2898947113267077819}
+  - component: {fileID: 5321277113459268770}
   m_Layer: 0
   m_Name: zebra BASE
   m_TagString: Untagged
@@ -119,6 +120,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.73430556, y: 1.0057853, z: 0.9144069}
   m_Center: {x: 0.000000059604645, y: 0.000000059604645, z: 0.000000044703484}
+--- !u!64 &5321277113459268770
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4775659704447512925}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: f7de770005f432f4ab04d3997af5ad8f, type: 3}
 --- !u!1 &8198004458086453636
 GameObject:
   m_ObjectHideFlags: 0

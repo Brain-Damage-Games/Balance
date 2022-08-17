@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5048724533275042240}
   - component: {fileID: 5048724533276173056}
   - component: {fileID: 5048724533264649728}
+  - component: {fileID: 366441297217796909}
   m_Layer: 0
   m_Name: jar
   m_TagString: Untagged
@@ -105,6 +106,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!64 &366441297217796909
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5048724533274181056}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 57cd5fe365fffbe4f9c9b1cd0efe67f9, type: 3}
 --- !u!1001 &5048724533365134870
 PrefabInstance:
   m_ObjectHideFlags: 0

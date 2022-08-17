@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6377556049347625469}
   - component: {fileID: 6377556049348723517}
   - component: {fileID: 6377556049341247037}
+  - component: {fileID: 7482592351618039244}
   m_Layer: 0
   m_Name: grape
   m_TagString: Untagged
@@ -105,6 +106,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!64 &7482592351618039244
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6377556049350729213}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: fba2240e8e4290a419e52bfd89068075, type: 3}
 --- !u!1001 &4926159627852837416
 PrefabInstance:
   m_ObjectHideFlags: 0

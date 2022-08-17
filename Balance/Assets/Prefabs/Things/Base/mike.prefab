@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3043192052510036387}
   - component: {fileID: 3043192052511036259}
   - component: {fileID: 3043192052516240995}
+  - component: {fileID: 5019083104170921663}
   m_Layer: 0
   m_Name: mike
   m_TagString: Untagged
@@ -105,6 +106,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!64 &5019083104170921663
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3043192052508839331}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 03bec9d8b10cc9e498086c78e79045a4, type: 3}
 --- !u!1001 &3043192051923954363
 PrefabInstance:
   m_ObjectHideFlags: 0

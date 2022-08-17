@@ -4,14 +4,15 @@ public class AttachReceiver : MonoBehaviour
 {
     [SerializeField]
     Transform destinationAttachPoint;
-
-    [SerializeField]
-    Transform parent;
+    
     private bool Attached = false;
    
     public void Attach(GameObject OriginGameObject)
     {
-        OriginGameObject.transform.position = destinationAttachPoint.position;
+        OriginGameObject.transform.position = destinationAttachPoint.position  ;
+
+        Debug.DrawLine(GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Transform>().position, destinationAttachPoint.position , Color.red);
+
         //here add the code to add the weight of object to scale
         OriginGameObject.GetComponent<Dragging>().enabled = false;
     }

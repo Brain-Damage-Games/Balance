@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 299814787160938000}
   - component: {fileID: 299814787161937104}
   - component: {fileID: 299814787167140304}
+  - component: {fileID: 8279736709878193797}
   m_Layer: 0
   m_Name: owl
   m_TagString: Untagged
@@ -105,6 +106,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!64 &8279736709878193797
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299814787159738896}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 2b48b5ecd4ff3da48b55b659d9dc5388, type: 3}
 --- !u!1001 &7872727653040598684
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6675053910068273813}
   - component: {fileID: 6675053910067175509}
   - component: {fileID: 6675053910074395989}
+  - component: {fileID: 7086382394602027921}
   m_Layer: 0
   m_Name: clock
   m_TagString: Untagged
@@ -105,6 +106,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!64 &7086382394602027921
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6675053910064922261}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: ffd7a767ef289d748b0b89faa2e7c5eb, type: 3}
 --- !u!1001 &6675053909336347692
 PrefabInstance:
   m_ObjectHideFlags: 0

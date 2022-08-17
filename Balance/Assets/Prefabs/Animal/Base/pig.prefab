@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4267122446741642800}
   - component: {fileID: 4267122446742641904}
   - component: {fileID: 4267122446748037616}
+  - component: {fileID: 1444535886582795550}
   m_Layer: 0
   m_Name: pig
   m_TagString: Untagged
@@ -105,6 +106,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!64 &1444535886582795550
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4267122446740636208}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: d29620af26ab88149ba4260050763425, type: 3}
 --- !u!1001 &4772184548272582505
 PrefabInstance:
   m_ObjectHideFlags: 0

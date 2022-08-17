@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4135380760942183451}
   - component: {fileID: 4135380760941086427}
   - component: {fileID: 4135380760931806171}
+  - component: {fileID: 6551859162660553619}
   m_Layer: 0
   m_Name: lemon
   m_TagString: Untagged
@@ -105,6 +106,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!64 &6551859162660553619
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4135380760939091995}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: df9c0712fba4ab5488b358fef60a43ae, type: 3}
 --- !u!1001 &8432124910876367442
 PrefabInstance:
   m_ObjectHideFlags: 0

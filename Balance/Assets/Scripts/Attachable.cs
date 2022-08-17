@@ -5,27 +5,39 @@ public class Attachable : MonoBehaviour
     [SerializeField]
     float distance = 10000f;
 
-    [SerializeField]
-    GameObject Camera;
+
+    private bool checkedAttachabality=false;
 
     private GameObject aim;
+    //private Vector3 cameraPosition;
 
+    /*private void Awake()
+    {
+        cameraPosition = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Transform>().position;
+    }*/
     void LateUpdate()
     {
-        //if(Input.GetKey(KeyCode.Space))
             Attach();
-
-        //if(Input.GetKey(KeyCode.LeftAlt))
-            //Detach();
     }
     public void Attach()
     {
-        if (CheckAttachablity() && aim.tag == "Aim")
+        
+        if ((CheckAttachablity() || checkedAttachabality) && aim.tag == "Aim")
             aim.GetComponent<AttachReceiver>().Attach(gameObject);
     }
-    private void OnCollisionEnter(Collision collision)
+    /*private void OnCollisionEnter(Collision collision)
     {
         print("collides");
+    }*/
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Aim")
+        {
+            aim = other.gameObject;
+            checkedAttachabality = true;
+        }
+        else
+            checkedAttachabality = false;
     }
     public void Detach()
     {
@@ -42,7 +54,7 @@ public class Attachable : MonoBehaviour
 
         if(Physics.Raycast(ray, out hitInfo, distance) || (Physics.Raycast(ray2, out hitInfo, distance)))
         {
-            Debug.DrawLine(ray.origin, hitInfo.point, Color.red);
+            Debug.DrawLine(ray.origin, hitInfo.point, Color.black);
             aim = hitInfo.collider.gameObject;
             return true;
         }
@@ -50,7 +62,7 @@ public class Attachable : MonoBehaviour
         {
             Debug.DrawLine(ray.origin, ray.origin + ray.direction * 100, Color.blue);
             Debug.DrawLine(ray2.origin, ray2.origin + ray2.direction * 100, Color.blue);
-            return false;
+            return  false;
 
         }
     }
