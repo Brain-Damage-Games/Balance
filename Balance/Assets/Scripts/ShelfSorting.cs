@@ -11,6 +11,7 @@ public class ShelfSorting : MonoBehaviour
     GameObject[] buttons;
 
     float space, objectsScale;
+    Vector3 firstScaleOfObjects;
 
     float shelfStartPosition, shelfEndPosition;
     int firstObjectIndex, lastObjectIndex;
@@ -124,6 +125,7 @@ public class ShelfSorting : MonoBehaviour
     {
 
         takingOut.transform.position = new Vector3(takingOut.transform.position.x, takingOut.transform.position.y + 2f, takingOut.transform.position.z);
+        takingOut.transform.localScale = firstScaleOfObjects;
 
         int allObjectsCount = allObjects.Count;
         seenObjects.Remove(takingOut);
@@ -141,7 +143,6 @@ public class ShelfSorting : MonoBehaviour
         }
         else
         {
-            print("in third if");
             seenObjects.Insert(0, allObjects[firstObjectIndex - 1]);
             allObjects[firstObjectIndex - 1].SetActive(true);
             lastObjectIndex--;
@@ -152,6 +153,8 @@ public class ShelfSorting : MonoBehaviour
 
     private void ChangeTheScale()
     {
+        firstScaleOfObjects = allObjects[0].transform.localScale;
+        
         for(int i = 0; i < allObjects.Count; i++)
             allObjects[i].transform.localScale = new Vector3
             (
