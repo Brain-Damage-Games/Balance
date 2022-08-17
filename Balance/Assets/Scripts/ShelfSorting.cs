@@ -40,25 +40,28 @@ public class ShelfSorting : MonoBehaviour
     {
         allObjects = new List<GameObject>();
 
-        for(int i = 0; i < ObjetsArray.Length; i++)
+        for(int i = 0; i < ObjetsArray.Length; i++){
             allObjects.Add(ObjetsArray[i]);
+            Rigidbody rb = ObjetsArray[i].GetComponent<Rigidbody>();
+            if (rb != null) rb.useGravity = false;
+        }
         
     }
 
     //***** this function will gave the gameObjects their position;
     public void Sort()
     {
-        shelfStartPosition = transform.position.z - transform.localScale.z / 2f + 1f;
-        shelfEndPosition = transform.position.z + transform.localScale.z / 2f - 1f;
+        shelfStartPosition = transform.position.x - transform.localScale.z / 2f;
+        shelfEndPosition = transform.position.x + transform.localScale.z / 2f;
 
         for(int i = 0; i < seenObjects.Count; i++)
         {
             seenObjects[i].transform.position = new Vector3(
-                transform.localPosition.x,
-                transform.position.y + 1f,
-                shelfStartPosition + space + 0.5f );
+                shelfStartPosition + space,
+                transform.position.y + transform.localScale.y,
+                transform.localPosition.z);
             
-            shelfStartPosition = shelfStartPosition + space + 1f;
+            shelfStartPosition = shelfStartPosition + space;
            
         }
     }

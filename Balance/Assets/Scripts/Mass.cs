@@ -14,7 +14,7 @@ public class Mass : MonoBehaviour
 
     public void SetMass(float mass){
         this.mass = mass;
-        // rb.mass = mass;
+        if (rb != null) rb.mass = mass;
     }
 
     public float GetMass(){

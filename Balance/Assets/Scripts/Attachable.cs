@@ -21,7 +21,7 @@ public class Attachable : MonoBehaviour
     }
     public void Attach()
     {
-        if (CheckAttachablity() && aim.tag == "Aim"){
+        if (CheckAttachablity() && aim.tag == "Aim" && !aim.GetComponent<AttachReceiver>().isAttached()){
             aim.GetComponent<AttachReceiver>()?.Attach(gameObject);
             Camera.GetComponent<Dragging>().UnDrag();
             transform.SetParent(aim.transform);

@@ -16,14 +16,11 @@ public class Comparator : MonoBehaviour
     [SerializeField, Range(0f,10f)] float angleOffsetIncreasePerUnit = 2f;
     [SerializeField, Range(0.01f, 0.5f)] float baseSpeed = 0.1f;
     [SerializeField] Transform leftHook,rightHook;
-    public TextMeshProUGUI leftText, rightText;
 
     void Update(){
         if (isRotating){
             Rotate();
         }
-        leftText.text = leftMass.ToString();
-        rightText.text = rightMass.ToString();
     }
     private void Rotate(){
         angle = (transform.rotation.eulerAngles.z > 180) ? transform.rotation.eulerAngles.z - 360 : transform.rotation.eulerAngles.z;
@@ -103,6 +100,7 @@ public class Comparator : MonoBehaviour
         if (rightMassObject != null) rightMass = rightMassObject.GetMass();
         if (leftMassObject != null) leftMass = leftMassObject.GetMass();
         Compare();
+        GetComponent<Attachable>()?.GetTargetComparator().UpdateMass();
     }
 
     public void RemoveMass(Mass mass){
