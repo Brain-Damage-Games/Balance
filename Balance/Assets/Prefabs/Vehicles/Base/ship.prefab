@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4109450314017035033}
   - component: {fileID: 4109450314016035289}
   - component: {fileID: 4109450314027433177}
+  - component: {fileID: -243735027470569333}
   m_Layer: 0
   m_Name: ship
   m_TagString: Untagged
@@ -105,6 +106,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!64 &-243735027470569333
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4109450314018033433}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 3a3a56e445ef7d84b886106fd4e0a544, type: 3}
 --- !u!1001 &1978663971352958844
 PrefabInstance:
   m_ObjectHideFlags: 0

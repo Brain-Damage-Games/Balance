@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7134433418785874476}
   - component: {fileID: 7134433418786971884}
   - component: {fileID: 7134433418792324588}
+  - component: {fileID: -4638092249814102673}
   m_Layer: 0
   m_Name: backpack
   m_TagString: Untagged
@@ -105,6 +106,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!64 &-4638092249814102673
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7134433418785046060}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: c4768ca69dd78054a87af50dab7f16d0, type: 3}
 --- !u!1001 &7134433419851657766
 PrefabInstance:
   m_ObjectHideFlags: 0

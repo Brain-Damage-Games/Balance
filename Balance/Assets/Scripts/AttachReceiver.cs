@@ -4,36 +4,26 @@ public class AttachReceiver : MonoBehaviour
 {
     [SerializeField]
     Transform destinationAttachPoint;
-
-    [SerializeField]
-    Transform parent;
-    private Comparator comparator;
-    [SerializeField] bool isLeft;
-    private bool attached;
-
-    void Awake(){
-        comparator = GetComponentInParent<Comparator>();
-    }
-
-    public void Attach(GameObject OriginGameObject)
+    
+    private bool attached = false;
+   
+    public void ReceiveAttach(GameObject OriginGameObject)
     {
-        OriginGameObject.transform.position = destinationAttachPoint.position;
-        
-        if (isLeft) comparator.AddMassToLeft(OriginGameObject.GetComponent<Mass>());
-        else comparator.AddMassToRight(OriginGameObject.GetComponent<Mass>());
+        OriginGameObject.transform.position = destinationAttachPoint.position  ;
 
-        GetComponentInParent<Attachable>()?.GetTargetComparator()?.UpdateMass();
+        //Debug.DrawLine(GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Transform>().position, destinationAttachPoint.position , Color.red);
+
+        //here add the code to add the weight of object to scale
+
+        //OriginGameObject.GetComponent<Dragging>().enabled = false;
         attached = true;
     }
-    public void Detach(GameObject go)
+    public void Release(GameObject go)
     {
-        comparator.RemoveMass(go.GetComponent<Mass>());
-        GetComponentInParent<Attachable>()?.GetTargetComparator()?.UpdateMass();
         attached = false;
+        //here add the code to omit the weight of object to scale
+        go.GetComponent<Dragging>().enabled = true;
     }
 
-
-    public bool isAttached(){
-        return attached;
-    }
+   
 }

@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 7756396030661432839}
   - component: {fileID: 7756396030661432838}
   - component: {fileID: 7756396030661432837}
+  - component: {fileID: 606530877398025361}
   m_Layer: 0
   m_Name: wolf
   m_TagString: Untagged
@@ -191,3 +192,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!64 &606530877398025361
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7756396030661432836}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 3c9db9044ad4e654f8e843cda6c725d1, type: 3}

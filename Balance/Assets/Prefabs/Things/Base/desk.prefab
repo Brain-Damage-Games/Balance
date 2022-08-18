@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9011009274544525838}
   - component: {fileID: 9011009274543558862}
   - component: {fileID: 9011009274533952974}
+  - component: {fileID: -4688152353132327582}
   m_Layer: 0
   m_Name: desk
   m_TagString: Untagged
@@ -105,6 +106,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!64 &-4688152353132327582
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9011009274541362702}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: c9d713989dc4813438bc535d526a153b, type: 3}
 --- !u!1001 &9011009274526271428
 PrefabInstance:
   m_ObjectHideFlags: 0

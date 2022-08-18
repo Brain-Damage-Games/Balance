@@ -55,11 +55,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: guitar
       objectReference: {fileID: 0}
+    - target: {fileID: 5525507594287120829, guid: 71df1978496915049ad6a886e28bb855, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5525507594287120829, guid: 71df1978496915049ad6a886e28bb855, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.362
+      objectReference: {fileID: 0}
+    - target: {fileID: 7398288210202169893, guid: 71df1978496915049ad6a886e28bb855, type: 3}
+      propertyPath: mass
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7691684492055035891, guid: 71df1978496915049ad6a886e28bb855, type: 3}
+      propertyPath: mass
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745084836782863881, guid: 71df1978496915049ad6a886e28bb855, type: 3}
+      propertyPath: m_Mass
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71df1978496915049ad6a886e28bb855, type: 3}
---- !u!4 &1442561717684285834 stripped
+--- !u!4 &4918649741429237929 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 2083200965768894622, guid: 71df1978496915049ad6a886e28bb855, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5525507594287120829, guid: 71df1978496915049ad6a886e28bb855, type: 3}
   m_PrefabInstance: {fileID: 642895446112594196}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3162080112959688230
@@ -67,7 +87,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1442561717684285834}
+    m_TransformParent: {fileID: 4918649741429237929}
     m_Modifications:
     - target: {fileID: 5420705023162813626, guid: e39a1fd0a0e314642978265906c965f1, type: 3}
       propertyPath: m_RootOrder
@@ -79,11 +99,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5420705023162813626, guid: e39a1fd0a0e314642978265906c965f1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0
+      value: -0.362
       objectReference: {fileID: 0}
     - target: {fileID: 5420705023162813626, guid: e39a1fd0a0e314642978265906c965f1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5420705023162813626, guid: e39a1fd0a0e314642978265906c965f1, type: 3}
       propertyPath: m_LocalRotation.w
