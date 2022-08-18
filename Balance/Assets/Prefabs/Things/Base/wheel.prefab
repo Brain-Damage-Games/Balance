@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8939724367788306349}
   - component: {fileID: 8939724367789403501}
   - component: {fileID: 8939724367777906797}
+  - component: {fileID: 7472265402065749313}
   m_Layer: 0
   m_Name: wheel
   m_TagString: Untagged
@@ -105,6 +106,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!64 &7472265402065749313
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8939724367787406253}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 6b362970e0de80e498856fda0167e28e, type: 3}
 --- !u!1 &8939724369272729631
 GameObject:
   m_ObjectHideFlags: 0

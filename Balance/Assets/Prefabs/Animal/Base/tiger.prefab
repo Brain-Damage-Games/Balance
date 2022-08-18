@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 3737168445600790606}
   - component: {fileID: 3737168445600790607}
   - component: {fileID: 5408102323302016528}
+  - component: {fileID: 177029097485746294}
   m_Layer: 0
   m_Name: tiger
   m_TagString: Untagged
@@ -202,3 +203,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.9261216, y: 0.8366187, z: 0.9144521}
   m_Center: {x: -0.000000044703484, y: 0.00000011920929, z: 0.00000011920929}
+--- !u!64 &177029097485746294
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3737168445600790600}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 23823dfbbe2b14a4d97a1835fabcf433, type: 3}

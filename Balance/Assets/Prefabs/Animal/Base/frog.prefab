@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 778284046092183382}
   - component: {fileID: 778284046093182358}
   - component: {fileID: 778284046081788054}
+  - component: {fileID: -7339544653048480006}
   m_Layer: 0
   m_Name: frog
   m_TagString: Untagged
@@ -105,6 +106,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!64 &-7339544653048480006
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 778284046091189078}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: cdfa61b37b6c51f4fb53d2ce3122397c, type: 3}
 --- !u!1001 &2962328950416857554
 PrefabInstance:
   m_ObjectHideFlags: 0

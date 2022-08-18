@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9160499029586795645}
   - component: {fileID: 9160499029585796797}
   - component: {fileID: 9160499029580608445}
+  - component: {fileID: -8917709153887538880}
   m_Layer: 0
   m_Name: Lesser Panda
   m_TagString: Untagged
@@ -105,6 +106,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!64 &-8917709153887538880
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9160499029587984509}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 62ba324d26a943145a47d210a2da1539, type: 3}
 --- !u!1001 &1336603694764699053
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8572785191170541807}
   - component: {fileID: 8572785191169444399}
   - component: {fileID: 8572785191176742703}
+  - component: {fileID: 5891710588412644590}
   m_Layer: 0
   m_Name: tank
   m_TagString: Untagged
@@ -105,6 +106,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!64 &5891710588412644590
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8572785191167251695}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 442cc46a44043094fb256252201a23cf, type: 3}
 --- !u!1001 &8963402425526560592
 PrefabInstance:
   m_ObjectHideFlags: 0

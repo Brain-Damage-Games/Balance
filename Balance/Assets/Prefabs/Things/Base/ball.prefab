@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7777811614269739736}
   - component: {fileID: 7777811614268772376}
   - component: {fileID: 7777811614276140312}
+  - component: {fileID: -8503807891072766422}
   m_Layer: 0
   m_Name: ball
   m_TagString: Untagged
@@ -105,6 +106,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!64 &-8503807891072766422
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7777811614266773208}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 016eb03583a42ed4dbb23c1b2985e48d, type: 3}
 --- !u!1001 &7777811614273303408
 PrefabInstance:
   m_ObjectHideFlags: 0
