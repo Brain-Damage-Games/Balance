@@ -10,8 +10,6 @@ public class Attachable : MonoBehaviour
     private bool attached = false;
 
     private GameObject aim;
-
-
     private bool triggerAttachabality = false;
 
     private void Awake()
@@ -29,7 +27,6 @@ public class Attachable : MonoBehaviour
         
         if ((CheckAttachablity() || triggerAttachabality) && aim.tag == "Aim")
         {
-
             aim.GetComponent<AttachReceiver>().ReceiveAttach(gameObject);
             attached = true;
         }
@@ -47,18 +44,18 @@ public class Attachable : MonoBehaviour
     public void Detach()
     {
         aim.GetComponent<AttachReceiver>().Release(gameObject);
-        attached=false;
+        attached = false;
     }
     private bool CheckAttachablity()
     {
-        Vector3 camera = cameraPos ;
+        Vector3 camera = cameraPos;
         Vector3 dest = transform.position;
         Vector3 direction = Vector3.Normalize(dest - camera);
         Ray ray = new Ray(dest, direction);
         Ray ray2 = new Ray(dest, -direction);
         RaycastHit hitInfo;
 
-        if(Physics.Raycast(ray, out hitInfo, distance) || (Physics.Raycast(ray2, out hitInfo, distance)))
+        if(!attached && (Physics.Raycast(ray, out hitInfo, distance) || (Physics.Raycast(ray2, out hitInfo, distance))))
         {
             //Debug.DrawLine(ray.origin, hitInfo.point, Color.black);
             aim = hitInfo.collider.gameObject;
@@ -75,5 +72,12 @@ public class Attachable : MonoBehaviour
     public bool IsAttached()
     {
         return attached;
+    }
+
+    public Comparator GetTargetComparator(){
+        if (aim != null){
+            return aim.GetComponentInParent<Comparator>();
+        }
+        else return null;
     }
 }

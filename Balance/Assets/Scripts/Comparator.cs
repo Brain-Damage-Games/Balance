@@ -5,8 +5,6 @@ using TMPro;
 
 public class Comparator : MonoBehaviour
 {
-    private bool heavyRight = false;
-    private bool heavyLeft = false;
     private float leftMass = 0, rightMass = 0;
     private Mass leftMassObject, rightMassObject;
     private bool isRotating = false;
@@ -66,21 +64,7 @@ public class Comparator : MonoBehaviour
     private void Compare(){
         angleOffset = Mathf.Abs(leftMass - rightMass) * angleOffsetIncreasePerUnit;
         if (angleOffset > maxAngleOffset) angleOffset = maxAngleOffset;
-
-        if (leftMass > rightMass){
-            heavyLeft = true;
-            heavyRight = false;
-        }
-        else if (leftMass < rightMass){
-            heavyLeft = false;
-            heavyRight = true;
-        }
-        else{
-            heavyLeft = false;
-            heavyRight = false;
-        }
         isRotating = true;
-
         GetComponent<Mass>()?.SetMass(leftMass + rightMass);
     }
 

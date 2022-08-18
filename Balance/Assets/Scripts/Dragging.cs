@@ -35,7 +35,7 @@ public class Dragging : MonoBehaviour
                     dragging = true;
 
                     Attachable attachable = hit.collider.gameObject.GetComponent<Attachable>();
-                    if (attachable != null && attachable.isAttached()){
+                    if (attachable != null && attachable.IsAttached()){
                         attachable.Detach();
                     }
                 }
