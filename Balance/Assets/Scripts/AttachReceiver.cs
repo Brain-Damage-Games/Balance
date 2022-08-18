@@ -7,7 +7,7 @@ public class AttachReceiver : MonoBehaviour
     
     private bool attached = false;
    
-    public void Attach(GameObject OriginGameObject)
+    public void ReceiveAttach(GameObject OriginGameObject)
     {
         OriginGameObject.transform.position = destinationAttachPoint.position  ;
 
@@ -18,10 +18,12 @@ public class AttachReceiver : MonoBehaviour
         //OriginGameObject.GetComponent<Dragging>().enabled = false;
         attached = true;
     }
-    public void Detach(GameObject go)
+    public void Release(GameObject go)
     {
         attached = false;
         //here add the code to omit the weight of object to scale
         go.GetComponent<Dragging>().enabled = true;
     }
+
+   
 }

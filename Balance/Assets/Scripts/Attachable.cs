@@ -5,7 +5,8 @@ public class Attachable : MonoBehaviour
     [SerializeField]
     float distance = 10000f;
 
-    
+    private Vector3 cameraPos;
+
     private bool attached = false;
 
     private GameObject aim;
@@ -13,6 +14,10 @@ public class Attachable : MonoBehaviour
 
     private bool triggerAttachabality = false;
 
+    private void Awake()
+    {
+        cameraPos = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Transform>().position; 
+    }
     void Update()
     {
         if(!attached)
@@ -25,8 +30,8 @@ public class Attachable : MonoBehaviour
         if ((CheckAttachablity() || triggerAttachabality) && aim.tag == "Aim")
         {
 
-            aim.GetComponent<AttachReceiver>().Attach(gameObject);
-            IsAttached();
+            aim.GetComponent<AttachReceiver>().ReceiveAttach(gameObject);
+            attached = true;
         }
     }
     void OnTriggerEnter(Collider other)
@@ -41,12 +46,12 @@ public class Attachable : MonoBehaviour
     }
     public void Detach()
     {
-        aim.GetComponent<AttachReceiver>().Detach(gameObject);
-        IsAttached();
+        aim.GetComponent<AttachReceiver>().Release(gameObject);
+        attached=false;
     }
     private bool CheckAttachablity()
     {
-        Vector3 camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Transform>().position;
+        Vector3 camera = cameraPos ;
         Vector3 dest = transform.position;
         Vector3 direction = Vector3.Normalize(dest - camera);
         Ray ray = new Ray(dest, direction);
@@ -67,16 +72,7 @@ public class Attachable : MonoBehaviour
 
         }
     }
-    public void IsAttached()
-    {
-        attached = true;
-    }
-
-    public void NotAttached()
-    {
-        attached = false;
-    }
-    public bool GetAttachValue()
+    public bool IsAttached()
     {
         return attached;
     }
