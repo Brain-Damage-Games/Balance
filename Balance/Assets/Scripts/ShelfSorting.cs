@@ -11,7 +11,7 @@ public class ShelfSorting : MonoBehaviour
     GameObject[] buttons;
 
     float space, objectsScale;
-    Vector3 firstScaleOfObjects;
+    List<Vector3> scaleOfObjects;
 
     float shelfStartPosition, shelfEndPosition;
     int firstObjectIndex, lastObjectIndex;
@@ -39,7 +39,7 @@ public class ShelfSorting : MonoBehaviour
 
 
         space = transform.localScale.x * 0.036f;
-        objectsScale = seenObjects[0].transform.localScale.x;
+        objectsScale = transform.localScale.x / 11f;
 
         shelfStartPosition = transform.position.x - transform.localScale.x / 2f;
         shelfEndPosition = transform.position.x + transform.localScale.x / 2f;  
@@ -125,9 +125,10 @@ public class ShelfSorting : MonoBehaviour
     {
 
         takingOut.transform.position = new Vector3(takingOut.transform.position.x, takingOut.transform.position.y + 2f, takingOut.transform.position.z);
-        takingOut.transform.localScale = firstScaleOfObjects;
+        takingOut.transform.localScale = scaleOfObjects[allObjects.IndexOf(takingOut)];
 
         int allObjectsCount = allObjects.Count;
+        scaleOfObjects.RemoveAt(allObjects.IndexOf(takingOut));
         seenObjects.Remove(takingOut);
         allObjects.Remove(takingOut);
 
@@ -153,8 +154,10 @@ public class ShelfSorting : MonoBehaviour
 
     private void ChangeTheScale()
     {
-        firstScaleOfObjects = allObjects[0].transform.localScale;
-        
+        scaleOfObjects = new List<Vector3>();
+        for (int i = 0; i < allObjects.Count; i++)
+            scaleOfObjects.Add(allObjects[i].transform.localScale);
+
         for(int i = 0; i < allObjects.Count; i++)
             allObjects[i].transform.localScale = new Vector3
             (
