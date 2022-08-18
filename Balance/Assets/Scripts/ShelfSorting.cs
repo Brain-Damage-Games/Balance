@@ -8,13 +8,17 @@ public class ShelfSorting : MonoBehaviour
     List<GameObject> seenObjects;
 
     [SerializeField]
-    float space = 0.4f;
+    GameObject[] buttons;
+
+    float space, objectsScale;
+    List<Vector3> scaleOfObjects;
 
     float shelfStartPosition, shelfEndPosition;
     int firstObjectIndex, lastObjectIndex;
     void Awake()
     {
         TurnToList(GameObject.FindGameObjectsWithTag("Objects"));
+        ChangeTheScale();
         seenObjects = new List<GameObject>(6);
 
         if(allObjects.Count > 6)
@@ -33,6 +37,27 @@ public class ShelfSorting : MonoBehaviour
             for(int i = 0; i < allObjects.Count; i++)
                 seenObjects.Add(allObjects[i]);
 
+
+        space = transform.localScale.x * 0.036f;
+        objectsScale = transform.localScale.x / 11f;
+
+        shelfStartPosition = transform.position.x - transform.localScale.x / 2f;
+        shelfEndPosition = transform.position.x + transform.localScale.x / 2f;  
+
+        buttons[0].transform.position = new Vector3
+        (
+            shelfStartPosition + objectsScale / 2,
+            transform.position.y + objectsScale,
+            transform.localPosition.z
+        );
+        buttons[1].transform.position = new Vector3
+        (
+            shelfEndPosition - objectsScale / 2,
+            transform.position.y + objectsScale,
+            transform.localPosition.z
+        );
+
+
         Sort();
     }
 
@@ -48,17 +73,17 @@ public class ShelfSorting : MonoBehaviour
     //***** this function will gave the gameObjects their position;
     public void Sort()
     {
-        shelfStartPosition = transform.position.z - transform.localScale.z / 2f + 1f;
-        shelfEndPosition = transform.position.z + transform.localScale.z / 2f - 1f;
+        shelfStartPosition = transform.position.x - transform.localScale.x / 2f + objectsScale;
+        shelfEndPosition = transform.position.x + transform.localScale.x / 2f - objectsScale;
 
         for(int i = 0; i < seenObjects.Count; i++)
         {
             seenObjects[i].transform.position = new Vector3(
-                transform.localPosition.x,
-                transform.position.y + 1f,
-                shelfStartPosition + space + 0.5f );
+                shelfStartPosition + space + objectsScale / 2,
+                transform.position.y + objectsScale,
+                 transform.localPosition.z);
             
-            shelfStartPosition = shelfStartPosition + space + 1f;
+            shelfStartPosition = shelfStartPosition + space + objectsScale;
            
         }
     }
@@ -100,8 +125,10 @@ public class ShelfSorting : MonoBehaviour
     {
 
         takingOut.transform.position = new Vector3(takingOut.transform.position.x, takingOut.transform.position.y + 2f, takingOut.transform.position.z);
+        takingOut.transform.localScale = scaleOfObjects[allObjects.IndexOf(takingOut)];
 
         int allObjectsCount = allObjects.Count;
+        scaleOfObjects.RemoveAt(allObjects.IndexOf(takingOut));
         seenObjects.Remove(takingOut);
         allObjects.Remove(takingOut);
 
@@ -117,13 +144,36 @@ public class ShelfSorting : MonoBehaviour
         }
         else
         {
-            print("in third if");
             seenObjects.Insert(0, allObjects[firstObjectIndex - 1]);
             allObjects[firstObjectIndex - 1].SetActive(true);
             lastObjectIndex--;
             firstObjectIndex--;
             Sort();
         }
+    }
+
+    private void ChangeTheScale()
+    {
+        scaleOfObjects = new List<Vector3>();
+        for (int i = 0; i < allObjects.Count; i++)
+            scaleOfObjects.Add(allObjects[i].transform.localScale);
+
+        for(int i = 0; i < allObjects.Count; i++)
+            allObjects[i].transform.localScale = new Vector3
+            (
+                transform.localScale.x / 11f,
+                transform.localScale.x / 11f,
+                transform.localScale.x / 11f
+            ) ;
+
+        for(int i = 0; i < buttons.Length; i++)
+            buttons[i].transform.localScale = new Vector3
+            (
+                transform.localScale.x / 11f,
+                transform.localScale.x / 11f,
+                transform.localScale.x / 11f
+            );
+        
     }
 
    
