@@ -15,10 +15,9 @@ public class Attachable : MonoBehaviour
 
     void Update()
     {
-        //if(!attached)
+        if(!attached)
             Attach();
-        //
-        //write your desiered code for detach
+
     }
     public void Attach()
     {
@@ -43,6 +42,7 @@ public class Attachable : MonoBehaviour
     public void Detach()
     {
         aim.GetComponent<AttachReceiver>().Detach(gameObject);
+        IsAttached();
     }
     private bool CheckAttachablity()
     {
@@ -55,14 +55,14 @@ public class Attachable : MonoBehaviour
 
         if(Physics.Raycast(ray, out hitInfo, distance) || (Physics.Raycast(ray2, out hitInfo, distance)))
         {
-            Debug.DrawLine(ray.origin, hitInfo.point, Color.black);
+            //Debug.DrawLine(ray.origin, hitInfo.point, Color.black);
             aim = hitInfo.collider.gameObject;
             return true;
         }
         else
         {
-            Debug.DrawLine(ray.origin, ray.origin + ray.direction * 100, Color.blue);
-            Debug.DrawLine(ray2.origin, ray2.origin + ray2.direction * 100, Color.blue);
+            //Debug.DrawLine(ray.origin, ray.origin + ray.direction * 100, Color.blue);
+            //Debug.DrawLine(ray2.origin, ray2.origin + ray2.direction * 100, Color.blue);
             return  false;
 
         }
@@ -72,8 +72,12 @@ public class Attachable : MonoBehaviour
         attached = true;
     }
 
-    public void IsNotAttached()
+    public void NotAttached()
     {
         attached = false;
+    }
+    public bool GetAttachValue()
+    {
+        return attached;
     }
 }
