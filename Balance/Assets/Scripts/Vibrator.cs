@@ -14,13 +14,16 @@ public static class Vibrator
 
     public static void Vibrate(long milliSeconds = 200) 
     {
-        if (IsAndroid())
+        if (PlayerPrefs.GetInt("Vibration") == 1)
         {
-            vibrator.Call("vibrate", milliSeconds);
-        }
-        else 
-        {
-            Handheld.Vibrate();
+            if (IsAndroid())
+            {
+                vibrator.Call("vibrate", milliSeconds);
+            }
+            else
+            {
+                Handheld.Vibrate();
+            }
         }
     }
 
