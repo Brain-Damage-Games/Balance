@@ -23,7 +23,7 @@ public class Comparator : MonoBehaviour
     private void Rotate(){
         angle = (transform.rotation.eulerAngles.z > 180) ? transform.rotation.eulerAngles.z - 360 : transform.rotation.eulerAngles.z;
         float rotateSpeed = Mathf.Abs(rightMass - leftMass) * Mathf.Abs(maxAngleOffset - Mathf.Abs(angle)) * Time.deltaTime * baseSpeed;
-        float balanceSpeed = Mathf.Abs(maxAngleOffset - Mathf.Abs(angle)) * Time.deltaTime * baseSpeed * 2;
+        float balanceSpeed = Time.deltaTime * baseSpeed * 250;
         if (leftMass > rightMass && angle < angleOffset && Mathf.Abs(angle - angleOffset) > angleOffsetIncreasePerUnit+1){
             transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x,transform.rotation.eulerAngles.y,transform.rotation.eulerAngles.z + rotateSpeed);
             rightHook.localRotation = leftHook.localRotation = Quaternion.Euler(leftHook.localRotation.eulerAngles.x,leftHook.localRotation.eulerAngles.y,leftHook.localRotation.eulerAngles.z - rotateSpeed);
@@ -65,7 +65,7 @@ public class Comparator : MonoBehaviour
         angleOffset = Mathf.Abs(leftMass - rightMass) * angleOffsetIncreasePerUnit;
         if (angleOffset > maxAngleOffset) angleOffset = maxAngleOffset;
         isRotating = true;
-        GetComponent<Mass>()?.SetMass(leftMass + rightMass);
+        UpdateMass();
     }
 
     public void AddMassToLeft(Mass mass){
@@ -83,8 +83,11 @@ public class Comparator : MonoBehaviour
     public void UpdateMass(){
         if (rightMassObject != null) rightMass = rightMassObject.GetMass();
         if (leftMassObject != null) leftMass = leftMassObject.GetMass();
-        Compare();
-        GetComponent<Attachable>()?.GetTargetComparator().UpdateMass();
+        GetComponent<Mass>()?.SetMass(leftMass + rightMass);
+        
+        Comparator parnetComparator = GetComponent<Attachable>()?.GetTargetComparator();
+        parnetComparator?.UpdateMass();
+        parnetComparator?.Compare();
     }
 
     public void RemoveMass(Mass mass){

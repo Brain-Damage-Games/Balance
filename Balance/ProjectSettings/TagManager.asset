@@ -7,6 +7,7 @@ TagManager:
   - Objects
   - Aim
   - drag
+  - Shelf
   layers:
   - Default
   - TransparentFX

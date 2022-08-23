@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class AttachReceiver : MonoBehaviour
@@ -15,21 +17,28 @@ public class AttachReceiver : MonoBehaviour
     public void ReceiveAttach(GameObject OriginGameObject)
     {
         if (!attached){
-            OriginGameObject.transform.position = destinationAttachPoint.position  ;
+            OriginGameObject.transform.position = destinationAttachPoint.position;
+            OriginGameObject.transform.SetParent(destinationAttachPoint);
+
 
             //Debug.DrawLine(GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Transform>().position, destinationAttachPoint.position , Color.red);
+            OriginGameObject.GetComponent<Draggable>().SetDragging(false);
             Mass objectMass = OriginGameObject.GetComponent<Mass>();
             if (isLeft) comparator.AddMassToLeft(objectMass);
             else comparator.AddMassToRight(objectMass);
             attached = true;
+           
         }
     }
     public void Release(GameObject go)
     {
-        attached = false;
+        go.transform.SetParent(null);
         comparator.RemoveMass(go.GetComponent<Mass>());
-        // go.GetComponent<Dragging>().enabled = true;
+        attached = false;
     }
 
-   
+    public bool isEmpty(){
+        return !attached;
+    }
+
 }

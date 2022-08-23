@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Attachable : MonoBehaviour
@@ -7,10 +9,11 @@ public class Attachable : MonoBehaviour
 
     private Vector3 cameraPos;
 
-    private bool attached = false;
+    public bool attached = false;
 
     private GameObject aim;
     private bool triggerAttachabality = false;
+    private bool allowAttach = false;
 
     private void Awake()
     {
@@ -25,11 +28,17 @@ public class Attachable : MonoBehaviour
     public void Attach()
     {
         
-        if ((CheckAttachablity() || triggerAttachabality) && aim.tag == "Aim")
+        if (allowAttach && (CheckAttachablity() || triggerAttachabality) && aim != null && aim.tag == "Aim" && !attached)
         {
-            aim.GetComponent<AttachReceiver>().ReceiveAttach(gameObject);
-            attached = true;
+            AttachReceiver attachReceiver = aim.GetComponent<AttachReceiver>();
+            Draggable targetDraggable = aim.GetComponentInParent<Draggable>();
+            if (attachReceiver.isEmpty() && (targetDraggable == null || !targetDraggable.IsInBox())){
+                attachReceiver.ReceiveAttach(gameObject);
+                attached = true;
+                print("attached!");
+            }
         }
+        else if (!allowAttach) aim = null;
     }
     void OnTriggerEnter(Collider other)
     {
@@ -44,7 +53,7 @@ public class Attachable : MonoBehaviour
     public void Detach()
     {
         aim.GetComponent<AttachReceiver>().Release(gameObject);
-        attached = false;
+        StartCoroutine(Timer());
     }
     private bool CheckAttachablity()
     {
@@ -76,8 +85,19 @@ public class Attachable : MonoBehaviour
 
     public Comparator GetTargetComparator(){
         if (aim != null){
+            print("Yes");
             return aim.GetComponentInParent<Comparator>();
         }
         else return null;
+    }
+
+    private IEnumerator Timer(){
+        yield return new WaitForSeconds(1f);
+        aim = null;
+        attached = false;
+    }
+
+    public void AllowAttachment(bool allowAttach){
+        this.allowAttach = allowAttach;
     }
 }
