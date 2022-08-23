@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5420705023166237850}
   - component: {fileID: 5420705023165107802}
   - component: {fileID: 5420705023155594074}
+  - component: {fileID: 7748393263477494481}
   m_Layer: 0
   m_Name: guitar
   m_TagString: Untagged
@@ -105,6 +106,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!64 &7748393263477494481
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5420705023162847386}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 281ee1194cf40044e9dd96117dee6b74, type: 3}
 --- !u!1001 &5420705023744362685
 PrefabInstance:
   m_ObjectHideFlags: 0

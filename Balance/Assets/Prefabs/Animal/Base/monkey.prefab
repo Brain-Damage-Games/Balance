@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4767192665889273962}
   - component: {fileID: 4767192665890241194}
   - component: {fileID: 4767192665895720874}
+  - component: {fileID: 7415713059397114279}
   m_Layer: 0
   m_Name: monkey
   m_TagString: Untagged
@@ -105,6 +106,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!64 &7415713059397114279
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4767192665888302186}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: fb90bfcfb5dd63f469edc706f381b28b, type: 3}
 --- !u!1001 &2580917749695141451
 PrefabInstance:
   m_ObjectHideFlags: 0

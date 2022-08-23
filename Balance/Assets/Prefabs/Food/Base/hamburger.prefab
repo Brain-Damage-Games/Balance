@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3650938337298345256}
   - component: {fileID: 3650938337299312616}
   - component: {fileID: 3650938337292141288}
+  - component: {fileID: -4922118729479899690}
   m_Layer: 0
   m_Name: hamburger
   m_TagString: Untagged
@@ -105,6 +106,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!64 &-4922118729479899690
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3650938337301508392}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 24be6ba9bfd0fe047897f2352c0c3702, type: 3}
 --- !u!1001 &122766552837014441
 PrefabInstance:
   m_ObjectHideFlags: 0

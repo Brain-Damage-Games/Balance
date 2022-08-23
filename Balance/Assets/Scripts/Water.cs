@@ -12,4 +12,9 @@ public class Water : MonoBehaviour
         Debug.Log(objectInWater);
     }
 
+    public int GetObjectInWater()
+    {
+        return objectInWater;
+    }
+
 }
