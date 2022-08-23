@@ -4,27 +4,26 @@ using UnityEngine;
 
 public class TouchManager : MonoBehaviour
 {
-    private Vector3 TouchPosition;
+    private Vector3 touchPosition;
     private Touch touch;
     private void Touch ()
     {
         if (Input.touchCount != 1 )
         {
-            return ;
+            return;
         }
-
         touch = Input.touches[0];
-        TouchPosition = touch.position;
+        touchPosition = touch.position;
 
         if (touch.phase == TouchPhase.Began)
         {
-            Ray ray = Camera.main.ScreenPointToRay(TouchPosition);
+            Ray ray = Camera.main.ScreenPointToRay(touchPosition);
             RaycastHit hit;
             if(Physics.Raycast(ray , out hit))
             {
                if (hit.transform.gameObject.GetComponent<Draggable>() != null)
                {
-                  Draggable.I.SetDragging(true);
+                    hit.transform.gameObject.GetComponent<Draggable>().SetDragging(true);
                }
             }
         }
@@ -32,10 +31,17 @@ public class TouchManager : MonoBehaviour
         {
 
         }
-
         if(touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled) 
         {
-           Draggable.I.SetDragging(false);
+            Ray ray = Camera.main.ScreenPointToRay(touchPosition);
+            RaycastHit hit;
+            if(Physics.Raycast(ray , out hit))
+            {
+               if (hit.transform.gameObject.GetComponent<Draggable>() != null)
+               {
+                    hit.transform.gameObject.GetComponent<Draggable>().SetDragging(false);
+               }
+            }
         }
     }
     void Update()

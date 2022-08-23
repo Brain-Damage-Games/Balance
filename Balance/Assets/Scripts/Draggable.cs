@@ -4,18 +4,13 @@ using UnityEngine;
 
 public class Draggable : MonoBehaviour
 {
-   public static Draggable I;
    private bool dragging = false; 
    private float dist ;
-   private Vector3 ScreenPoint ;
+   [SerializeField]
+   private float borderX;
+   [SerializeField]
+   private float borderY;
    private Vector3 offset ;
-
-   private void Awake() {
-        if(I != this)
-        {
-            I = this;
-        }
-    }
    public void SetDragging(bool dragging)
    {
        this.dragging = dragging;
@@ -25,17 +20,25 @@ public class Draggable : MonoBehaviour
         dist = Camera.main.WorldToScreenPoint(gameObject.transform.position).z ;
         offset = gameObject.transform.position - GetMouseWorldPos();
     }
-    private void OnMouseDrag()
+   private void OnMouseDrag()
     {
         if (dragging)
         {
-            gameObject.transform.position = GetMouseWorldPos() + offset;
+            gameObject.transform.position= GetMouseWorldPos() + offset;
+            Limit () ;
         }
+    }
+    private void Limit () 
+    {
+        Vector3 newPos = gameObject.transform.position ; 
+        newPos.x =Mathf.Clamp(newPos.x , -borderX , borderX);
+        newPos.y =Mathf.Clamp(newPos.y , -borderY , borderY);
+        gameObject.transform.position = newPos ; 
     }
     private Vector3 GetMouseWorldPos()
     {
-        Vector3 MousePoint = Input.mousePosition;
-        MousePoint.z = dist;
-        return Camera.main.ScreenToWorldPoint(MousePoint);
+        Vector3 mousePoint = Input.mousePosition;
+        mousePoint.z = dist;
+        return Camera.main.ScreenToWorldPoint(mousePoint);
     }
 }

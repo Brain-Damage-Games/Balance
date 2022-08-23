@@ -9,16 +9,16 @@ public class OnCollisionEvent : MonoBehaviour
     public UnityEvent <Collision> onInter , onExit;
     private void OnCollisionEnter(Collision collision)
     {
-        int LayerTest = layerMask.value & (1 << collision.gameObject.layer);
-        if (LayerTest > 0)
+        int layerTest = layerMask.value & (1 << collision.gameObject.layer);
+        if (layerTest > 0)
         {
             onInter?.Invoke(collision);
         }
     }
     private void OnCollisionExit(Collision collision)
     {
-        int LayerTest = layerMask.value & (1 << collision.gameObject.layer);
-        if (LayerTest > 0)
+        int layerTest = layerMask.value & (1 << collision.gameObject.layer);
+        if (layerTest > 0)
         {
             onInter?.Invoke(collision);
         }
