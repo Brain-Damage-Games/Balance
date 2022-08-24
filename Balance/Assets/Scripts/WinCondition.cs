@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class WinCondition : MonoBehaviour
 {
+    public delegate void endOfGame();
+    public static event endOfGame EndOfGame;
+
     GameObject[] allObjects;
 
     [SerializeField]
@@ -24,6 +27,7 @@ public class WinCondition : MonoBehaviour
         if(water.GetComponent<Water>().GetObjectInWater() != 0)
             return false;
 
+        EndOfGame();
         alreadyWon = true;
         return true;
     }
