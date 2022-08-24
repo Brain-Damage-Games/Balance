@@ -14,9 +14,11 @@ public class Attachable : MonoBehaviour
     private GameObject aim;
     private bool triggerAttachabality = false;
     private bool allowAttach = false;
+    private Rigidbody rb;
 
     private void Awake()
     {
+        rb = GetComponent<Rigidbody>();
         cameraPos = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Transform>().position; 
     }
     void Update()
@@ -35,7 +37,7 @@ public class Attachable : MonoBehaviour
             if (attachReceiver.isEmpty() && (targetDraggable == null || !targetDraggable.IsInBox())){
                 attachReceiver.ReceiveAttach(gameObject);
                 attached = true;
-                print("attached!");
+                rb.isKinematic = true;
             }
         }
         else if (!allowAttach) aim = null;

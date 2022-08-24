@@ -6,7 +6,7 @@ using TMPro;
 public class Comparator : MonoBehaviour
 {
     private float leftMass = 0, rightMass = 0;
-    private Mass leftMassObject, rightMassObject;
+    public Mass leftMassObject, rightMassObject;
     private bool isRotating = false;
     [SerializeField, Range(5f,50f)] float maxAngleOffset = 30f;
     private float angleOffset = 0f;

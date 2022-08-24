@@ -13,7 +13,9 @@ public class Draggable : MonoBehaviour
    private float borderY;
    private Vector3 offset;
    private ShelfSorting shelf;
+   private Rigidbody rb;
    void Awake(){
+    rb = GetComponent<Rigidbody>();
     shelf = GameObject.FindGameObjectWithTag("Shelf").GetComponent<ShelfSorting>();
    }
    public void SetDragging(bool dragging)
@@ -30,6 +32,9 @@ public class Draggable : MonoBehaviour
         shelf.TakeOut(gameObject);
         inBox = false;
        }
+
+       if (dragging) rb.isKinematic = true;
+       else if (!attachable.IsAttached()) rb.isKinematic = false;
    }
    private void OnMouseDown()
     {
