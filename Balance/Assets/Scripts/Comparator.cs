@@ -14,7 +14,11 @@ public class Comparator : MonoBehaviour
     [SerializeField, Range(0f,10f)] float angleOffsetIncreasePerUnit = 2f;
     [SerializeField, Range(0.01f, 0.5f)] float baseSpeed = 0.1f;
     [SerializeField] Transform leftHook,rightHook;
+    private WinCondition winCondition;
 
+    void Awake(){
+        winCondition = GameObject.FindGameObjectWithTag("WinCondition").GetComponent<WinCondition>();
+    }
     void Update(){
         if (isRotating){
             Rotate();
@@ -55,9 +59,13 @@ public class Comparator : MonoBehaviour
                 transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x,transform.rotation.eulerAngles.y,0);
                 rightHook.localRotation = leftHook.localRotation = Quaternion.Euler(leftHook.localRotation.eulerAngles.x,leftHook.localRotation.eulerAngles.y,0);
                 isRotating = false;
+                if (winCondition.IsWon()) print("You Won");
             }
         }
-        else isRotating = false;
+        else{
+            isRotating = false;
+            if (winCondition.IsWon()) print("You Won");
+        }
 
     }
 

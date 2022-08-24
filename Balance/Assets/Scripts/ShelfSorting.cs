@@ -130,7 +130,6 @@ public class ShelfSorting : MonoBehaviour
     //***** this function will sort the objects when one of them taked out;
     public void TakeOut(GameObject takingOut)
     {
-        print("Taken");
         takingOut.transform.position = new Vector3(takingOut.transform.position.x, takingOut.transform.position.y + 2f, takingOut.transform.position.z);
         takingOut.transform.localScale = scaleOfObjects[allObjects.IndexOf(takingOut)];
 

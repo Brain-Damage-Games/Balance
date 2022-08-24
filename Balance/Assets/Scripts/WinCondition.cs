@@ -8,13 +8,15 @@ public class WinCondition : MonoBehaviour
 
     [SerializeField]
     GameObject water;
+    private bool alreadyWon = false;
 
     void Awake() {
         allObjects = GameObject.FindGameObjectsWithTag("Objects");
     }
 
-    bool IsWon()
+    public bool IsWon()
     {
+        if (alreadyWon) return false;
         foreach(GameObject gameObject in allObjects)
             if(!gameObject.GetComponent<Attachable>().IsAttached())
                 return false;
@@ -22,6 +24,7 @@ public class WinCondition : MonoBehaviour
         if(water.GetComponent<Water>().GetObjectInWater() != 0)
             return false;
 
+        alreadyWon = true;
         return true;
     }
 }

@@ -87,7 +87,6 @@ public class Attachable : MonoBehaviour
 
     public Comparator GetTargetComparator(){
         if (aim != null){
-            print("Yes");
             return aim.GetComponentInParent<Comparator>();
         }
         else return null;
