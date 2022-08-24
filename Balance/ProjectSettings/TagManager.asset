@@ -7,6 +7,8 @@ TagManager:
   - Objects
   - Aim
   - drag
+  - Shelf
+  - WinCondition
   layers:
   - Default
   - TransparentFX

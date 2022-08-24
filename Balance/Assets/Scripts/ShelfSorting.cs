@@ -44,18 +44,18 @@ public class ShelfSorting : MonoBehaviour
         shelfStartPosition = transform.position.x - transform.localScale.x / 2f;
         shelfEndPosition = transform.position.x + transform.localScale.x / 2f;  
 
-        buttons[0].transform.position = new Vector3
-        (
-            shelfStartPosition + objectsScale / 2,
-            transform.position.y + objectsScale,
-            transform.localPosition.z
-        );
-        buttons[1].transform.position = new Vector3
-        (
-            shelfEndPosition - objectsScale / 2,
-            transform.position.y + objectsScale,
-            transform.localPosition.z
-        );
+        // buttons[0].transform.position = new Vector3
+        // (
+        //     shelfStartPosition + objectsScale / 2,
+        //     transform.position.y + objectsScale,
+        //     transform.localPosition.z
+        // );
+        // buttons[1].transform.position = new Vector3
+        // (
+        //     shelfEndPosition - objectsScale / 2,
+        //     transform.position.y + objectsScale,
+        //     transform.localPosition.z
+        // );
 
 
         Sort();
@@ -65,8 +65,10 @@ public class ShelfSorting : MonoBehaviour
     {
         allObjects = new List<GameObject>();
 
-        for(int i = 0; i < ObjetsArray.Length; i++)
+        for(int i = 0; i < ObjetsArray.Length; i++){
             allObjects.Add(ObjetsArray[i]);
+            ObjetsArray[i].GetComponent<Draggable>()?.SetInBox(true);
+        }
         
     }
 
@@ -78,11 +80,16 @@ public class ShelfSorting : MonoBehaviour
 
         for(int i = 0; i < seenObjects.Count; i++)
         {
-            seenObjects[i].transform.position = new Vector3(
-                shelfStartPosition + space + objectsScale / 2,
-                transform.position.y + objectsScale,
-                 transform.localPosition.z);
-            
+            if (seenObjects[i].transform.parent != null)
+                seenObjects[i].transform.parent.position = new Vector3(
+                    shelfStartPosition + space + objectsScale / 2,
+                    transform.position.y + objectsScale,
+                    transform.localPosition.z);
+            else
+                seenObjects[i].transform.position = new Vector3(
+                    shelfStartPosition + space + objectsScale / 2,
+                    transform.position.y + objectsScale,
+                    transform.localPosition.z);
             shelfStartPosition = shelfStartPosition + space + objectsScale;
            
         }
@@ -123,7 +130,6 @@ public class ShelfSorting : MonoBehaviour
     //***** this function will sort the objects when one of them taked out;
     public void TakeOut(GameObject takingOut)
     {
-
         takingOut.transform.position = new Vector3(takingOut.transform.position.x, takingOut.transform.position.y + 2f, takingOut.transform.position.z);
         takingOut.transform.localScale = scaleOfObjects[allObjects.IndexOf(takingOut)];
 
