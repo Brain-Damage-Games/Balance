@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7394270815357713354}
   - component: {fileID: 7394270815358712074}
   - component: {fileID: 7394270815363896330}
+  - component: {fileID: 6129340014794257115}
   m_Layer: 0
   m_Name: book
   m_TagString: Untagged
@@ -105,6 +106,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!64 &6129340014794257115
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7394270815356512202}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 7f3936e3cddc63a479db0e333b405267, type: 3}
 --- !u!1001 &7394270815467005177
 PrefabInstance:
   m_ObjectHideFlags: 0

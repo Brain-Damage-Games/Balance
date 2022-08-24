@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 031c95c70f499644ebff4cf898bd9ec4
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - audioSource: {instanceID: 0}
+  - attachSound: {fileID: 8300000, guid: 91772dc1db3279b419ace1ad504f1a18, type: 3}
+  - detachSound: {fileID: 8300000, guid: 91772dc1db3279b419ace1ad504f1a18, type: 3}
+  - winSound: {fileID: 8300000, guid: 8d25d45991d7d5a4aa35ced5701c87a3, type: 3}
+  - waterSound: {fileID: 8300000, guid: 94a6e7e55b32d4647936a719e6a3a5a4, type: 3}
+  - selectSound: {fileID: 8300000, guid: 4e8c3973aa3a1f84cb034e18688ea375, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

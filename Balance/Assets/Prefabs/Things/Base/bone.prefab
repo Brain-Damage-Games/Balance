@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2298110744841197360}
   - component: {fileID: 2298110744842327536}
   - component: {fileID: 2298110744835012848}
+  - component: {fileID: 7087639108962790876}
   m_Layer: 0
   m_Name: bone
   m_TagString: Untagged
@@ -105,6 +106,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!64 &7087639108962790876
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2298110744844520240}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: c52c6df9011949042a517a64c38a608d, type: 3}
 --- !u!1001 &2298110744184876757
 PrefabInstance:
   m_ObjectHideFlags: 0

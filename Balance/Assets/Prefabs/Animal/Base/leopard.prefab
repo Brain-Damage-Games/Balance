@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 3121829674898008429}
   - component: {fileID: 3121829674896911277}
   - component: {fileID: 3121829674891806381}
+  - component: {fileID: 6494550824099208879}
+  - component: {fileID: 7527494424273030480}
   m_Layer: 0
   m_Name: leopard
   m_TagString: Untagged
@@ -105,6 +107,34 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!64 &6494550824099208879
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3121829674899109229}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 3c031dbcfde2e5246b6253beffdd8fe3, type: 3}
+--- !u!64 &7527494424273030480
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3121829674899109229}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 3c031dbcfde2e5246b6253beffdd8fe3, type: 3}
 --- !u!1001 &902380962319363952
 PrefabInstance:
   m_ObjectHideFlags: 0
