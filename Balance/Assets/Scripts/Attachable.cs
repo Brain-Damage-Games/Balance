@@ -56,6 +56,8 @@ public class Attachable : MonoBehaviour
     public void Detach()
     {
         aim.GetComponent<AttachReceiver>().Release(gameObject);
+        GetComponent<Comparator>()?.DetachAll();
+        rb.isKinematic = false;
         StartCoroutine(Timer());
     }
     private bool CheckAttachablity()

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Draggable : MonoBehaviour
 {
-   private bool dragging = false; 
+   public bool dragging = false; 
    private bool inBox = false;
    private float dist ;
    [SerializeField]
@@ -46,7 +46,7 @@ public class Draggable : MonoBehaviour
         if (dragging)
         {
             gameObject.transform.position= GetMouseWorldPos() + offset;
-            Limit () ;
+            Limit ();
         }
     }
     private void Limit () 
