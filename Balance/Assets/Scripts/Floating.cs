@@ -10,7 +10,8 @@ public class Floating : MonoBehaviour
     public float airAngularDrag = 0.05f;
     public float floatingPower = 116.45f;
     public float waterHeight = 0f;
-
+    //public Transform center;
+    //public float waveSpeed = 100f;
     Rigidbody rb;
     bool underwater;
     int floatersUnderWater;
@@ -28,8 +29,14 @@ public class Floating : MonoBehaviour
 
         if (diff < 0)
         {
-             rb.AddForceAtPosition(Vector3.up * floatingPower * Mathf.Abs(diff), transform.position, ForceMode.Force);
-             floatersUnderWater += 1;
+            //Vector3 dest = center.position - transform.position;
+
+            rb.AddForceAtPosition(Vector3.up * floatingPower * Mathf.Abs(diff), transform.position, ForceMode.Force);
+            //rb.AddForce(Vector3.up * floatingPower * Mathf.Abs(diff) + dest.normalized * waveSpeed);
+
+            //rb.AddForce(dest.normalized * waveSpeed);
+
+            floatersUnderWater += 1;
             if (!underwater)
              {
                    underwater = true;
