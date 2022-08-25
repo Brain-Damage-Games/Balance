@@ -6,10 +6,6 @@ public class ShelfSorting : MonoBehaviour
 {
     List<GameObject> allObjects;
     List<GameObject> seenObjects;
-
-    [SerializeField]
-    GameObject[] buttons;
-
     float space, objectsScale;
     List<Vector3> scaleOfObjects;
 
@@ -43,21 +39,6 @@ public class ShelfSorting : MonoBehaviour
 
         shelfStartPosition = transform.position.z - transform.localScale.z / 2f;
         shelfEndPosition = transform.position.z + transform.localScale.z / 2f;  
-
-        buttons[0].transform.position = new Vector3
-        (
-            transform.localPosition.x,
-            transform.position.y + objectsScale,
-            shelfStartPosition + objectsScale / 2
-        );
-        buttons[1].transform.position = new Vector3
-        (
-            transform.localPosition.x,
-            transform.position.y + objectsScale,
-            shelfEndPosition - objectsScale / 2
-        );
-
-
         Sort();
     }
 
@@ -171,17 +152,6 @@ public class ShelfSorting : MonoBehaviour
                 transform.localScale.z / 11f,
                 transform.localScale.z / 11f
             ) ;
-
-        for(int i = 0; i < buttons.Length; i++)
-            buttons[i].transform.localScale = new Vector3
-            (
-                transform.localScale.z / 11f,
-                transform.localScale.z / 11f,
-                transform.localScale.z / 11f
-            );
         
     }
-
-   
-
 }
