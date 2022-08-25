@@ -8,7 +8,7 @@ public class Draggable : MonoBehaviour
    private bool inBox = false;
    private float dist ;
    [SerializeField]
-   private float borderX;
+   private float borderZ;
    [SerializeField]
    private float borderY;
    private Vector3 offset;
@@ -35,13 +35,13 @@ public class Draggable : MonoBehaviour
 
        if (dragging) rb.isKinematic = true;
        else if (!attachable.IsAttached()) rb.isKinematic = false;
-   }
-   private void OnMouseDown()
+    }
+    private void OnMouseDown()
     {
-        dist = Camera.main.WorldToScreenPoint(gameObject.transform.position).z ;
+        
         offset = gameObject.transform.position - GetMouseWorldPos();
     }
-   private void OnMouseDrag()
+    private void OnMouseDrag()
     {
         if (dragging)
         {
@@ -52,14 +52,15 @@ public class Draggable : MonoBehaviour
     private void Limit () 
     {
         Vector3 newPos = gameObject.transform.position ; 
-        newPos.x =Mathf.Clamp(newPos.x , -borderX , borderX);
+        newPos.z =Mathf.Clamp(newPos.z , -borderZ , borderZ);
         newPos.y =Mathf.Clamp(newPos.y , -borderY , borderY);
         gameObject.transform.position = newPos ; 
     }
     private Vector3 GetMouseWorldPos()
     {
+        dist = Camera.main.WorldToScreenPoint(gameObject.transform.position).x ;
         Vector3 mousePoint = Input.mousePosition;
-        mousePoint.z = dist;
+        mousePoint.x = dist;
         return Camera.main.ScreenToWorldPoint(mousePoint);
     }
 
