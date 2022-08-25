@@ -18,6 +18,7 @@ public class Attachable : MonoBehaviour
 
     private void Awake()
     {
+        WinCondition.EndOfGame += Detach;
         rb = GetComponent<Rigidbody>();
         cameraPos = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Transform>().position; 
     }

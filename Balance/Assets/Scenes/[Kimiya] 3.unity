@@ -600,7 +600,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11100000, guid: dd6ec75974b69a3409711f8110698bbb, type: 3}
       propertyPath: m_Animations.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11100000, guid: dd6ec75974b69a3409711f8110698bbb, type: 3}
       propertyPath: m_Animations.Array.data[0]
@@ -609,7 +609,7 @@ PrefabInstance:
     - target: {fileID: 11100000, guid: dd6ec75974b69a3409711f8110698bbb, type: 3}
       propertyPath: m_Animations.Array.data[1]
       value: 
-      objectReference: {fileID: 7400000, guid: f320efa63ce12874a9ad50add869c0b5, type: 3}
+      objectReference: {fileID: 7400018, guid: f320efa63ce12874a9ad50add869c0b5, type: 3}
     - target: {fileID: 13700000, guid: dd6ec75974b69a3409711f8110698bbb, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
