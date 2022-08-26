@@ -10,14 +10,17 @@ public class Floating : MonoBehaviour
     public float airAngularDrag = 0.05f;
     public float floatingPower = 116.45f;
     public float waterHeight = 0f;
-    //public Transform center;
-    //public float waveSpeed = 100f;
+    private Transform center;
+    public float waveSpeed = 5f;
+    private bool isForwarding = false;
+
     Rigidbody rb;
     bool underwater;
     int floatersUnderWater;
     // Start is called before the first frame update
     void Start()
     {
+        center = GameObject.FindGameObjectWithTag("Center").transform;
         rb = this.GetComponent<Rigidbody>();
     }
 
@@ -29,17 +32,19 @@ public class Floating : MonoBehaviour
 
         if (diff < 0)
         {
-            //Vector3 dest = center.position - transform.position;
+            if (!isForwarding)
+            {
+                Vector3 dest = center.position - transform.position;
+                rb.AddForce(dest* waveSpeed);
+                isForwarding = false;
+            }
 
             rb.AddForceAtPosition(Vector3.up * floatingPower * Mathf.Abs(diff), transform.position, ForceMode.Force);
-            //rb.AddForce(Vector3.up * floatingPower * Mathf.Abs(diff) + dest.normalized * waveSpeed);
-
-            //rb.AddForce(dest.normalized * waveSpeed);
 
             floatersUnderWater += 1;
             if (!underwater)
              {
-                   underwater = true;
+                underwater = true;
                 SwitchState(true);
             }
         }

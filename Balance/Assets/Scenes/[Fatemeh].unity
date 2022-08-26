@@ -523,7 +523,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3533166048544859904, guid: 03f50f4c38b12974786267c88ae85722, type: 3}
       propertyPath: m_Constraints
-      value: 122
+      value: 112
       objectReference: {fileID: 0}
     - target: {fileID: 4879481011650286510, guid: 03f50f4c38b12974786267c88ae85722, type: 3}
       propertyPath: m_TagString
@@ -745,7 +745,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6009877600266151229, guid: c7b6c519e4432eb46811c313c93e1d04, type: 3}
       propertyPath: m_Constraints
-      value: 122
+      value: 112
       objectReference: {fileID: 0}
     - target: {fileID: 6009877600266151229, guid: c7b6c519e4432eb46811c313c93e1d04, type: 3}
       propertyPath: m_IsKinematic
@@ -1010,7 +1010,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6009877600266151229, guid: a32383bddc52c51488e3c2908edfb0a3, type: 3}
       propertyPath: m_Constraints
-      value: 122
+      value: 112
       objectReference: {fileID: 0}
     - target: {fileID: 6009877600266151229, guid: a32383bddc52c51488e3c2908edfb0a3, type: 3}
       propertyPath: m_IsKinematic
@@ -1127,6 +1127,7 @@ MonoBehaviour:
   airAngularDrag: 0.05
   floatingPower: 400
   waterHeight: 0
+  waveSpeed: 100
 --- !u!114 &425112644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1372,7 +1373,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3533166048544859904, guid: 03f50f4c38b12974786267c88ae85722, type: 3}
       propertyPath: m_Constraints
-      value: 122
+      value: 112
       objectReference: {fileID: 0}
     - target: {fileID: 4879481011650286510, guid: 03f50f4c38b12974786267c88ae85722, type: 3}
       propertyPath: m_TagString
@@ -1803,7 +1804,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6009877600266151229, guid: c7b6c519e4432eb46811c313c93e1d04, type: 3}
       propertyPath: m_Constraints
-      value: 122
+      value: 112
       objectReference: {fileID: 0}
     - target: {fileID: 6009877600266151229, guid: c7b6c519e4432eb46811c313c93e1d04, type: 3}
       propertyPath: m_IsKinematic
@@ -1940,6 +1941,7 @@ MonoBehaviour:
   airAngularDrag: 0.05
   floatingPower: 116.45
   waterHeight: 0
+  waveSpeed: 5
 --- !u!114 &788811005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1991,6 +1993,7 @@ MonoBehaviour:
   airAngularDrag: 0.05
   floatingPower: 1000
   waterHeight: 0
+  waveSpeed: 5
 --- !u!114 &799373856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2016,8 +2019,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.7260606, y: 1.0652009, z: 1}
-  m_Center: {x: 0.026432673, y: -0.7429971, z: 0}
+  m_Size: {x: 0.7785206, y: 1.0652009, z: 0.78032494}
+  m_Center: {x: 0.00020265579, y: -0.7429971, z: 0.0049180984}
 --- !u!1 &803407629
 GameObject:
   m_ObjectHideFlags: 0
@@ -2568,7 +2571,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3533166048544859904, guid: 03f50f4c38b12974786267c88ae85722, type: 3}
       propertyPath: m_Constraints
-      value: 122
+      value: 112
       objectReference: {fileID: 0}
     - target: {fileID: 4879481011650286510, guid: 03f50f4c38b12974786267c88ae85722, type: 3}
       propertyPath: m_TagString
@@ -2711,6 +2714,7 @@ MonoBehaviour:
   airAngularDrag: 0.05
   floatingPower: 116.45
   waterHeight: 0
+  waveSpeed: 5
 --- !u!1 &1135334089 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6113288583343868591, guid: c7b6c519e4432eb46811c313c93e1d04, type: 3}
@@ -2746,8 +2750,22 @@ MonoBehaviour:
   underWaterAngularDrag: 1
   airDrag: 0
   airAngularDrag: 0.05
-  floatingPower: 600
+  floatingPower: 1000
   waterHeight: 0
+  waveSpeed: 5
+--- !u!65 &1135334105
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1135334089}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.73863184, y: 1.0261631, z: 0.76169586}
+  m_Center: {x: 0.00768739, y: -0.7502996, z: 0.0038433075}
 --- !u!1 &1188602129 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6113288583343868591, guid: c7b6c519e4432eb46811c313c93e1d04, type: 3}
@@ -2771,6 +2789,7 @@ MonoBehaviour:
   airAngularDrag: 0.05
   floatingPower: 1000
   waterHeight: 0
+  waveSpeed: 5
 --- !u!114 &1188602132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2796,8 +2815,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.7260606, y: 1.0652009, z: 1}
-  m_Center: {x: 0.026432673, y: -0.7429971, z: 0}
+  m_Size: {x: 0.77196336, y: 1.0652009, z: 0.76065254}
+  m_Center: {x: 0.0034812689, y: -0.7429971, z: 0.0049180984}
 --- !u!1 &1197563504
 GameObject:
   m_ObjectHideFlags: 0
@@ -2970,6 +2989,7 @@ MonoBehaviour:
   airAngularDrag: 0.05
   floatingPower: 400
   waterHeight: 0
+  waveSpeed: 5
 --- !u!4 &1293265003 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5259279178231810324, guid: 03f50f4c38b12974786267c88ae85722, type: 3}
@@ -3120,7 +3140,7 @@ GameObject:
   - component: {fileID: 1342450199}
   m_Layer: 0
   m_Name: center
-  m_TagString: Untagged
+  m_TagString: Center
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3133,7 +3153,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1342450198}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.35, z: -4.46}
+  m_LocalPosition: {x: 0, y: -0.658, z: -1.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3191,6 +3211,7 @@ MonoBehaviour:
   airAngularDrag: 0.05
   floatingPower: 116.45
   waterHeight: 0
+  waveSpeed: 100
 --- !u!1001 &1360379578
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3212,7 +3233,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6009877600266151229, guid: c7b6c519e4432eb46811c313c93e1d04, type: 3}
       propertyPath: m_Constraints
-      value: 122
+      value: 112
       objectReference: {fileID: 0}
     - target: {fileID: 6009877600266151229, guid: c7b6c519e4432eb46811c313c93e1d04, type: 3}
       propertyPath: m_IsKinematic
@@ -3442,7 +3463,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6009877600266151229, guid: a32383bddc52c51488e3c2908edfb0a3, type: 3}
       propertyPath: m_Constraints
-      value: 122
+      value: 112
       objectReference: {fileID: 0}
     - target: {fileID: 6009877600266151229, guid: a32383bddc52c51488e3c2908edfb0a3, type: 3}
       propertyPath: m_IsKinematic
@@ -3532,7 +3553,9 @@ PrefabInstance:
       propertyPath: mass
       value: 13
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5032770490919835997, guid: a32383bddc52c51488e3c2908edfb0a3, type: 3}
+    - {fileID: 8230055128285606261, guid: a32383bddc52c51488e3c2908edfb0a3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a32383bddc52c51488e3c2908edfb0a3, type: 3}
 --- !u!1 &1551190386 stripped
 GameObject:
@@ -4284,7 +4307,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3533166048544859904, guid: 03f50f4c38b12974786267c88ae85722, type: 3}
       propertyPath: m_Constraints
-      value: 122
+      value: 112
       objectReference: {fileID: 0}
     - target: {fileID: 4879481011650286510, guid: 03f50f4c38b12974786267c88ae85722, type: 3}
       propertyPath: m_TagString
@@ -4418,6 +4441,7 @@ MonoBehaviour:
   airAngularDrag: 0.05
   floatingPower: 950
   waterHeight: 0
+  waveSpeed: 5
 --- !u!1 &2022988617 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1802386100055476743, guid: 03f50f4c38b12974786267c88ae85722, type: 3}
@@ -4469,6 +4493,7 @@ MonoBehaviour:
   airAngularDrag: 0.05
   floatingPower: 116.45
   waterHeight: 0
+  waveSpeed: 5
 --- !u!4 &2056866972 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5259279178231810324, guid: 03f50f4c38b12974786267c88ae85722, type: 3}
@@ -4709,7 +4734,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5627806452780149103, guid: 7f6aa0133bad0c1479b0354d8f8ef428, type: 3}
       propertyPath: m_Constraints
-      value: 122
+      value: 112
       objectReference: {fileID: 0}
     - target: {fileID: 5627806452780149103, guid: 7f6aa0133bad0c1479b0354d8f8ef428, type: 3}
       propertyPath: m_IsKinematic
