@@ -6,7 +6,6 @@ public class AttachReceiver : MonoBehaviour
 {
     [SerializeField]
     Transform destinationAttachPoint;
-
     private bool attached = false;
     private Comparator comparator;
     [SerializeField] bool isLeft;

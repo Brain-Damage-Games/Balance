@@ -109,4 +109,9 @@ public class Comparator : MonoBehaviour
         }
         Compare();
     }
+
+    public void DetachAll(){
+        leftMassObject?.gameObject.GetComponent<Attachable>()?.Detach();
+        rightMassObject?.gameObject.GetComponent<Attachable>()?.Detach();
+    }
 }
