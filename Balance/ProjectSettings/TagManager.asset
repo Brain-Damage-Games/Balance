@@ -9,6 +9,7 @@ TagManager:
   - drag
   - Shelf
   - WinCondition
+  - Center
   layers:
   - Default
   - TransparentFX
