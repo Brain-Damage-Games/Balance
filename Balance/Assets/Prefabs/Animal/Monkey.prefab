@@ -78,7 +78,7 @@ PrefabInstance:
     - target: {fileID: 9072754437883357314, guid: f2c046599fc8f0f439b62e1d3d4e6e2f, type: 3}
       propertyPath: hook
       value: 
-      objectReference: {fileID: 8706787238700842918}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2c046599fc8f0f439b62e1d3d4e6e2f, type: 3}
 --- !u!4 &3702061458114667063 stripped
@@ -141,10 +141,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: monkey
       objectReference: {fileID: 0}
+    - target: {fileID: 4767192665888302186, guid: f1305102c98e4934e9aa94a499440a86, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8728637915795819074, guid: f1305102c98e4934e9aa94a499440a86, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1305102c98e4934e9aa94a499440a86, type: 3}
---- !u!4 &8706787238700842918 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5634471897199446519, guid: f1305102c98e4934e9aa94a499440a86, type: 3}
-  m_PrefabInstance: {fileID: 3955588233925260881}
-  m_PrefabAsset: {fileID: 0}

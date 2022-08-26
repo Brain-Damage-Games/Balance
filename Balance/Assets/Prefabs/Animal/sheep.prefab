@@ -78,7 +78,7 @@ PrefabInstance:
     - target: {fileID: 9072754437883357314, guid: f2c046599fc8f0f439b62e1d3d4e6e2f, type: 3}
       propertyPath: hook
       value: 
-      objectReference: {fileID: 314528775725255745}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2c046599fc8f0f439b62e1d3d4e6e2f, type: 3}
 --- !u!4 &3702061458114667063 stripped
@@ -93,9 +93,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3702061458114667063}
     m_Modifications:
+    - target: {fileID: 1859102676717263345, guid: 1e7f431b0cd460c49892dc2d346043a6, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5473053356725080675, guid: 1e7f431b0cd460c49892dc2d346043a6, type: 3}
       propertyPath: m_Name
       value: sheep
+      objectReference: {fileID: 0}
+    - target: {fileID: 5473053356725080675, guid: 1e7f431b0cd460c49892dc2d346043a6, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5473053356725112387, guid: 1e7f431b0cd460c49892dc2d346043a6, type: 3}
       propertyPath: m_RootOrder
@@ -143,8 +151,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e7f431b0cd460c49892dc2d346043a6, type: 3}
---- !u!4 &314528775725255745 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3377470672200489540, guid: 1e7f431b0cd460c49892dc2d346043a6, type: 3}
-  m_PrefabInstance: {fileID: 3063083194731550213}
-  m_PrefabAsset: {fileID: 0}

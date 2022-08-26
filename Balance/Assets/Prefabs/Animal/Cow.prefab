@@ -93,6 +93,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3702061458114667063}
     m_Modifications:
+    - target: {fileID: 217708880850922335, guid: 39ef2a2f83469e844bf588cfaeb3bbc9, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 511252946171761199, guid: 39ef2a2f83469e844bf588cfaeb3bbc9, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -140,6 +144,10 @@ PrefabInstance:
     - target: {fileID: 511252946172186127, guid: 39ef2a2f83469e844bf588cfaeb3bbc9, type: 3}
       propertyPath: m_Name
       value: cow
+      objectReference: {fileID: 0}
+    - target: {fileID: 511252946172186127, guid: 39ef2a2f83469e844bf588cfaeb3bbc9, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39ef2a2f83469e844bf588cfaeb3bbc9, type: 3}

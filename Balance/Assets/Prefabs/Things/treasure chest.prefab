@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: treasure chest
       objectReference: {fileID: 0}
+    - target: {fileID: 1431863817475131552, guid: e8166f11826cd7c448239b1b856206d6, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5198752952213685976, guid: e8166f11826cd7c448239b1b856206d6, type: 3}
       propertyPath: mass
       value: 55
@@ -79,6 +83,10 @@ PrefabInstance:
       propertyPath: mass
       value: 55
       objectReference: {fileID: 0}
+    - target: {fileID: 8109928155154948271, guid: e8166f11826cd7c448239b1b856206d6, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8592266613635043133, guid: e8166f11826cd7c448239b1b856206d6, type: 3}
       propertyPath: m_Mass
       value: 55
@@ -97,6 +105,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7797369480540684028}
     m_Modifications:
+    - target: {fileID: 234301370946369372, guid: 9b4081aa5fbf2db429dad79855e3eca2, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5750288888286043820, guid: 9b4081aa5fbf2db429dad79855e3eca2, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -144,6 +156,10 @@ PrefabInstance:
     - target: {fileID: 5750288888286265996, guid: 9b4081aa5fbf2db429dad79855e3eca2, type: 3}
       propertyPath: m_Name
       value: treasure chest
+      objectReference: {fileID: 0}
+    - target: {fileID: 5750288888286265996, guid: 9b4081aa5fbf2db429dad79855e3eca2, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b4081aa5fbf2db429dad79855e3eca2, type: 3}

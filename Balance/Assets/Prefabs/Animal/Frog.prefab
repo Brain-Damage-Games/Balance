@@ -82,7 +82,7 @@ PrefabInstance:
     - target: {fileID: 9072754437883357314, guid: f2c046599fc8f0f439b62e1d3d4e6e2f, type: 3}
       propertyPath: hook
       value: 
-      objectReference: {fileID: 3423982759171582846}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2c046599fc8f0f439b62e1d3d4e6e2f, type: 3}
 --- !u!4 &3702061458114667063 stripped
@@ -145,10 +145,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: frog
       objectReference: {fileID: 0}
+    - target: {fileID: 778284046091189078, guid: 9f77656adc3040b42bfde2553a0e76cb, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8353988780988007899, guid: 9f77656adc3040b42bfde2553a0e76cb, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f77656adc3040b42bfde2553a0e76cb, type: 3}
---- !u!4 &3423982759171582846 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4971031907490399854, guid: 9f77656adc3040b42bfde2553a0e76cb, type: 3}
-  m_PrefabInstance: {fileID: 7744160574126353680}
-  m_PrefabAsset: {fileID: 0}

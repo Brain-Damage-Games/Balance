@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 31
       objectReference: {fileID: 0}
+    - target: {fileID: 1455284385851736208, guid: 1e6be9a1fb075b6419dbb74faeb47c1e, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3883768691963074375, guid: 1e6be9a1fb075b6419dbb74faeb47c1e, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -75,6 +79,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: cake
       objectReference: {fileID: 0}
+    - target: {fileID: 9036612298318956337, guid: 1e6be9a1fb075b6419dbb74faeb47c1e, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e6be9a1fb075b6419dbb74faeb47c1e, type: 3}
 --- !u!4 &2490233674435301923 stripped
@@ -89,6 +97,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2490233674435301923}
     m_Modifications:
+    - target: {fileID: 186426914961476929, guid: 6a69cfc7867e85d44861149a3a9424fc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5780442889307888440, guid: 6a69cfc7867e85d44861149a3a9424fc, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -136,6 +148,10 @@ PrefabInstance:
     - target: {fileID: 5780442889308243736, guid: 6a69cfc7867e85d44861149a3a9424fc, type: 3}
       propertyPath: m_Name
       value: cake
+      objectReference: {fileID: 0}
+    - target: {fileID: 5780442889308243736, guid: 6a69cfc7867e85d44861149a3a9424fc, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a69cfc7867e85d44861149a3a9424fc, type: 3}

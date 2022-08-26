@@ -11,7 +11,7 @@ public class Floating : MonoBehaviour
     public float floatingPower = 116.45f;
     public float waterHeight = 0f;
     private Transform center;
-    public float waveSpeed = 5f;
+    //public float waveSpeed = 5f;
     private bool isForwarding = false;
 
     Rigidbody rb;
@@ -35,7 +35,8 @@ public class Floating : MonoBehaviour
             if (!isForwarding)
             {
                 Vector3 dest = center.position - transform.position;
-                rb.AddForce(dest* waveSpeed);
+                print(dest.magnitude);
+                rb.AddForce(dest* Mathf.Pow((dest.magnitude),2f));
                 isForwarding = false;
             }
 

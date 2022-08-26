@@ -74,7 +74,7 @@ PrefabInstance:
     - target: {fileID: 9072754437883357314, guid: f2c046599fc8f0f439b62e1d3d4e6e2f, type: 3}
       propertyPath: hook
       value: 
-      objectReference: {fileID: 2889219181986039459}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2c046599fc8f0f439b62e1d3d4e6e2f, type: 3}
 --- !u!4 &3702061458114667063 stripped
@@ -89,6 +89,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3702061458114667063}
     m_Modifications:
+    - target: {fileID: 5152387618226163704, guid: 494c40213c9aa41469c025957ae2e389, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6949935457842684952, guid: 494c40213c9aa41469c025957ae2e389, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -137,10 +141,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: panda
       objectReference: {fileID: 0}
+    - target: {fileID: 6949935457842853944, guid: 494c40213c9aa41469c025957ae2e389, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 494c40213c9aa41469c025957ae2e389, type: 3}
---- !u!4 &2889219181986039459 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8111834620104232013, guid: 494c40213c9aa41469c025957ae2e389, type: 3}
-  m_PrefabInstance: {fileID: 6380359401143962350}
-  m_PrefabAsset: {fileID: 0}

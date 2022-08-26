@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: backpack
       objectReference: {fileID: 0}
+    - target: {fileID: 1431863817475131552, guid: e8166f11826cd7c448239b1b856206d6, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5198752952213685976, guid: e8166f11826cd7c448239b1b856206d6, type: 3}
       propertyPath: mass
       value: 39
@@ -83,6 +87,10 @@ PrefabInstance:
       propertyPath: mass
       value: 39
       objectReference: {fileID: 0}
+    - target: {fileID: 8109928155154948271, guid: e8166f11826cd7c448239b1b856206d6, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8592266613635043133, guid: e8166f11826cd7c448239b1b856206d6, type: 3}
       propertyPath: m_Mass
       value: 39
@@ -101,9 +109,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7797369480540684028}
     m_Modifications:
+    - target: {fileID: 4175262992486542895, guid: 8be60482535a7124ebf6918788358b00, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7134433418785046060, guid: 8be60482535a7124ebf6918788358b00, type: 3}
       propertyPath: m_Name
       value: backpack
+      objectReference: {fileID: 0}
+    - target: {fileID: 7134433418785046060, guid: 8be60482535a7124ebf6918788358b00, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7134433418785071628, guid: 8be60482535a7124ebf6918788358b00, type: 3}
       propertyPath: m_RootOrder

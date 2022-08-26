@@ -207,7 +207,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1810431126}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ShelfSorting, Assembly-CSharp
         m_MethodName: ShiftRight
         m_Mode: 1
@@ -520,6 +520,10 @@ PrefabInstance:
     - target: {fileID: 2970775268200234117, guid: 03f50f4c38b12974786267c88ae85722, type: 3}
       propertyPath: angleOffsetIncreasePerUnit
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3533166048544859904, guid: 03f50f4c38b12974786267c88ae85722, type: 3}
+      propertyPath: m_Mass
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3533166048544859904, guid: 03f50f4c38b12974786267c88ae85722, type: 3}
       propertyPath: m_Constraints
@@ -1127,7 +1131,6 @@ MonoBehaviour:
   airAngularDrag: 0.05
   floatingPower: 400
   waterHeight: 0
-  waveSpeed: 100
 --- !u!114 &425112644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1140,6 +1143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13668662e71f4164dad9f0436e3375f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dragging: 0
   borderX: 10
   borderY: 10
 --- !u!1 &433880525
@@ -1370,6 +1374,10 @@ PrefabInstance:
     - target: {fileID: 2970775268200234117, guid: 03f50f4c38b12974786267c88ae85722, type: 3}
       propertyPath: angleOffsetIncreasePerUnit
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3533166048544859904, guid: 03f50f4c38b12974786267c88ae85722, type: 3}
+      propertyPath: m_Mass
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3533166048544859904, guid: 03f50f4c38b12974786267c88ae85722, type: 3}
       propertyPath: m_Constraints
@@ -1941,7 +1949,6 @@ MonoBehaviour:
   airAngularDrag: 0.05
   floatingPower: 116.45
   waterHeight: 0
-  waveSpeed: 5
 --- !u!114 &788811005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1968,6 +1975,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13668662e71f4164dad9f0436e3375f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dragging: 0
   borderX: 10
   borderY: 10
 --- !u!1 &799373853 stripped
@@ -1993,7 +2001,6 @@ MonoBehaviour:
   airAngularDrag: 0.05
   floatingPower: 1000
   waterHeight: 0
-  waveSpeed: 5
 --- !u!114 &799373856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2006,6 +2013,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13668662e71f4164dad9f0436e3375f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dragging: 0
   borderX: 10
   borderY: 10
 --- !u!65 &799373857
@@ -2532,7 +2540,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1033310870
 MonoBehaviour:
@@ -2694,6 +2702,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13668662e71f4164dad9f0436e3375f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dragging: 0
   borderX: 10
   borderY: 10
 --- !u!114 &1105488898
@@ -2714,7 +2723,6 @@ MonoBehaviour:
   airAngularDrag: 0.05
   floatingPower: 116.45
   waterHeight: 0
-  waveSpeed: 5
 --- !u!1 &1135334089 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6113288583343868591, guid: c7b6c519e4432eb46811c313c93e1d04, type: 3}
@@ -2732,6 +2740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13668662e71f4164dad9f0436e3375f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dragging: 0
   borderX: 10
   borderY: 10
 --- !u!114 &1135334100
@@ -2752,7 +2761,6 @@ MonoBehaviour:
   airAngularDrag: 0.05
   floatingPower: 1000
   waterHeight: 0
-  waveSpeed: 5
 --- !u!65 &1135334105
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2789,7 +2797,6 @@ MonoBehaviour:
   airAngularDrag: 0.05
   floatingPower: 1000
   waterHeight: 0
-  waveSpeed: 5
 --- !u!114 &1188602132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2802,6 +2809,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13668662e71f4164dad9f0436e3375f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dragging: 0
   borderX: 10
   borderY: 10
 --- !u!65 &1188602133
@@ -2969,6 +2977,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13668662e71f4164dad9f0436e3375f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dragging: 0
   borderX: 10
   borderY: 10
 --- !u!114 &1201993076
@@ -2989,7 +2998,6 @@ MonoBehaviour:
   airAngularDrag: 0.05
   floatingPower: 400
   waterHeight: 0
-  waveSpeed: 5
 --- !u!4 &1293265003 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5259279178231810324, guid: 03f50f4c38b12974786267c88ae85722, type: 3}
@@ -3177,6 +3185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13668662e71f4164dad9f0436e3375f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dragging: 0
   borderX: 10
   borderY: 10
 --- !u!114 &1354513374
@@ -3211,7 +3220,6 @@ MonoBehaviour:
   airAngularDrag: 0.05
   floatingPower: 116.45
   waterHeight: 0
-  waveSpeed: 100
 --- !u!1001 &1360379578
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3642,7 +3650,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8270143571827785751, guid: ad7cb50ca1e387a4090c84ba67cf45d3, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8270143571827785751, guid: ad7cb50ca1e387a4090c84ba67cf45d3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4060,17 +4068,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1779322531}
   m_CullTransparentMesh: 1
---- !u!114 &1810431126 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6046213209475883950, guid: a7942ca03945b8b40b9673486c077cb5, type: 3}
-  m_PrefabInstance: {fileID: 1860628399}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5abb58cc9d8a08b46809f9a9d065f956, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1860628399
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4154,6 +4151,18 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Shelf
       objectReference: {fileID: 0}
+    - target: {fileID: 8823378374171460146, guid: a7942ca03945b8b40b9673486c077cb5, type: 3}
+      propertyPath: m_TagString
+      value: Shelf
+      objectReference: {fileID: 0}
+    - target: {fileID: 8823378374171460150, guid: a7942ca03945b8b40b9673486c077cb5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.615
+      objectReference: {fileID: 0}
+    - target: {fileID: 8823378374171460150, guid: a7942ca03945b8b40b9673486c077cb5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.4
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6046213209475883954, guid: a7942ca03945b8b40b9673486c077cb5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a7942ca03945b8b40b9673486c077cb5, type: 3}
@@ -4183,6 +4192,10 @@ PrefabInstance:
     - target: {fileID: 2970775268200234117, guid: 03f50f4c38b12974786267c88ae85722, type: 3}
       propertyPath: angleOffsetIncreasePerUnit
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3533166048544859904, guid: 03f50f4c38b12974786267c88ae85722, type: 3}
+      propertyPath: m_Mass
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3533166048544859904, guid: 03f50f4c38b12974786267c88ae85722, type: 3}
       propertyPath: m_Constraints
@@ -4306,6 +4319,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3533166048544859904, guid: 03f50f4c38b12974786267c88ae85722, type: 3}
+      propertyPath: m_Mass
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3533166048544859904, guid: 03f50f4c38b12974786267c88ae85722, type: 3}
       propertyPath: m_Constraints
       value: 112
       objectReference: {fileID: 0}
@@ -4421,6 +4438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13668662e71f4164dad9f0436e3375f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dragging: 0
   borderX: 10
   borderY: 10
 --- !u!114 &1963614476
@@ -4441,7 +4459,6 @@ MonoBehaviour:
   airAngularDrag: 0.05
   floatingPower: 950
   waterHeight: 0
-  waveSpeed: 5
 --- !u!1 &2022988617 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1802386100055476743, guid: 03f50f4c38b12974786267c88ae85722, type: 3}
@@ -4459,6 +4476,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13668662e71f4164dad9f0436e3375f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dragging: 0
   borderX: 10
   borderY: 10
 --- !u!114 &2022988619
@@ -4493,7 +4511,6 @@ MonoBehaviour:
   airAngularDrag: 0.05
   floatingPower: 116.45
   waterHeight: 0
-  waveSpeed: 5
 --- !u!4 &2056866972 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5259279178231810324, guid: 03f50f4c38b12974786267c88ae85722, type: 3}
@@ -4583,7 +4600,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1810431126}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ShelfSorting, Assembly-CSharp
         m_MethodName: ShiftLeft
         m_Mode: 1
@@ -4646,7 +4663,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1493429412202699788, guid: 7f6aa0133bad0c1479b0354d8f8ef428, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1493429412202699788, guid: 7f6aa0133bad0c1479b0354d8f8ef428, type: 3}
       propertyPath: m_LocalPosition.x

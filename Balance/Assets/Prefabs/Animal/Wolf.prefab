@@ -141,9 +141,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7756396030473061952, guid: bd2a8295787b1284594d42ba0e57d6cc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7756396030661432836, guid: bd2a8295787b1284594d42ba0e57d6cc, type: 3}
       propertyPath: m_Name
       value: wolf
+      objectReference: {fileID: 0}
+    - target: {fileID: 7756396030661432836, guid: bd2a8295787b1284594d42ba0e57d6cc, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd2a8295787b1284594d42ba0e57d6cc, type: 3}

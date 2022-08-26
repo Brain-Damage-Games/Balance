@@ -75,6 +75,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: igloo
       objectReference: {fileID: 0}
+    - target: {fileID: 5258953912032827246, guid: b0656114b1b4a9f41b3e5866c5b1002f, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6278102605381224856, guid: b0656114b1b4a9f41b3e5866c5b1002f, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8810856019550362692, guid: b0656114b1b4a9f41b3e5866c5b1002f, type: 3}
       propertyPath: mass
       value: 50
@@ -93,9 +101,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2667699851566592496}
     m_Modifications:
+    - target: {fileID: 3272507387150934870, guid: 4356f3e7986b6ee439c8ecde12de0776, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8618010440562806321, guid: 4356f3e7986b6ee439c8ecde12de0776, type: 3}
       propertyPath: m_Name
       value: igloo
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618010440562806321, guid: 4356f3e7986b6ee439c8ecde12de0776, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8618010440562971153, guid: 4356f3e7986b6ee439c8ecde12de0776, type: 3}
       propertyPath: m_RootOrder

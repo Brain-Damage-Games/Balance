@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 1455284385851736208, guid: 1e6be9a1fb075b6419dbb74faeb47c1e, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3883768691963074375, guid: 1e6be9a1fb075b6419dbb74faeb47c1e, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -83,6 +87,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: pizza
       objectReference: {fileID: 0}
+    - target: {fileID: 9036612298318956337, guid: 1e6be9a1fb075b6419dbb74faeb47c1e, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e6be9a1fb075b6419dbb74faeb47c1e, type: 3}
 --- !u!4 &2490233674435301923 stripped
@@ -100,6 +108,10 @@ PrefabInstance:
     - target: {fileID: 555506744933031783, guid: d0671ec4c29a4644f8103e90502c1ad7, type: 3}
       propertyPath: m_Name
       value: pizza
+      objectReference: {fileID: 0}
+    - target: {fileID: 555506744933031783, guid: d0671ec4c29a4644f8103e90502c1ad7, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 555506744933385031, guid: d0671ec4c29a4644f8103e90502c1ad7, type: 3}
       propertyPath: m_RootOrder
@@ -144,6 +156,10 @@ PrefabInstance:
     - target: {fileID: 555506744933385031, guid: d0671ec4c29a4644f8103e90502c1ad7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8058031901968793463, guid: d0671ec4c29a4644f8103e90502c1ad7, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0671ec4c29a4644f8103e90502c1ad7, type: 3}

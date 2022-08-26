@@ -27,6 +27,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bicycle
       objectReference: {fileID: 0}
+    - target: {fileID: 3516570022201527797, guid: 6bdae2108b49a2744b8d39212e53a544, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4388425330492099931, guid: 6bdae2108b49a2744b8d39212e53a544, type: 3}
       propertyPath: mass
       value: 61
@@ -83,6 +87,10 @@ PrefabInstance:
       propertyPath: mass
       value: 61
       objectReference: {fileID: 0}
+    - target: {fileID: 9133776763437425693, guid: 6bdae2108b49a2744b8d39212e53a544, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6bdae2108b49a2744b8d39212e53a544, type: 3}
 --- !u!4 &7612528918717790833 stripped
@@ -97,6 +105,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7612528918717790833}
     m_Modifications:
+    - target: {fileID: 3001314867255044363, guid: f4f861ba91ab14941ab19eac59849c00, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8310782938750548329, guid: f4f861ba91ab14941ab19eac59849c00, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -144,6 +156,10 @@ PrefabInstance:
     - target: {fileID: 8310782938750772553, guid: f4f861ba91ab14941ab19eac59849c00, type: 3}
       propertyPath: m_Name
       value: bicycle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8310782938750772553, guid: f4f861ba91ab14941ab19eac59849c00, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4f861ba91ab14941ab19eac59849c00, type: 3}

@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3702061458114667063}
     m_Modifications:
+    - target: {fileID: 1506564485759234870, guid: a020eb93d6b9cf6488d65eb38ec7a41d, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 9074508475135502620, guid: a020eb93d6b9cf6488d65eb38ec7a41d, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -55,13 +59,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: quail
       objectReference: {fileID: 0}
+    - target: {fileID: 9074508475135866172, guid: a020eb93d6b9cf6488d65eb38ec7a41d, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a020eb93d6b9cf6488d65eb38ec7a41d, type: 3}
---- !u!4 &2517727136056970414 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2592832916092317827, guid: a020eb93d6b9cf6488d65eb38ec7a41d, type: 3}
-  m_PrefabInstance: {fileID: 75246938497678381}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1401347439979568583
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -144,7 +147,7 @@ PrefabInstance:
     - target: {fileID: 9072754437883357314, guid: f2c046599fc8f0f439b62e1d3d4e6e2f, type: 3}
       propertyPath: hook
       value: 
-      objectReference: {fileID: 2517727136056970414}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2c046599fc8f0f439b62e1d3d4e6e2f, type: 3}
 --- !u!4 &3702061458114667063 stripped
