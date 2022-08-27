@@ -1139,6 +1139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13668662e71f4164dad9f0436e3375f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  setPositon: 0
   borderZ: 0
   borderY: 10
 --- !u!1 &433880525
@@ -1978,6 +1979,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13668662e71f4164dad9f0436e3375f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  setPositon: 0
   borderZ: 0
   borderY: 10
 --- !u!1 &799373853 stripped
@@ -2015,6 +2017,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13668662e71f4164dad9f0436e3375f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  setPositon: 0
   borderZ: 0
   borderY: 10
 --- !u!65 &799373857
@@ -2535,14 +2538,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1033310866}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.036, y: 1.24, z: -9.47}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -3.48, y: 0.63, z: -6.34}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &1033310870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2555,7 +2558,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea9e1be1c87d9ce4484d39f043b34e45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  setPositon: -10
 --- !u!1001 &1092793636
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2704,6 +2706,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13668662e71f4164dad9f0436e3375f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  setPositon: 0
   borderZ: 0
   borderY: 10
 --- !u!114 &1105488898
@@ -2741,7 +2744,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13668662e71f4164dad9f0436e3375f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  borderZ: 0
+  setPositon: 0
+  borderZ: 10
   borderY: 10
 --- !u!114 &1135334100
 MonoBehaviour:
@@ -2796,6 +2800,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13668662e71f4164dad9f0436e3375f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  setPositon: 0
   borderZ: 0
   borderY: 10
 --- !u!65 &1188602133
@@ -2963,6 +2968,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13668662e71f4164dad9f0436e3375f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  setPositon: 0
   borderZ: 0
   borderY: 10
 --- !u!114 &1201993076
@@ -3139,6 +3145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13668662e71f4164dad9f0436e3375f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  setPositon: 0
   borderZ: 0
   borderY: 10
 --- !u!114 &1354513374
@@ -4372,6 +4379,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13668662e71f4164dad9f0436e3375f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  setPositon: 0
   borderZ: 10
   borderY: 10
 --- !u!114 &1963614476
@@ -4409,6 +4417,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13668662e71f4164dad9f0436e3375f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  setPositon: 0
   borderZ: 0
   borderY: 10
 --- !u!114 &2022988619

@@ -6,8 +6,6 @@ public class TouchManager : MonoBehaviour
 {
     private Vector3 touchPosition;
     private Touch touch;
-    [SerializeField]
-    private float setPositon ; 
     private void Touch ()
     {
         if (Input.touchCount != 1 )
@@ -26,7 +24,6 @@ public class TouchManager : MonoBehaviour
                if (hit.transform.gameObject.GetComponent<Draggable>() != null)
                {
                     hit.transform.gameObject.GetComponent<Draggable>().SetDragging(true);
-                    hit.transform.gameObject.GetComponent<Transform>().position.x.Equals(setPositon) ;
                }
             }
         }

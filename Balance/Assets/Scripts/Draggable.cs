@@ -8,6 +8,8 @@ public class Draggable : MonoBehaviour
    private bool inBox = false;
    private float dist ;
    [SerializeField]
+   private float setPositon ; 
+   [SerializeField]
    private float borderZ;
    [SerializeField]
    private float borderY;
@@ -32,13 +34,13 @@ public class Draggable : MonoBehaviour
         shelf.TakeOut(gameObject);
         inBox = false;
        }
-
        if (dragging) rb.isKinematic = true;
        else if (!attachable.IsAttached()) rb.isKinematic = false;
     }
     private void OnMouseDown()
     {
-        
+        gameObject.transform.position = new Vector3 (setPositon, gameObject.transform.position.y , gameObject.transform.position.z);
+        dist = Camera.main.WorldToScreenPoint(gameObject.transform.position).z ;
         offset = gameObject.transform.position - GetMouseWorldPos();
     }
     private void OnMouseDrag()
@@ -58,20 +60,16 @@ public class Draggable : MonoBehaviour
     }
     private Vector3 GetMouseWorldPos()
     {
-        dist = Camera.main.WorldToScreenPoint(gameObject.transform.position).x ;
         Vector3 mousePoint = Input.mousePosition;
-        mousePoint.x = dist;
+        mousePoint.z = dist;
         return Camera.main.ScreenToWorldPoint(mousePoint);
     }
-
     public bool IsDragging(){
         return dragging;
     }
-
     public void SetInBox(bool inBox){
         this.inBox = inBox;
     }
-
     public bool IsInBox(){
         return inBox;
     }
