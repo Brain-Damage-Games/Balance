@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7056743603694993532}
   m_Layer: 0
   m_Name: parent
-  m_TagString: Objects
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 2083200965768894622}
   m_Layer: 0
   m_Name: Instrument
-  m_TagString: Untagged
+  m_TagString: Objects
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

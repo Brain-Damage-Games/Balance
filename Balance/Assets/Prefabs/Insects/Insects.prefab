@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8671263864326592954}
   m_Layer: 0
   m_Name: parent
-  m_TagString: Objects
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 1295803679392314809}
   m_Layer: 0
   m_Name: Insects
-  m_TagString: Untagged
+  m_TagString: Objects
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
