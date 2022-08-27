@@ -93,9 +93,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3702061458114667063}
     m_Modifications:
+    - target: {fileID: 3737168445437094104, guid: 6040533ac85576b48aabdeba2ffbef9b, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3737168445600790600, guid: 6040533ac85576b48aabdeba2ffbef9b, type: 3}
       propertyPath: m_Name
       value: tiger
+      objectReference: {fileID: 0}
+    - target: {fileID: 3737168445600790600, guid: 6040533ac85576b48aabdeba2ffbef9b, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3737168445600790604, guid: 6040533ac85576b48aabdeba2ffbef9b, type: 3}
       propertyPath: m_RootOrder

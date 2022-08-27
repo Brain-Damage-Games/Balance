@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7612528918717790833}
     m_Modifications:
+    - target: {fileID: 2519491345603744225, guid: c1359226973ae8d43a49c682691afdbf, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8648058019638149844, guid: c1359226973ae8d43a49c682691afdbf, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -55,6 +59,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: balloon
       objectReference: {fileID: 0}
+    - target: {fileID: 8648058019638648564, guid: c1359226973ae8d43a49c682691afdbf, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1359226973ae8d43a49c682691afdbf, type: 3}
 --- !u!1001 &4844404155782483647
@@ -79,6 +87,10 @@ PrefabInstance:
     - target: {fileID: 3516570022201527797, guid: 6bdae2108b49a2744b8d39212e53a544, type: 3}
       propertyPath: m_Name
       value: balloon
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516570022201527797, guid: 6bdae2108b49a2744b8d39212e53a544, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4388425330492099931, guid: 6bdae2108b49a2744b8d39212e53a544, type: 3}
       propertyPath: mass
@@ -135,6 +147,10 @@ PrefabInstance:
     - target: {fileID: 8605968720820647962, guid: 6bdae2108b49a2744b8d39212e53a544, type: 3}
       propertyPath: mass
       value: 71
+      objectReference: {fileID: 0}
+    - target: {fileID: 9133776763437425693, guid: 6bdae2108b49a2744b8d39212e53a544, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6bdae2108b49a2744b8d39212e53a544, type: 3}

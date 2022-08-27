@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 1455284385851736208, guid: 1e6be9a1fb075b6419dbb74faeb47c1e, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3883768691963074375, guid: 1e6be9a1fb075b6419dbb74faeb47c1e, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -79,6 +83,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: apple
       objectReference: {fileID: 0}
+    - target: {fileID: 9036612298318956337, guid: 1e6be9a1fb075b6419dbb74faeb47c1e, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e6be9a1fb075b6419dbb74faeb47c1e, type: 3}
 --- !u!4 &2490233674435301923 stripped
@@ -93,9 +101,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2490233674435301923}
     m_Modifications:
+    - target: {fileID: 3123428219429858865, guid: ff84937d98cb2c94f8652de7ddadc1d7, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8629065861066990341, guid: ff84937d98cb2c94f8652de7ddadc1d7, type: 3}
       propertyPath: m_Name
       value: apple
+      objectReference: {fileID: 0}
+    - target: {fileID: 8629065861066990341, guid: ff84937d98cb2c94f8652de7ddadc1d7, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8629065861067357989, guid: ff84937d98cb2c94f8652de7ddadc1d7, type: 3}
       propertyPath: m_RootOrder

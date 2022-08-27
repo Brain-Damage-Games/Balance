@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fork
       objectReference: {fileID: 0}
+    - target: {fileID: 1431863817475131552, guid: e8166f11826cd7c448239b1b856206d6, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5198752952213685976, guid: e8166f11826cd7c448239b1b856206d6, type: 3}
       propertyPath: mass
       value: 15
@@ -75,6 +79,10 @@ PrefabInstance:
       propertyPath: mass
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 8109928155154948271, guid: e8166f11826cd7c448239b1b856206d6, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8592266613635043133, guid: e8166f11826cd7c448239b1b856206d6, type: 3}
       propertyPath: m_Mass
       value: 15
@@ -96,6 +104,10 @@ PrefabInstance:
     - target: {fileID: 1788769220014661790, guid: 5af4df06c32b13044bbab84a26cd9540, type: 3}
       propertyPath: m_Name
       value: fork
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788769220014661790, guid: 5af4df06c32b13044bbab84a26cd9540, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1788769220015160510, guid: 5af4df06c32b13044bbab84a26cd9540, type: 3}
       propertyPath: m_RootOrder
@@ -140,6 +152,10 @@ PrefabInstance:
     - target: {fileID: 1788769220015160510, guid: 5af4df06c32b13044bbab84a26cd9540, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 4765343680337466551, guid: 5af4df06c32b13044bbab84a26cd9540, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5af4df06c32b13044bbab84a26cd9540, type: 3}

@@ -86,7 +86,7 @@ PrefabInstance:
     - target: {fileID: 9072754437883357314, guid: f2c046599fc8f0f439b62e1d3d4e6e2f, type: 3}
       propertyPath: hook
       value: 
-      objectReference: {fileID: 3350692738130200296}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2c046599fc8f0f439b62e1d3d4e6e2f, type: 3}
 --- !u!4 &3702061458114667063 stripped
@@ -149,10 +149,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: fish
       objectReference: {fileID: 0}
+    - target: {fileID: 3509051471457215898, guid: a674c51ef466e24479c4de31198fb07a, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5098878082746589987, guid: a674c51ef466e24479c4de31198fb07a, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a674c51ef466e24479c4de31198fb07a, type: 3}
---- !u!4 &3350692738130200296 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8201381750104400022, guid: a674c51ef466e24479c4de31198fb07a, type: 3}
-  m_PrefabInstance: {fileID: 6868310993221674622}
-  m_PrefabAsset: {fileID: 0}

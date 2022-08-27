@@ -89,9 +89,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3702061458114667063}
     m_Modifications:
+    - target: {fileID: 1786009737674191712, guid: 160c021c712218449b9a42d05d9298cf, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4267122446740636208, guid: 160c021c712218449b9a42d05d9298cf, type: 3}
       propertyPath: m_Name
       value: pig
+      objectReference: {fileID: 0}
+    - target: {fileID: 4267122446740636208, guid: 160c021c712218449b9a42d05d9298cf, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4267122446740872720, guid: 160c021c712218449b9a42d05d9298cf, type: 3}
       propertyPath: m_RootOrder

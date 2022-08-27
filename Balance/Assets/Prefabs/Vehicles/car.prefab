@@ -55,6 +55,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: car
       objectReference: {fileID: 0}
+    - target: {fileID: 4003789341970973946, guid: 1c5e9c77bf7cdf54ab9e33f436ed4685, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7882227082498468302, guid: 1c5e9c77bf7cdf54ab9e33f436ed4685, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c5e9c77bf7cdf54ab9e33f436ed4685, type: 3}
 --- !u!1001 &4844404155782483647
@@ -75,6 +83,10 @@ PrefabInstance:
     - target: {fileID: 3516570022201527797, guid: 6bdae2108b49a2744b8d39212e53a544, type: 3}
       propertyPath: m_Name
       value: car
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516570022201527797, guid: 6bdae2108b49a2744b8d39212e53a544, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4388425330492099931, guid: 6bdae2108b49a2744b8d39212e53a544, type: 3}
       propertyPath: mass
@@ -131,6 +143,10 @@ PrefabInstance:
     - target: {fileID: 8605968720820647962, guid: 6bdae2108b49a2744b8d39212e53a544, type: 3}
       propertyPath: mass
       value: 63
+      objectReference: {fileID: 0}
+    - target: {fileID: 9133776763437425693, guid: 6bdae2108b49a2744b8d39212e53a544, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6bdae2108b49a2744b8d39212e53a544, type: 3}

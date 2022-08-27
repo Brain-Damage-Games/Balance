@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: hen
       objectReference: {fileID: 0}
+    - target: {fileID: 912467223500563160, guid: 58d97ac7645ae574788de0719ff7f607, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 912467223501061880, guid: 58d97ac7645ae574788de0719ff7f607, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -55,13 +59,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4239630445659461588, guid: 58d97ac7645ae574788de0719ff7f607, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58d97ac7645ae574788de0719ff7f607, type: 3}
---- !u!4 &111948909198615263 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 992413473613550689, guid: 58d97ac7645ae574788de0719ff7f607, type: 3}
-  m_PrefabInstance: {fileID: 885091721686988478}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1401347439979568583
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -140,7 +143,7 @@ PrefabInstance:
     - target: {fileID: 9072754437883357314, guid: f2c046599fc8f0f439b62e1d3d4e6e2f, type: 3}
       propertyPath: hook
       value: 
-      objectReference: {fileID: 111948909198615263}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2c046599fc8f0f439b62e1d3d4e6e2f, type: 3}
 --- !u!4 &3702061458114667063 stripped

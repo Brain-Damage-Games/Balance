@@ -13,6 +13,7 @@ public class TouchManager : MonoBehaviour
    [SerializeField]
    private bool setPositon = false ; 
    private float borderX ; 
+    private Draggable draggingObject;
     private void Touch ()
     {
         if (Input.touchCount != 1 )
@@ -33,7 +34,10 @@ public class TouchManager : MonoBehaviour
                     hit.transform.gameObject.GetComponent<Draggable>().init(borderX ,  borderY , borderZ , setPositon );
                     hit.transform.gameObject.GetComponent<Draggable>().SetDragging(true);
                 }
+                draggingObject = hit.transform.GetComponent<Draggable>();
+                draggingObject?.SetDragging(true);
             }
+            return;
         }
         if(touch.phase == TouchPhase.Moved)
         {
@@ -41,15 +45,9 @@ public class TouchManager : MonoBehaviour
         }
         if(touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled) 
         {
-            Ray ray = Camera.main.ScreenPointToRay(touchPosition);
-            RaycastHit hit;
-            if(Physics.Raycast(ray , out hit))
-            {
-               if (hit.transform.gameObject.GetComponent<Draggable>() != null)
-               {
-                    hit.transform.gameObject.GetComponent<Draggable>().SetDragging(false);
-               }
-            }
+            draggingObject?.SetDragging(false);
+            draggingObject = null;
+            return;
         }
     }
 
