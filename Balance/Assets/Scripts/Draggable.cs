@@ -6,12 +6,10 @@ public class Draggable : MonoBehaviour
 {
    private bool dragging = false; 
    private bool inBox = false;
+   private bool setPositon = false ; 
    private float dist ;
-   [SerializeField]
-   private float setPositon ; 
-   [SerializeField]
+   private float borderX ; 
    private float borderZ;
-   [SerializeField]
    private float borderY;
    private Vector3 offset;
    private ShelfSorting shelf;
@@ -37,9 +35,19 @@ public class Draggable : MonoBehaviour
        if (dragging) rb.isKinematic = true;
        else if (!attachable.IsAttached()) rb.isKinematic = false;
     }
+    public void init(float borderX  , float borderY , float borderZ  , bool setPositon)
+    {
+        this.borderX = borderX ;
+        this.borderY = borderY ;
+        this.borderZ = borderZ ; 
+        this.setPositon = setPositon ; 
+    }
     private void OnMouseDown()
     {
-        gameObject.transform.position = new Vector3 (setPositon, gameObject.transform.position.y , gameObject.transform.position.z);
+        if(setPositon)
+        {
+            gameObject.transform.position = new Vector3 (borderX , gameObject.transform.position.y , gameObject.transform.position.z);
+        }
         dist = Camera.main.WorldToScreenPoint(gameObject.transform.position).z ;
         offset = gameObject.transform.position - GetMouseWorldPos();
     }
