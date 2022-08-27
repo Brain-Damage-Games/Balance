@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5706091817674528222}
   m_Layer: 0
   m_Name: Things
-  m_TagString: Untagged
+  m_TagString: Objects
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 8871722488931186862}
   m_Layer: 0
   m_Name: parent
-  m_TagString: Objects
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

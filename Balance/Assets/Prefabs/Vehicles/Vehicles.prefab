@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4789616675264360129}
   m_Layer: 0
   m_Name: Vehicles
-  m_TagString: Untagged
+  m_TagString: Objects
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 2978302266286751879}
   m_Layer: 0
   m_Name: parent
-  m_TagString: Objects
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
