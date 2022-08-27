@@ -6,6 +6,13 @@ public class TouchManager : MonoBehaviour
 {
     private Vector3 touchPosition;
     private Touch touch;
+   [SerializeField]
+   private float borderZ;
+   [SerializeField]
+   private float borderY;
+   [SerializeField]
+   private bool setPositon = false ; 
+   private float borderX ; 
     private Draggable draggingObject;
     private void Touch ()
     {
@@ -22,6 +29,11 @@ public class TouchManager : MonoBehaviour
             RaycastHit hit;
             if(Physics.Raycast(ray , out hit))
             {
+                if (hit.transform.gameObject.GetComponent<Draggable>() != null || hit.transform.gameObject.GetComponent<Water>() == null)
+                {
+                    hit.transform.gameObject.GetComponent<Draggable>().init(borderX ,  borderY , borderZ , setPositon );
+                    hit.transform.gameObject.GetComponent<Draggable>().SetDragging(true);
+                }
                 draggingObject = hit.transform.GetComponent<Draggable>();
                 draggingObject?.SetDragging(true);
             }
@@ -38,6 +50,7 @@ public class TouchManager : MonoBehaviour
             return;
         }
     }
+
     void Update()
     {
         Touch ();

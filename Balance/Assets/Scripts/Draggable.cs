@@ -6,10 +6,10 @@ public class Draggable : MonoBehaviour
 {
    public bool dragging = false; 
    private bool inBox = false;
+   private bool setPositon = false ; 
    private float dist ;
-   [SerializeField]
-   private float borderX;
-   [SerializeField]
+   private float borderX ; 
+   private float borderZ;
    private float borderY;
    private Vector3 offset;
    private ShelfSorting shelf;
@@ -32,16 +32,26 @@ public class Draggable : MonoBehaviour
         shelf.TakeOut(gameObject);
         inBox = false;
        }
-
        if (dragging) rb.isKinematic = true;
        else if (!attachable.IsAttached()) rb.isKinematic = false;
-   }
-   private void OnMouseDown()
+    }
+    public void init(float borderX  , float borderY , float borderZ  , bool setPositon)
     {
+        this.borderX = borderX ;
+        this.borderY = borderY ;
+        this.borderZ = borderZ ; 
+        this.setPositon = setPositon ; 
+    }
+    private void OnMouseDown()
+    {
+        if(setPositon)
+        {
+            gameObject.transform.position = new Vector3 (borderX , gameObject.transform.position.y , gameObject.transform.position.z);
+        }
         dist = Camera.main.WorldToScreenPoint(gameObject.transform.position).z ;
         offset = gameObject.transform.position - GetMouseWorldPos();
     }
-   private void OnMouseDrag()
+    private void OnMouseDrag()
     {
         if (dragging)
         {
@@ -52,7 +62,7 @@ public class Draggable : MonoBehaviour
     private void Limit () 
     {
         Vector3 newPos = gameObject.transform.position ; 
-        newPos.x =Mathf.Clamp(newPos.x , -borderX , borderX);
+        newPos.z =Mathf.Clamp(newPos.z , -borderZ , borderZ);
         newPos.y =Mathf.Clamp(newPos.y , -borderY , borderY);
         gameObject.transform.position = newPos ; 
     }
@@ -62,15 +72,12 @@ public class Draggable : MonoBehaviour
         mousePoint.z = dist;
         return Camera.main.ScreenToWorldPoint(mousePoint);
     }
-
     public bool IsDragging(){
         return dragging;
     }
-
     public void SetInBox(bool inBox){
         this.inBox = inBox;
     }
-
     public bool IsInBox(){
         return inBox;
     }
