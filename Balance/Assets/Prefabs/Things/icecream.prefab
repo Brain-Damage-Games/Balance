@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: icecream
       objectReference: {fileID: 0}
+    - target: {fileID: 1431863817475131552, guid: e8166f11826cd7c448239b1b856206d6, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5198752952213685976, guid: e8166f11826cd7c448239b1b856206d6, type: 3}
       propertyPath: mass
       value: 20
@@ -79,6 +83,10 @@ PrefabInstance:
       propertyPath: mass
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 8109928155154948271, guid: e8166f11826cd7c448239b1b856206d6, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8592266613635043133, guid: e8166f11826cd7c448239b1b856206d6, type: 3}
       propertyPath: m_Mass
       value: 20
@@ -100,6 +108,10 @@ PrefabInstance:
     - target: {fileID: 2843534371565133197, guid: ce9cb71a974888842a6256a05f377d5b, type: 3}
       propertyPath: m_Name
       value: icecream
+      objectReference: {fileID: 0}
+    - target: {fileID: 2843534371565133197, guid: ce9cb71a974888842a6256a05f377d5b, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2843534371565552045, guid: ce9cb71a974888842a6256a05f377d5b, type: 3}
       propertyPath: m_RootOrder
@@ -144,6 +156,10 @@ PrefabInstance:
     - target: {fileID: 2843534371565552045, guid: ce9cb71a974888842a6256a05f377d5b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9044733855303537295, guid: ce9cb71a974888842a6256a05f377d5b, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce9cb71a974888842a6256a05f377d5b, type: 3}

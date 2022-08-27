@@ -93,6 +93,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: zebra
       objectReference: {fileID: 0}
+    - target: {fileID: 4775659704447512925, guid: dadadc83ba4ddb443948ccad9671388e, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8198004458086453636, guid: dadadc83ba4ddb443948ccad9671388e, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8869186145426942379, guid: dadadc83ba4ddb443948ccad9671388e, type: 3}
       propertyPath: m_RootOrder
       value: 0

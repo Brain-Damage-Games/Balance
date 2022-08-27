@@ -55,6 +55,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: pencil
       objectReference: {fileID: 0}
+    - target: {fileID: 2823105202124941344, guid: 0e70e35d8280d2a44b3be30451c0ac46, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9069886595235293130, guid: 0e70e35d8280d2a44b3be30451c0ac46, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e70e35d8280d2a44b3be30451c0ac46, type: 3}
 --- !u!1001 &2619550323548269056
@@ -67,6 +75,10 @@ PrefabInstance:
     - target: {fileID: 1431863817475131552, guid: e8166f11826cd7c448239b1b856206d6, type: 3}
       propertyPath: m_Name
       value: pencil
+      objectReference: {fileID: 0}
+    - target: {fileID: 1431863817475131552, guid: e8166f11826cd7c448239b1b856206d6, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5198752952213685976, guid: e8166f11826cd7c448239b1b856206d6, type: 3}
       propertyPath: mass
@@ -135,6 +147,10 @@ PrefabInstance:
     - target: {fileID: 7029412286439813981, guid: e8166f11826cd7c448239b1b856206d6, type: 3}
       propertyPath: mass
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8109928155154948271, guid: e8166f11826cd7c448239b1b856206d6, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8592266613635043133, guid: e8166f11826cd7c448239b1b856206d6, type: 3}
       propertyPath: m_Mass

@@ -59,6 +59,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: earth
       objectReference: {fileID: 0}
+    - target: {fileID: 2580315270909734300, guid: 3ddd9efef0f063c4baa043d4679e0574, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4917457608610626010, guid: 3ddd9efef0f063c4baa043d4679e0574, type: 3}
       propertyPath: mass
       value: 99
@@ -74,6 +78,10 @@ PrefabInstance:
     - target: {fileID: 5275076281349515688, guid: 3ddd9efef0f063c4baa043d4679e0574, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.764
+      objectReference: {fileID: 0}
+    - target: {fileID: 6228269424958136963, guid: 3ddd9efef0f063c4baa043d4679e0574, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8251202516871917351, guid: 3ddd9efef0f063c4baa043d4679e0574, type: 3}
       propertyPath: m_Mass
@@ -93,9 +101,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5487336925924315902}
     m_Modifications:
+    - target: {fileID: 4349404397041973192, guid: ca435451ecb95fa4a98fbf217371c223, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7399179673073630579, guid: ca435451ecb95fa4a98fbf217371c223, type: 3}
       propertyPath: m_Name
       value: earth
+      objectReference: {fileID: 0}
+    - target: {fileID: 7399179673073630579, guid: ca435451ecb95fa4a98fbf217371c223, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7399179673074114899, guid: ca435451ecb95fa4a98fbf217371c223, type: 3}
       propertyPath: m_RootOrder

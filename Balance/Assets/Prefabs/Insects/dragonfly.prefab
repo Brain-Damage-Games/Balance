@@ -55,6 +55,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: dragonfly
       objectReference: {fileID: 0}
+    - target: {fileID: 1081709130488859748, guid: 4b9c42d41728a8b4e9b99f4ba43a609f, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6010418493671093571, guid: 4b9c42d41728a8b4e9b99f4ba43a609f, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b9c42d41728a8b4e9b99f4ba43a609f, type: 3}
 --- !u!1001 &7110506914654142710
@@ -124,6 +132,10 @@ PrefabInstance:
       propertyPath: mass
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 7619025966593453908, guid: a4bd6a70fa88b3942a573c25e37bc03d, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7976539235528209835, guid: a4bd6a70fa88b3942a573c25e37bc03d, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -139,6 +151,10 @@ PrefabInstance:
     - target: {fileID: 8597537172676869163, guid: a4bd6a70fa88b3942a573c25e37bc03d, type: 3}
       propertyPath: m_Name
       value: dragonfly
+      objectReference: {fileID: 0}
+    - target: {fileID: 8597537172676869163, guid: a4bd6a70fa88b3942a573c25e37bc03d, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4bd6a70fa88b3942a573c25e37bc03d, type: 3}

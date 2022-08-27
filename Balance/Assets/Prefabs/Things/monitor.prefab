@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: monitor
       objectReference: {fileID: 0}
+    - target: {fileID: 3300177689502097505, guid: 21855d8d7839a2a44b45bea6ccfb6927, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3300177689502465089, guid: 21855d8d7839a2a44b45bea6ccfb6927, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -55,6 +59,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8592741556431577483, guid: 21855d8d7839a2a44b45bea6ccfb6927, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21855d8d7839a2a44b45bea6ccfb6927, type: 3}
 --- !u!1001 &2619550323548269056
@@ -67,6 +75,10 @@ PrefabInstance:
     - target: {fileID: 1431863817475131552, guid: e8166f11826cd7c448239b1b856206d6, type: 3}
       propertyPath: m_Name
       value: monitor
+      objectReference: {fileID: 0}
+    - target: {fileID: 1431863817475131552, guid: e8166f11826cd7c448239b1b856206d6, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5198752952213685976, guid: e8166f11826cd7c448239b1b856206d6, type: 3}
       propertyPath: mass
@@ -139,6 +151,10 @@ PrefabInstance:
     - target: {fileID: 7029412286439813981, guid: e8166f11826cd7c448239b1b856206d6, type: 3}
       propertyPath: mass
       value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 8109928155154948271, guid: e8166f11826cd7c448239b1b856206d6, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8592266613635043133, guid: e8166f11826cd7c448239b1b856206d6, type: 3}
       propertyPath: m_Mass

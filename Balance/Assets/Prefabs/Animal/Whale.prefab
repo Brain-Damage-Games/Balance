@@ -145,6 +145,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: whale
       objectReference: {fileID: 0}
+    - target: {fileID: 4850449622309808308, guid: efc7d8eaec9f8bc44994eabc511e2990, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733412085174074917, guid: efc7d8eaec9f8bc44994eabc511e2990, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: efc7d8eaec9f8bc44994eabc511e2990, type: 3}
 --- !u!1 &729473912557308977 stripped

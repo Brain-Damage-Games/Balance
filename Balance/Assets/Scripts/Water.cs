@@ -5,7 +5,8 @@ using UnityEngine;
 public class Water : MonoBehaviour
 {
    
-   public int objectInWater=0;
+    public int objectInWater=0;
+
 
     void OnTriggerEnter(Collider col){
         if (col.gameObject.transform.parent?.tag == "Objects")
@@ -21,5 +22,5 @@ public class Water : MonoBehaviour
     {
         return objectInWater;
     }
-
+   
 }
