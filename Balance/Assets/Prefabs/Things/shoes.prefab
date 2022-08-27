@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: shoes
       objectReference: {fileID: 0}
+    - target: {fileID: 1431863817475131552, guid: e8166f11826cd7c448239b1b856206d6, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5198752952213685976, guid: e8166f11826cd7c448239b1b856206d6, type: 3}
       propertyPath: mass
       value: 27
@@ -83,6 +87,10 @@ PrefabInstance:
       propertyPath: mass
       value: 27
       objectReference: {fileID: 0}
+    - target: {fileID: 8109928155154948271, guid: e8166f11826cd7c448239b1b856206d6, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8592266613635043133, guid: e8166f11826cd7c448239b1b856206d6, type: 3}
       propertyPath: m_Mass
       value: 27
@@ -148,6 +156,14 @@ PrefabInstance:
     - target: {fileID: 3902280462757542633, guid: 70bfaa1c664b65b40a9581b174847bd7, type: 3}
       propertyPath: m_Name
       value: shoes
+      objectReference: {fileID: 0}
+    - target: {fileID: 3902280462757542633, guid: 70bfaa1c664b65b40a9581b174847bd7, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5765372356524437434, guid: 70bfaa1c664b65b40a9581b174847bd7, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70bfaa1c664b65b40a9581b174847bd7, type: 3}

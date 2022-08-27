@@ -82,7 +82,7 @@ PrefabInstance:
     - target: {fileID: 9072754437883357314, guid: f2c046599fc8f0f439b62e1d3d4e6e2f, type: 3}
       propertyPath: hook
       value: 
-      objectReference: {fileID: 3539121833931154193}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2c046599fc8f0f439b62e1d3d4e6e2f, type: 3}
 --- !u!4 &3702061458114667063 stripped
@@ -97,6 +97,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3702061458114667063}
     m_Modifications:
+    - target: {fileID: 1327191941756464257, guid: 40842d33fc94ab540844904f6f798319, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5657025645585159107, guid: 40842d33fc94ab540844904f6f798319, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -145,10 +149,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: mouse
       objectReference: {fileID: 0}
+    - target: {fileID: 5657025645585584099, guid: 40842d33fc94ab540844904f6f798319, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40842d33fc94ab540844904f6f798319, type: 3}
---- !u!4 &3539121833931154193 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2700138514822803252, guid: 40842d33fc94ab540844904f6f798319, type: 3}
-  m_PrefabInstance: {fileID: 1469771218370858021}
-  m_PrefabAsset: {fileID: 0}

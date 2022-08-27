@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1749943754116077509, guid: 71df1978496915049ad6a886e28bb855, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2083200965768894622, guid: 71df1978496915049ad6a886e28bb855, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -55,6 +59,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: guitar
       objectReference: {fileID: 0}
+    - target: {fileID: 3380683496018941863, guid: 71df1978496915049ad6a886e28bb855, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5525507594287120829, guid: 71df1978496915049ad6a886e28bb855, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -89,6 +97,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4918649741429237929}
     m_Modifications:
+    - target: {fileID: 1281604546445251764, guid: e39a1fd0a0e314642978265906c965f1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5420705023162813626, guid: e39a1fd0a0e314642978265906c965f1, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -136,6 +148,10 @@ PrefabInstance:
     - target: {fileID: 5420705023162847386, guid: e39a1fd0a0e314642978265906c965f1, type: 3}
       propertyPath: m_Name
       value: guitar
+      objectReference: {fileID: 0}
+    - target: {fileID: 5420705023162847386, guid: e39a1fd0a0e314642978265906c965f1, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e39a1fd0a0e314642978265906c965f1, type: 3}

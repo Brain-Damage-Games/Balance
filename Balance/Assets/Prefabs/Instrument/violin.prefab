@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1749943754116077509, guid: 71df1978496915049ad6a886e28bb855, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2083200965768894622, guid: 71df1978496915049ad6a886e28bb855, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -54,6 +58,10 @@ PrefabInstance:
     - target: {fileID: 3380683496018941863, guid: 71df1978496915049ad6a886e28bb855, type: 3}
       propertyPath: m_Name
       value: violin
+      objectReference: {fileID: 0}
+    - target: {fileID: 3380683496018941863, guid: 71df1978496915049ad6a886e28bb855, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5525507594287120829, guid: 71df1978496915049ad6a886e28bb855, type: 3}
       propertyPath: m_RootOrder
@@ -105,6 +113,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: violin
       objectReference: {fileID: 0}
+    - target: {fileID: 1945610743547370782, guid: 3928afa6a5851e140b6960ff361340b7, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1945610743547461950, guid: 3928afa6a5851e140b6960ff361340b7, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -148,6 +160,10 @@ PrefabInstance:
     - target: {fileID: 1945610743547461950, guid: 3928afa6a5851e140b6960ff361340b7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4752186411838405942, guid: 3928afa6a5851e140b6960ff361340b7, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3928afa6a5851e140b6960ff361340b7, type: 3}

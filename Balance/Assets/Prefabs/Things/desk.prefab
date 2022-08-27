@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: desk
       objectReference: {fileID: 0}
+    - target: {fileID: 1431863817475131552, guid: e8166f11826cd7c448239b1b856206d6, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5198752952213685976, guid: e8166f11826cd7c448239b1b856206d6, type: 3}
       propertyPath: mass
       value: 60
@@ -79,6 +83,10 @@ PrefabInstance:
       propertyPath: mass
       value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 8109928155154948271, guid: e8166f11826cd7c448239b1b856206d6, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8592266613635043133, guid: e8166f11826cd7c448239b1b856206d6, type: 3}
       propertyPath: m_Mass
       value: 60
@@ -97,9 +105,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7797369480540684028}
     m_Modifications:
+    - target: {fileID: 2881903288346991565, guid: 17448166b3e0695419a39e4e06730727, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 9011009274541362702, guid: 17448166b3e0695419a39e4e06730727, type: 3}
       propertyPath: m_Name
       value: desk
+      objectReference: {fileID: 0}
+    - target: {fileID: 9011009274541362702, guid: 17448166b3e0695419a39e4e06730727, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9011009274541658670, guid: 17448166b3e0695419a39e4e06730727, type: 3}
       propertyPath: m_RootOrder

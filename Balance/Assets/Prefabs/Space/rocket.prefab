@@ -59,6 +59,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rocket
       objectReference: {fileID: 0}
+    - target: {fileID: 2580315270909734300, guid: 3ddd9efef0f063c4baa043d4679e0574, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4917457608610626010, guid: 3ddd9efef0f063c4baa043d4679e0574, type: 3}
       propertyPath: mass
       value: 76
@@ -74,6 +78,10 @@ PrefabInstance:
     - target: {fileID: 5275076281349515688, guid: 3ddd9efef0f063c4baa043d4679e0574, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.804
+      objectReference: {fileID: 0}
+    - target: {fileID: 6228269424958136963, guid: 3ddd9efef0f063c4baa043d4679e0574, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8251202516871917351, guid: 3ddd9efef0f063c4baa043d4679e0574, type: 3}
       propertyPath: m_Mass
@@ -140,6 +148,14 @@ PrefabInstance:
     - target: {fileID: 3408865595664171953, guid: f7443a263bbfc704e9e6551833f0ece6, type: 3}
       propertyPath: m_Name
       value: rocket
+      objectReference: {fileID: 0}
+    - target: {fileID: 3408865595664171953, guid: f7443a263bbfc704e9e6551833f0ece6, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8484117344789419829, guid: f7443a263bbfc704e9e6551833f0ece6, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7443a263bbfc704e9e6551833f0ece6, type: 3}
