@@ -31,11 +31,10 @@ public class TouchManager : MonoBehaviour
             {
                 if (hit.transform.gameObject.GetComponent<Draggable>() != null || hit.transform.gameObject.GetComponent<Water>() == null)
                 {
-                    hit.transform.gameObject.GetComponent<Draggable>().init(borderX ,  borderY , borderZ , setPositon );
-                    hit.transform.gameObject.GetComponent<Draggable>().SetDragging(true);
+                    hit.transform.GetComponent<Draggable>()?.init(borderX ,  borderY , borderZ , setPositon );
+                    draggingObject = hit.transform.GetComponent<Draggable>();
+                    draggingObject?.SetDragging(true);
                 }
-                draggingObject = hit.transform.GetComponent<Draggable>();
-                draggingObject?.SetDragging(true);
             }
             return;
         }

@@ -9,12 +9,10 @@ public class Water : MonoBehaviour
 
 
     void OnTriggerEnter(Collider col){
-        if (col.gameObject.transform.parent?.tag == "Objects")
             objectInWater += 1;
     }
 
     void OnTriggerExit(Collider col){
-        if (col.gameObject.transform.parent?.tag == "Objects")
             objectInWater -= 1;
     }
 

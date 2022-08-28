@@ -148,6 +148,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distance: 10000
   attached: 0
+  aim: {fileID: 0}
+  allowAttach: 0
 --- !u!114 &5069648709836361617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,8 +162,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13668662e71f4164dad9f0436e3375f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  borderX: 10
-  borderY: 10
+  dragging: 0
+  inBox: 0
 --- !u!114 &7413442910537879965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -344,6 +346,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b698259b6c877774e9e5a0e9b81c8b33, type: 3}
       propertyPath: m_Name
       value: HookRight
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b698259b6c877774e9e5a0e9b81c8b33, type: 3}
+      propertyPath: m_TagString
+      value: Aim
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b698259b6c877774e9e5a0e9b81c8b33, type: 3}
@@ -532,6 +538,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b698259b6c877774e9e5a0e9b81c8b33, type: 3}
       propertyPath: m_Name
       value: HookLeft
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b698259b6c877774e9e5a0e9b81c8b33, type: 3}
+      propertyPath: m_TagString
+      value: Aim
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b698259b6c877774e9e5a0e9b81c8b33, type: 3}

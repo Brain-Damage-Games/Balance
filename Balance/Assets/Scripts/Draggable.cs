@@ -5,7 +5,7 @@ using UnityEngine;
 public class Draggable : MonoBehaviour
 {
    public bool dragging = false; 
-   private bool inBox = false;
+   public bool inBox = false;
    private bool setPositon = false ; 
    private float dist ;
    private float borderX ; 
@@ -29,7 +29,9 @@ public class Draggable : MonoBehaviour
         attachable.Detach();
        }
        else if (dragging && inBox){
-        shelf.TakeOut(gameObject);
+        if (transform.parent != null) shelf.TakeOut(transform.parent.gameObject);
+        else shelf.TakeOut(gameObject);
+            
         inBox = false;
        }
        if (dragging) rb.isKinematic = true;

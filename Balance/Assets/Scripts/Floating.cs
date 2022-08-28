@@ -35,7 +35,6 @@ public class Floating : MonoBehaviour
             if (!isForwarding)
             {
                 Vector3 dest = center.position - transform.position;
-                print(dest.magnitude);
                 rb.AddForce(dest* Mathf.Pow((dest.magnitude),2f));
                 isForwarding = false;
             }

@@ -11,6 +11,7 @@ public class ShelfSorting : MonoBehaviour
 
     float shelfStartPosition, shelfEndPosition;
     int firstObjectIndex, lastObjectIndex;
+    [SerializeField] float scaleResizeRatio = 10f;
     void Awake()
     {
         TurnToList(GameObject.FindGameObjectsWithTag("Objects"));
@@ -35,7 +36,7 @@ public class ShelfSorting : MonoBehaviour
 
 
         space = transform.localScale.z * 0.036f;
-        objectsScale = transform.localScale.z / 11f;
+        objectsScale = transform.localScale.z / scaleResizeRatio;
 
         shelfStartPosition = transform.position.z - transform.localScale.z / 2f;
         shelfEndPosition = transform.position.z + transform.localScale.z / 2f;  
@@ -48,7 +49,7 @@ public class ShelfSorting : MonoBehaviour
 
         for(int i = 0; i < ObjetsArray.Length; i++){
             allObjects.Add(ObjetsArray[i]);
-            ObjetsArray[i].GetComponent<Draggable>()?.SetInBox(true);
+            ObjetsArray[i].GetComponentInChildren<Draggable>()?.SetInBox(true);
         }
         
     }
@@ -56,18 +57,12 @@ public class ShelfSorting : MonoBehaviour
     //***** this function will gave the gameObjects their position;
     public void Sort()
     {
-        shelfStartPosition = transform.position.z - transform.localScale.z / 2f + objectsScale;
-        shelfEndPosition = transform.position.z + transform.localScale.z / 2f - objectsScale;
+        shelfStartPosition = transform.position.z - transform.localScale.z / 2f;
+        shelfEndPosition = transform.position.z + transform.localScale.z / 2f - objectsScale*100;
 
         for(int i = 0; i < seenObjects.Count; i++)
         {
-            if (seenObjects[i].transform.parent != null)
-                seenObjects[i].transform.parent.position = new Vector3(
-                    transform.localPosition.x,
-                    transform.position.y + objectsScale,
-                    shelfStartPosition + space + objectsScale / 2);
-            else
-                seenObjects[i].transform.position = new Vector3(
+            seenObjects[i].transform.position = new Vector3(
                     transform.localPosition.x,
                     transform.position.y + objectsScale,
                     shelfStartPosition + space + objectsScale / 2);
@@ -148,9 +143,9 @@ public class ShelfSorting : MonoBehaviour
         for(int i = 0; i < allObjects.Count; i++)
             allObjects[i].transform.localScale = new Vector3
             (
-                transform.localScale.z / 11f,
-                transform.localScale.z / 11f,
-                transform.localScale.z / 11f
+                transform.localScale.z / scaleResizeRatio,
+                transform.localScale.z / scaleResizeRatio,
+                transform.localScale.z / scaleResizeRatio
             ) ;
         
     }

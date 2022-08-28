@@ -8,21 +8,30 @@ public class WinCondition : MonoBehaviour
     public static event endOfGame EndOfGame;
 
     GameObject[] allObjects;
+    public List<Attachable> attachables;
 
     [SerializeField]
     GameObject water;
     private bool alreadyWon = false;
+    [SerializeField] Comparator[] scales; 
 
     void Awake() {
         allObjects = GameObject.FindGameObjectsWithTag("Objects");
+        foreach (GameObject gameObject in allObjects){
+            if (gameObject.GetComponent<Attachable>() == null) attachables.Add(gameObject.GetComponentInChildren<Attachable>());
+            else attachables.Add(gameObject.GetComponent<Attachable>());
+        }
     }
 
     public bool IsWon()
     {
         if (alreadyWon) return false;
-        foreach(GameObject gameObject in allObjects)
-            if(!gameObject.GetComponent<Attachable>().IsAttached())
-                return false;
+        foreach (Comparator scale in scales){
+            if (scale.IsRotating()) return false;
+        }
+        foreach(Attachable attachable in attachables){
+            if (!attachable.IsAttached()) return false;
+        }
 
         if(water.GetComponent<Water>().GetObjectInWater() != 0)
             return false;

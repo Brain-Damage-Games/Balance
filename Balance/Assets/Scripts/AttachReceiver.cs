@@ -17,7 +17,9 @@ public class AttachReceiver : MonoBehaviour
     {
         if (!attached){
             OriginGameObject.transform.position = destinationAttachPoint.position;
-            OriginGameObject.transform.SetParent(destinationAttachPoint);
+            if (OriginGameObject.transform.parent != null)
+                OriginGameObject.transform.parent.SetParent(destinationAttachPoint);
+            else OriginGameObject.transform.SetParent(destinationAttachPoint);
 
 
             //Debug.DrawLine(GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Transform>().position, destinationAttachPoint.position , Color.red);

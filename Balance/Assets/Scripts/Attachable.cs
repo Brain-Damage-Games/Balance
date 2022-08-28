@@ -11,9 +11,9 @@ public class Attachable : MonoBehaviour
 
     public bool attached = false;
 
-    private GameObject aim;
+    public GameObject aim;
     private bool triggerAttachabality = false;
-    private bool allowAttach = false;
+    public bool allowAttach = false;
     private Rigidbody rb;
 
     private void Awake()
@@ -35,6 +35,7 @@ public class Attachable : MonoBehaviour
         {
             AttachReceiver attachReceiver = aim.GetComponent<AttachReceiver>();
             Draggable targetDraggable = aim.GetComponentInParent<Draggable>();
+            print("yes");
             if (attachReceiver.isEmpty() && (targetDraggable == null || !targetDraggable.IsInBox())){
                 attachReceiver.ReceiveAttach(gameObject);
                 attached = true;
@@ -55,9 +56,11 @@ public class Attachable : MonoBehaviour
     }
     public void Detach()
     {
-        aim.GetComponent<AttachReceiver>().Release(gameObject);
+        aim?.GetComponent<AttachReceiver>()?.Release(gameObject);
         GetComponent<Comparator>()?.DetachAll();
         rb.isKinematic = false;
+        allowAttach = false;
+        attached = false;
         StartCoroutine(Timer());
     }
     private bool CheckAttachablity()
@@ -96,9 +99,9 @@ public class Attachable : MonoBehaviour
     }
 
     private IEnumerator Timer(){
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.1f);
         aim = null;
-        attached = false;
+        allowAttach = true;
     }
 
     public void AllowAttachment(bool allowAttach){

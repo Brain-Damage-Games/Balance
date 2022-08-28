@@ -7,7 +7,7 @@ public class Comparator : MonoBehaviour
 {
     private float leftMass = 0, rightMass = 0;
     public Mass leftMassObject, rightMassObject;
-    private bool isRotating = false;
+    private bool rotating = false;
     [SerializeField, Range(5f,50f)] float maxAngleOffset = 30f;
     private float angleOffset = 0f;
     private float angle;
@@ -20,7 +20,7 @@ public class Comparator : MonoBehaviour
         winCondition = GameObject.FindGameObjectWithTag("WinCondition").GetComponent<WinCondition>();
     }
     void Update(){
-        if (isRotating){
+        if (rotating){
             Rotate();
         }
     }
@@ -58,12 +58,12 @@ public class Comparator : MonoBehaviour
             if (Mathf.Abs(angle) < 0.5){
                 transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x,transform.rotation.eulerAngles.y,0);
                 rightHook.localRotation = leftHook.localRotation = Quaternion.Euler(leftHook.localRotation.eulerAngles.x,leftHook.localRotation.eulerAngles.y,0);
-                isRotating = false;
+                rotating = false;
                 if (winCondition.IsWon()) print("You Won");
             }
         }
         else{
-            isRotating = false;
+            rotating = false;
             if (winCondition.IsWon()) print("You Won");
         }
 
@@ -72,7 +72,7 @@ public class Comparator : MonoBehaviour
     private void Compare(){
         angleOffset = Mathf.Abs(leftMass - rightMass) * angleOffsetIncreasePerUnit;
         if (angleOffset > maxAngleOffset) angleOffset = maxAngleOffset;
-        isRotating = true;
+        rotating = true;
         UpdateMass();
     }
 
@@ -113,5 +113,9 @@ public class Comparator : MonoBehaviour
     public void DetachAll(){
         leftMassObject?.gameObject.GetComponent<Attachable>()?.Detach();
         rightMassObject?.gameObject.GetComponent<Attachable>()?.Detach();
+    }
+
+    public bool IsRotating(){
+        return rotating;
     }
 }
