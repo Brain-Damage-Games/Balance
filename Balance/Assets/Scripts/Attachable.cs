@@ -16,8 +16,13 @@ public class Attachable : MonoBehaviour
     public bool allowAttach = false;
     private Rigidbody rb;
 
+    private SoundEffectManager sound;
+    private ProgressBar progress;
+
     private void Awake()
     {
+        sound = GameObject.FindGameObjectWithTag("SoundEffects").GetComponent<SoundEffectManager>();
+        progress = GameObject.FindGameObjectWithTag("ProgressBar").GetComponent<ProgressBar>();
         WinCondition.EndOfGame += Detach;
         rb = GetComponent<Rigidbody>();
         cameraPos = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Transform>().position; 
@@ -30,9 +35,12 @@ public class Attachable : MonoBehaviour
     }
     public void Attach()
     {
-        
+       
+        Vibrator.Vibrate(25);
         if (allowAttach && (CheckAttachablity() || triggerAttachabality) && aim != null && aim.tag == "Aim" && !attached)
         {
+            progress.AddToBar();
+            sound.PlayAttachSound();
             AttachReceiver attachReceiver = aim.GetComponent<AttachReceiver>();
             Draggable targetDraggable = aim.GetComponentInParent<Draggable>();
             if (attachReceiver.isEmpty() && (targetDraggable == null || !targetDraggable.IsInBox())){
@@ -55,6 +63,8 @@ public class Attachable : MonoBehaviour
     }
     public void Detach()
     {
+        progress.Deduct();
+        sound.PlayDetachSound();
         aim?.GetComponent<AttachReceiver>()?.Release(gameObject);
         GetComponent<Comparator>()?.DetachAll();
         rb.isKinematic = false;

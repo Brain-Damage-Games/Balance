@@ -6,6 +6,27 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/[YasinSH].unity
-    guid: 33d3684fb1c10794bb0d78e7a2daa3f5
+    path: Assets/Scenes/Splash.unity
+    guid: 5f34c1a95d84177448fc7c27ab3b118e
+  - enabled: 1
+    path: Assets/Scenes/1.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/2.unity
+    guid: 131786b818406ff43987b395e283ad65
+  - enabled: 1
+    path: Assets/Scenes/3.unity
+    guid: ff737c005f1448f4fa9a590cf8db00f0
+  - enabled: 1
+    path: Assets/Scenes/4.unity
+    guid: 4d40fcf5b2f3e2643a0fc023781f5c15
+  - enabled: 1
+    path: Assets/Scenes/5.unity
+    guid: c44ef712b0c648845995a24fb129a481
+  - enabled: 1
+    path: Assets/Scenes/6.unity
+    guid: e97ae8b52b602e4489fcea4f40e3e76c
+  - enabled: 1
+    path: Assets/Scenes/7.unity
+    guid: 27deb1762a4c461499105a120a832dc3
   m_configObjects: {}

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class WinCondition : MonoBehaviour
 {
@@ -13,9 +14,14 @@ public class WinCondition : MonoBehaviour
     [SerializeField]
     GameObject water;
     private bool alreadyWon = false;
-    [SerializeField] Comparator[] scales; 
+    [SerializeField] Comparator[] scales;
 
+    private SoundEffectManager sound;
+    private ProgressBar progress;
     void Awake() {
+      //  PlayerPrefs.SetInt("Level", 1);
+        sound = GameObject.FindGameObjectWithTag("SoundEffects").GetComponent<SoundEffectManager>();
+        
         // allObjects = GameObject.FindGameObjectsWithTag("Objects");
         // foreach (GameObject gameObject in allObjects){
         //     if (gameObject.GetComponent<Attachable>() == null) attachables.Add(gameObject.GetComponentInChildren<Attachable>());
@@ -24,9 +30,18 @@ public class WinCondition : MonoBehaviour
         // attachables = Resources.FindObjectsOfTypeAll<Attachable>();
     }
 
+    private void Start()
+    {
+        progress = GameObject.FindGameObjectWithTag("ProgressBar").GetComponent<ProgressBar>();
+    }
     public bool IsWon()
     {
-        if (alreadyWon) return false;
+
+        if (alreadyWon) 
+        {
+            progress.Fill(1);
+            return false;
+        } 
         foreach (Comparator scale in scales){
             if (scale.IsRotating()) return false;
         }
@@ -34,11 +49,24 @@ public class WinCondition : MonoBehaviour
             if (!attachable.IsAttached()) return false;
         }
 
-        if(water.GetComponent<Water>().GetObjectInWater() != 0)
+        if (water.GetComponent<Water>().GetObjectInWater() != 0)
             return false;
+
+       
+        sound.PlayWinSound();
+    
+        Vibrator.Vibrate(25);
+        StartCoroutine(LoadNext());
 
         EndOfGame();
         alreadyWon = true;
         return true;
+    }
+
+    IEnumerator LoadNext() 
+    {
+        
+        yield return new WaitForSeconds(3.5f);
+        LevelChanger.LoadNextLevel();
     }
 }

@@ -10,7 +10,7 @@ public class ProgressBar : MonoBehaviour
     private Image progress;
 
     private GameObject[] objects;
-    private int count;
+    private float count;
 
     private void Awake()
     {
@@ -21,11 +21,21 @@ public class ProgressBar : MonoBehaviour
     }
     public void AddToBar() 
     {
-        progress.fillAmount += (1 % count);
+        progress.fillAmount += (1 / count);
     }
 
     public void Deduct() 
     {
-        progress.fillAmount -= (1 % count);
+        progress.fillAmount -= (1 / count);
+    }
+
+    public void Fill(float amount) 
+    {
+        progress.fillAmount = amount;
+    }
+
+    public void SetColor(Color color) 
+    {
+        progress.color = color;
     }
 }

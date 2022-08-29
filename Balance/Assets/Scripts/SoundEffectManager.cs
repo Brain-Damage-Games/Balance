@@ -6,9 +6,8 @@ public class SoundEffectManager : MonoBehaviour
 {
     //Attach Script To A SoundEffect Manager
     [SerializeField]
-    private AudioSource audioSource;
+    private AudioSource audioSource, winSource;
 
-    [Header("Sound Effects")]
     [SerializeField]
     private AudioClip attachSound, detachSound, winSound, waterSound, selectSound;
 
@@ -29,10 +28,10 @@ public class SoundEffectManager : MonoBehaviour
 
     public void PlayWinSound(float volume = 1) 
     {
-        audioSource.pitch = 1;
-        audioSource.volume = volume;
-        audioSource.clip = winSound;
-        audioSource.Play();
+        winSource.pitch = 1;
+        winSource.volume = volume;
+        winSource.clip = winSound;
+        winSource.Play();
     }
 
     public void PlayWaterSound(float volume = 1) 

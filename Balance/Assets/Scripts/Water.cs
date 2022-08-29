@@ -6,9 +6,15 @@ public class Water : MonoBehaviour
 {
    
     public int objectInWater=0;
+    private SoundEffectManager sound;
 
+    private void Awake()
+    {
+        sound = GameObject.FindGameObjectWithTag("SoundEffects").GetComponent<SoundEffectManager>();
+    }
 
     void OnTriggerEnter(Collider col){
+        sound.PlayWaterSound();
             objectInWater += 1;
     }
 

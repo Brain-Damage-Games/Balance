@@ -10,6 +10,8 @@ TagManager:
   - Shelf
   - WinCondition
   - Center
+  - SoundEffects
+  - ProgressBar
   layers:
   - Default
   - TransparentFX
