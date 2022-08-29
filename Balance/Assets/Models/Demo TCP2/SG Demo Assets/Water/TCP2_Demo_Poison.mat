@@ -88,7 +88,7 @@ Material:
     - _DstBlend: 0
     - _DstBlendTCP2: 10
     - _EmisPulseMin: 0
-    - _EmisPulseSpeed: 2
+    - _EmisPulseSpeed: 0
     - _FoamSmooth: 0.393
     - _FoamSpread: 1.2
     - _FoamStrength: 1
@@ -121,11 +121,11 @@ Material:
     - _UVWaveAmplitude2: 0.03
     - _UVWaveFrequency: 0.3
     - _UVWaveFrequency2: 0.1
-    - _UVWaveSpeed: 0.5
+    - _UVWaveSpeed: 0
     - _UVWaveSpeed2: 0.8
     - _WaveFrequency: 2
-    - _WaveHeight: 0.04
-    - _WaveSpeed: 2
+    - _WaveHeight: 0.01
+    - _WaveSpeed: 0
     - _ZWrite: 1
     - __dummy__: 0
     m_Colors:

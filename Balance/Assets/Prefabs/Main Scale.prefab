@@ -110,9 +110,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftMassObject: {fileID: 0}
   rightMassObject: {fileID: 0}
-  maxAngleOffset: 30
-  angleOffsetIncreasePerUnit: 2
-  baseSpeed: 0.1
+  maxAngleOffset: 50
+  angleOffsetIncreasePerUnit: 0.8
+  baseSpeed: 0.2
   leftHook: {fileID: 2122263729447193711}
   rightHook: {fileID: 7223962444326467312}
 --- !u!54 &3533166048544859904

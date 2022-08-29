@@ -1817,18 +1817,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Scale
       objectReference: {fileID: 0}
-    - target: {fileID: 2970775268200234117, guid: 43571ed67e700ca4285aedc9fb41d362, type: 3}
-      propertyPath: baseSpeed
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2970775268200234117, guid: 43571ed67e700ca4285aedc9fb41d362, type: 3}
-      propertyPath: maxAngleOffset
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 2970775268200234117, guid: 43571ed67e700ca4285aedc9fb41d362, type: 3}
-      propertyPath: angleOffsetIncreasePerUnit
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 6128757690219206761, guid: 43571ed67e700ca4285aedc9fb41d362, type: 3}
       propertyPath: m_RootOrder
       value: 12

@@ -35,7 +35,6 @@ public class Attachable : MonoBehaviour
         {
             AttachReceiver attachReceiver = aim.GetComponent<AttachReceiver>();
             Draggable targetDraggable = aim.GetComponentInParent<Draggable>();
-            print("yes");
             if (attachReceiver.isEmpty() && (targetDraggable == null || !targetDraggable.IsInBox())){
                 attachReceiver.ReceiveAttach(gameObject);
                 attached = true;
