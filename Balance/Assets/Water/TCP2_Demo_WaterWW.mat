@@ -110,10 +110,10 @@ Material:
     - _UVSec: 0
     - _UVWaveAmplitude: 0.05
     - _UVWaveFrequency: 1
-    - _UVWaveSpeed: 1
+    - _UVWaveSpeed: 0
     - _WaveFrequency: 1
-    - _WaveHeight: 0.1
-    - _WaveSpeed: 2
+    - _WaveHeight: 0
+    - _WaveSpeed: 0
     - _ZWrite: 1
     - __dummy__: 0
     m_Colors:

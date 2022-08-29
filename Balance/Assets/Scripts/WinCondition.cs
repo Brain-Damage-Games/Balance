@@ -8,7 +8,7 @@ public class WinCondition : MonoBehaviour
     public static event endOfGame EndOfGame;
 
     GameObject[] allObjects;
-    public List<Attachable> attachables;
+    public Attachable[] attachables;
 
     [SerializeField]
     GameObject water;
@@ -16,11 +16,12 @@ public class WinCondition : MonoBehaviour
     [SerializeField] Comparator[] scales; 
 
     void Awake() {
-        allObjects = GameObject.FindGameObjectsWithTag("Objects");
-        foreach (GameObject gameObject in allObjects){
-            if (gameObject.GetComponent<Attachable>() == null) attachables.Add(gameObject.GetComponentInChildren<Attachable>());
-            else attachables.Add(gameObject.GetComponent<Attachable>());
-        }
+        // allObjects = GameObject.FindGameObjectsWithTag("Objects");
+        // foreach (GameObject gameObject in allObjects){
+        //     if (gameObject.GetComponent<Attachable>() == null) attachables.Add(gameObject.GetComponentInChildren<Attachable>());
+        //     else attachables.Add(gameObject.GetComponent<Attachable>());
+        // }
+        // attachables = Resources.FindObjectsOfTypeAll<Attachable>();
     }
 
     public bool IsWon()
